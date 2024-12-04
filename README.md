@@ -324,7 +324,7 @@ const authorisationClient = new AuthorizationCode({
     secret: 'your_client_secret',
   },
   auth: {
-    tokenHost: 'https://auth.helloasso-sandbox.com/',
+    tokenHost: 'https://auth.helloasso.com/',
     authorizePath: '/authorize',
   },
 });
@@ -335,7 +335,7 @@ const tokenClient = new AuthorizationCode({
     secret: 'your_client_secret',
   },
   auth: {
-    tokenHost: 'https://api.helloasso-sandbox.com/',
+    tokenHost: 'https://api.helloasso.com/',
     tokenPath: '/oauth2/token'
   },
 });
