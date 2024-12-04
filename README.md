@@ -359,7 +359,6 @@ function getAuthorizationUrl() {
   const { codeVerifier, codeChallenge } = generatePKCE();
   const authorizationUri = client.authorizeURL({
     redirect_uri: 'https://your-app.com/callback',
-    scope: 'your_scope',
     state: 'random_state_string',
     code_challenge: codeChallenge,
     code_challenge_method: 'S256',
@@ -390,7 +389,7 @@ async function getAccessTokenFromCode(authorizationCode, codeVerifier) {
 // Usage
 const { authorizationUri, codeVerifier } = getAuthorizationUrl();
 // After user authorizes, exchange the code (passed in the redirect URL callback)
-// getAccessTokenFromCode('your_authorization_code', codeVerifier);
+// getAccessTokenFromCode('your_authorization_code', 'your_code_verifier');
 ```
 
 ## About this package
