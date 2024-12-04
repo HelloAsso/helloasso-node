@@ -1,8 +1,15 @@
 {
-  "name": "hello_asso_api",
-  "version": "public",
-  "description": "HelloAsso auto-generated SDK",
-  "license": "Unlicense",
+  "name": "helloasso-node",
+  "version": "1.0.0",
+  "description": "HelloAsso API wrapper",
+  "homepage": "https://dev.helloasso.com/",
+  "author": "HelloAsso <api.support@helloasso.org> (https://www.helloasso.com/)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/helloasso/helloasso-node.git"
+  },
+  "bugs": "https://github.com/helloasso/helloasso-node/issues",
+  "license": "GPL-3.0-only",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
