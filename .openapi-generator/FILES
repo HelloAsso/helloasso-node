@@ -98,7 +98,7 @@ docs/HelloAssoModelsPaymentsCashInFiscalReceiptFiscalReceiptFormatOption.md
 docs/HelloAssoModelsSharedGeoLocation.md
 docs/ListeDeValeursApi.md
 docs/OrganisationApi.md
-docs/OrganizationLegalInformationsApi.md
+docs/OrganizationApi.md
 docs/PaiementsApi.md
 docs/PartenairesApi.md
 docs/ResultsWithPaginationModelFormLightModel.md
@@ -109,8 +109,8 @@ docs/ResultsWithPaginationModelPayment.md
 docs/ResultsWithPaginationModelPublicPaymentModel.md
 docs/ResultsWithPaginationModelSynchronizableFormModel.md
 docs/ResultsWithPaginationModelSynchronizableOrganizationModel.md
+docs/ReusFiscauxApi.md
 docs/TagsApi.md
-docs/TaxReceiptApi.md
 docs/UtilisateursApi.md
 git_push.sh
 mocha.opts
@@ -122,11 +122,11 @@ src/api/CommandesApi.js
 src/api/FormulairesApi.js
 src/api/ListeDeValeursApi.js
 src/api/OrganisationApi.js
-src/api/OrganizationLegalInformationsApi.js
+src/api/OrganizationApi.js
 src/api/PaiementsApi.js
 src/api/PartenairesApi.js
+src/api/ReusFiscauxApi.js
 src/api/TagsApi.js
-src/api/TaxReceiptApi.js
 src/api/UtilisateursApi.js
 src/index.js
 src/model/HaTrustContractLegalInformationAddressAddressDto.js
@@ -227,7 +227,5 @@ src/model/ResultsWithPaginationModelPayment.js
 src/model/ResultsWithPaginationModelPublicPaymentModel.js
 src/model/ResultsWithPaginationModelSynchronizableFormModel.js
 src/model/ResultsWithPaginationModelSynchronizableOrganizationModel.js
-test/model/HaTrustContractLegalInformationAddressAddressDto.spec.js
-test/model/HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationFiscalReceiptTransmitterBody.spec.js
-test/model/HelloAssoCoreAccountsTaxReceiptsOrganizationFiscalReceiptOptionsConfiguration.spec.js
-test/model/HelloAssoModelsPaymentsCashInFiscalReceiptFiscalReceiptFormatOption.spec.js
+test/api/OrganizationApi.spec.js
+test/api/ReusFiscauxApi.spec.js

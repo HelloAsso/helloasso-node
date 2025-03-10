@@ -83,7 +83,7 @@ export default class OrganisationApi {
      */
 
     /**
-     * 
+     * Obtenir la configuration des informations juridiques de l'organisation.
      * <br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> OrganizationAdministration<br/><br/>
      * @param {String} organizationSlug 
      * @param {module:api/OrganisationApi~organizationsLegalInformationsOrganizationSlugConfigurationGetCallback} callback The callback function, accepting three arguments: error, data, response
@@ -126,7 +126,7 @@ export default class OrganisationApi {
      */
 
     /**
-     * 
+     * Obtenir les textes d'information fiscale de l'organisation.
      * <br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> OrganizationAdministration<br/><br/>
      * @param {Object} opts Optional parameters
      * @param {String} [organizationSlug] 

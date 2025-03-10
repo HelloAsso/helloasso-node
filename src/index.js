@@ -117,11 +117,11 @@ import CommandesApi from './api/CommandesApi';
 import FormulairesApi from './api/FormulairesApi';
 import ListeDeValeursApi from './api/ListeDeValeursApi';
 import OrganisationApi from './api/OrganisationApi';
-import OrganizationLegalInformationsApi from './api/OrganizationLegalInformationsApi';
+import OrganizationApi from './api/OrganizationApi';
 import PaiementsApi from './api/PaiementsApi';
 import PartenairesApi from './api/PartenairesApi';
+import ReusFiscauxApi from './api/ReusFiscauxApi';
 import TagsApi from './api/TagsApi';
-import TaxReceiptApi from './api/TaxReceiptApi';
 import UtilisateursApi from './api/UtilisateursApi';
 
 
@@ -788,10 +788,10 @@ export {
     OrganisationApi,
 
     /**
-    * The OrganizationLegalInformationsApi service constructor.
-    * @property {module:api/OrganizationLegalInformationsApi}
+    * The OrganizationApi service constructor.
+    * @property {module:api/OrganizationApi}
     */
-    OrganizationLegalInformationsApi,
+    OrganizationApi,
 
     /**
     * The PaiementsApi service constructor.
@@ -806,16 +806,16 @@ export {
     PartenairesApi,
 
     /**
+    * The ReusFiscauxApi service constructor.
+    * @property {module:api/ReusFiscauxApi}
+    */
+    ReusFiscauxApi,
+
+    /**
     * The TagsApi service constructor.
     * @property {module:api/TagsApi}
     */
     TagsApi,
-
-    /**
-    * The TaxReceiptApi service constructor.
-    * @property {module:api/TaxReceiptApi}
-    */
-    TaxReceiptApi,
 
     /**
     * The UtilisateursApi service constructor.
