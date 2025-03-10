@@ -22,10 +22,13 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
     /**
      * Constructs a new <code>HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody</code>.
      * @alias module:model/HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody
+     * @param legalStructureId {Number} 
+     * @param isColuche {Boolean} 
+     * @param allowIfiTaxReductions {Boolean} 
      */
-    constructor() { 
+    constructor(legalStructureId, isColuche, allowIfiTaxReductions) { 
         
-        HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody.initialize(this);
+        HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody.initialize(this, legalStructureId, isColuche, allowIfiTaxReductions);
     }
 
     /**
@@ -33,7 +36,10 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, legalStructureId, isColuche, allowIfiTaxReductions) { 
+        obj['legalStructureId'] = legalStructureId;
+        obj['isColuche'] = isColuche;
+        obj['allowIfiTaxReductions'] = allowIfiTaxReductions;
     }
 
     /**
@@ -56,9 +62,6 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
             if (data.hasOwnProperty('allowIfiTaxReductions')) {
                 obj['allowIfiTaxReductions'] = ApiClient.convertToType(data['allowIfiTaxReductions'], 'Boolean');
             }
-            if (data.hasOwnProperty('isHelloassoTransmitter')) {
-                obj['isHelloassoTransmitter'] = ApiClient.convertToType(data['isHelloassoTransmitter'], 'Boolean');
-            }
         }
         return obj;
     }
@@ -69,6 +72,12 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody</code>.
      */
     static validateJSON(data) {
+        // check to make sure all required properties are present in the JSON string
+        for (const property of HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody.RequiredProperties) {
+            if (!data.hasOwnProperty(property)) {
+                throw new Error("The required field `" + property + "` is not found in the JSON data: " + JSON.stringify(data));
+            }
+        }
 
         return true;
     }
@@ -76,7 +85,7 @@ class HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalIn
 
 }
 
-
+HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody.RequiredProperties = ["legalStructureId", "isColuche", "allowIfiTaxReductions"];
 
 /**
  * @member {Number} legalStructureId
@@ -92,11 +101,6 @@ HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformat
  * @member {Boolean} allowIfiTaxReductions
  */
 HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody.prototype['allowIfiTaxReductions'] = undefined;
-
-/**
- * @member {Boolean} isHelloassoTransmitter
- */
-HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody.prototype['isHelloassoTransmitter'] = undefined;
 
 
 

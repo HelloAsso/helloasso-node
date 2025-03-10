@@ -13,6 +13,7 @@
 
 
 import ApiClient from './ApiClient';
+import HaTrustContractLegalInformationAddressAddressDto from './model/HaTrustContractLegalInformationAddressAddressDto';
 import HelloAssoApiV5ModelsAccountCompanyLegalStatusModel from './model/HelloAssoApiV5ModelsAccountCompanyLegalStatusModel';
 import HelloAssoApiV5ModelsAccountOrganismCategoryModel from './model/HelloAssoApiV5ModelsAccountOrganismCategoryModel';
 import HelloAssoApiV5ModelsAccountsClientsApiClientModel from './model/HelloAssoApiV5ModelsAccountsClientsApiClientModel';
@@ -64,6 +65,7 @@ import HelloAssoApiV5ModelsFormsTermModel from './model/HelloAssoApiV5ModelsForm
 import HelloAssoApiV5ModelsFormsTierLightModel from './model/HelloAssoApiV5ModelsFormsTierLightModel';
 import HelloAssoApiV5ModelsFormsTierPublicModel from './model/HelloAssoApiV5ModelsFormsTierPublicModel';
 import HelloAssoApiV5ModelsOrganizationLegalInformationsOrganizationLegalStructuresModel from './model/HelloAssoApiV5ModelsOrganizationLegalInformationsOrganizationLegalStructuresModel';
+import HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationFiscalReceiptTransmitterBody from './model/HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationFiscalReceiptTransmitterBody';
 import HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody from './model/HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody';
 import HelloAssoApiV5ModelsOrganizationOrganizationBasicModel from './model/HelloAssoApiV5ModelsOrganizationOrganizationBasicModel';
 import HelloAssoApiV5ModelsOrganizationOrganizationLightModel from './model/HelloAssoApiV5ModelsOrganizationOrganizationLightModel';
@@ -94,13 +96,12 @@ import HelloAssoApiV5ModelsStatisticsSharePayment from './model/HelloAssoApiV5Mo
 import HelloAssoApiV5ModelsStatisticsUser from './model/HelloAssoApiV5ModelsStatisticsUser';
 import HelloAssoApiV5ModelsTagsInternalTagModel from './model/HelloAssoApiV5ModelsTagsInternalTagModel';
 import HelloAssoApiV5ModelsTagsPublicTagModel from './model/HelloAssoApiV5ModelsTagsPublicTagModel';
-import HelloAssoModelsAccountsOrganizationLegalInformationsFiscalReceiptFormatOptionModel from './model/HelloAssoModelsAccountsOrganizationLegalInformationsFiscalReceiptFormatOptionModel';
+import HelloAssoCoreAccountsTaxReceiptsOrganizationFiscalReceiptOptionsConfiguration from './model/HelloAssoCoreAccountsTaxReceiptsOrganizationFiscalReceiptOptionsConfiguration';
 import HelloAssoModelsAccountsOrganizationLegalInformationsFiscalReceiptSignatoryModel from './model/HelloAssoModelsAccountsOrganizationLegalInformationsFiscalReceiptSignatoryModel';
-import HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationFiscalReceiptOptionsConfiguration from './model/HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationFiscalReceiptOptionsConfiguration';
 import HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationLegalInformationConfiguration from './model/HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationLegalInformationConfiguration';
 import HelloAssoModelsAccountsOrganizationLegalInformationsTaxInformationText from './model/HelloAssoModelsAccountsOrganizationLegalInformationsTaxInformationText';
-import HelloAssoModelsComplianceV2CommonAddressAddressModelSnapshot from './model/HelloAssoModelsComplianceV2CommonAddressAddressModelSnapshot';
 import HelloAssoModelsEnumsGlobalRole from './model/HelloAssoModelsEnumsGlobalRole';
+import HelloAssoModelsPaymentsCashInFiscalReceiptFiscalReceiptFormatOption from './model/HelloAssoModelsPaymentsCashInFiscalReceiptFiscalReceiptFormatOption';
 import HelloAssoModelsSharedGeoLocation from './model/HelloAssoModelsSharedGeoLocation';
 import ResultsWithPaginationModelFormLightModel from './model/ResultsWithPaginationModelFormLightModel';
 import ResultsWithPaginationModelItem from './model/ResultsWithPaginationModelItem';
@@ -161,6 +162,12 @@ export {
      * @property {module:ApiClient}
      */
     ApiClient,
+
+    /**
+     * The HaTrustContractLegalInformationAddressAddressDto model constructor.
+     * @property {module:model/HaTrustContractLegalInformationAddressAddressDto}
+     */
+    HaTrustContractLegalInformationAddressAddressDto,
 
     /**
      * The HelloAssoApiV5ModelsAccountCompanyLegalStatusModel model constructor.
@@ -469,6 +476,12 @@ export {
     HelloAssoApiV5ModelsOrganizationLegalInformationsOrganizationLegalStructuresModel,
 
     /**
+     * The HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationFiscalReceiptTransmitterBody model constructor.
+     * @property {module:model/HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationFiscalReceiptTransmitterBody}
+     */
+    HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationFiscalReceiptTransmitterBody,
+
+    /**
      * The HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody model constructor.
      * @property {module:model/HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody}
      */
@@ -649,22 +662,16 @@ export {
     HelloAssoApiV5ModelsTagsPublicTagModel,
 
     /**
-     * The HelloAssoModelsAccountsOrganizationLegalInformationsFiscalReceiptFormatOptionModel model constructor.
-     * @property {module:model/HelloAssoModelsAccountsOrganizationLegalInformationsFiscalReceiptFormatOptionModel}
+     * The HelloAssoCoreAccountsTaxReceiptsOrganizationFiscalReceiptOptionsConfiguration model constructor.
+     * @property {module:model/HelloAssoCoreAccountsTaxReceiptsOrganizationFiscalReceiptOptionsConfiguration}
      */
-    HelloAssoModelsAccountsOrganizationLegalInformationsFiscalReceiptFormatOptionModel,
+    HelloAssoCoreAccountsTaxReceiptsOrganizationFiscalReceiptOptionsConfiguration,
 
     /**
      * The HelloAssoModelsAccountsOrganizationLegalInformationsFiscalReceiptSignatoryModel model constructor.
      * @property {module:model/HelloAssoModelsAccountsOrganizationLegalInformationsFiscalReceiptSignatoryModel}
      */
     HelloAssoModelsAccountsOrganizationLegalInformationsFiscalReceiptSignatoryModel,
-
-    /**
-     * The HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationFiscalReceiptOptionsConfiguration model constructor.
-     * @property {module:model/HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationFiscalReceiptOptionsConfiguration}
-     */
-    HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationFiscalReceiptOptionsConfiguration,
 
     /**
      * The HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationLegalInformationConfiguration model constructor.
@@ -679,16 +686,16 @@ export {
     HelloAssoModelsAccountsOrganizationLegalInformationsTaxInformationText,
 
     /**
-     * The HelloAssoModelsComplianceV2CommonAddressAddressModelSnapshot model constructor.
-     * @property {module:model/HelloAssoModelsComplianceV2CommonAddressAddressModelSnapshot}
-     */
-    HelloAssoModelsComplianceV2CommonAddressAddressModelSnapshot,
-
-    /**
      * The HelloAssoModelsEnumsGlobalRole model constructor.
      * @property {module:model/HelloAssoModelsEnumsGlobalRole}
      */
     HelloAssoModelsEnumsGlobalRole,
+
+    /**
+     * The HelloAssoModelsPaymentsCashInFiscalReceiptFiscalReceiptFormatOption model constructor.
+     * @property {module:model/HelloAssoModelsPaymentsCashInFiscalReceiptFiscalReceiptFormatOption}
+     */
+    HelloAssoModelsPaymentsCashInFiscalReceiptFiscalReceiptFormatOption,
 
     /**
      * The HelloAssoModelsSharedGeoLocation model constructor.

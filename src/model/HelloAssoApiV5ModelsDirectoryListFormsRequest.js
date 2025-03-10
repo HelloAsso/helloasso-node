@@ -289,37 +289,37 @@ HelloAssoApiV5ModelsDirectoryListFormsRequest.prototype['formTypes'] = undefined
 HelloAssoApiV5ModelsDirectoryListFormsRequest.prototype['formActivityType'] = undefined;
 
 /**
- * The minimum publication date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
+ * The inclusive minimum publication date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
  * @member {Date} formPublicationStartDateMin
  */
 HelloAssoApiV5ModelsDirectoryListFormsRequest.prototype['formPublicationStartDateMin'] = undefined;
 
 /**
- * The maximum publication date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
+ * The exclusive maximum publication date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
  * @member {Date} formPublicationStartDateMax
  */
 HelloAssoApiV5ModelsDirectoryListFormsRequest.prototype['formPublicationStartDateMax'] = undefined;
 
 /**
- * The minimum start date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
+ * The inclusive minimum start date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
  * @member {Date} formStartDateMin
  */
 HelloAssoApiV5ModelsDirectoryListFormsRequest.prototype['formStartDateMin'] = undefined;
 
 /**
- * The maximum start date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
+ * The exclusive maximum start date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
  * @member {Date} formStartDateMax
  */
 HelloAssoApiV5ModelsDirectoryListFormsRequest.prototype['formStartDateMax'] = undefined;
 
 /**
- * The maximum end date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
+ * The exclusive maximum end date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
  * @member {Date} formEndDateMax
  */
 HelloAssoApiV5ModelsDirectoryListFormsRequest.prototype['formEndDateMax'] = undefined;
 
 /**
- * The minimum end date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
+ * The inclusive minimum end date of the forms, format \"yyyy-MM-ddTHH:mm:ss.fffK\"
  * @member {Date} formEndDateMin
  */
 HelloAssoApiV5ModelsDirectoryListFormsRequest.prototype['formEndDateMin'] = undefined;

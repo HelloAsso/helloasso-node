@@ -43,6 +43,7 @@ export default class OrganizationLegalInformationsApi {
      */
 
     /**
+     * Update the organization legal information configuration
      * <br/><br/><b>Your token must have one of these roles : </b><br/>OrganizationAdmin<br/><br/>If you are an <b>association</b>, you can obtain these roles with your client.<br/>If you are a <b>partner</b>, you can obtain these roles by the authorize flow.<br/><br/><b>Your clientId must be allowed all of those privileges : </b> <br/> OrganizationAdministration<br/><br/>
      * @param {String} organizationSlug 
      * @param {Object} opts Optional parameters

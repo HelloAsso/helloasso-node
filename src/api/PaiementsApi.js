@@ -313,8 +313,8 @@ export default class PaiementsApi {
      * @param {Object} opts Optional parameters
      * @param {String} [comment] The comment about this refund.
      * @param {Boolean} [cancelOrder = false)] Whether the future payments and linked items of this order must be canceled (possible only if the payment is fully refunded)
-     * @param {Boolean} [sendRefundMail = true)] Whether a refund mail must be send or not.
-     * @param {Number} [amount = 0)] The amount in euros to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded
+     * @param {Boolean} [sendRefundMail = true)] Whether a refund mail must be sent or not.
+     * @param {Number} [amount = 0)] The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded
      * @param {module:api/PaiementsApi~paymentsPaymentIdRefundPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/HelloAssoApiV5ModelsPaymentRefundOperationModel}
      */

@@ -4,7 +4,7 @@ All URIs are relative to *https://api.helloasso.com/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**organizationsLegalInformationsOrganizationSlugConfigurationPut**](OrganizationLegalInformationsApi.md#organizationsLegalInformationsOrganizationSlugConfigurationPut) | **PUT** /organizations/legal-informations/{organizationSlug}/configuration | 
+[**organizationsLegalInformationsOrganizationSlugConfigurationPut**](OrganizationLegalInformationsApi.md#organizationsLegalInformationsOrganizationSlugConfigurationPut) | **PUT** /organizations/legal-informations/{organizationSlug}/configuration | Update the organization legal information configuration
 
 
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 > organizationsLegalInformationsOrganizationSlugConfigurationPut(organizationSlug, opts)
 
-
+Update the organization legal information configuration
 
 &lt;br/&gt;&lt;br/&gt;&lt;b&gt;Your token must have one of these roles : &lt;/b&gt;&lt;br/&gt;OrganizationAdmin&lt;br/&gt;&lt;br/&gt;If you are an &lt;b&gt;association&lt;/b&gt;, you can obtain these roles with your client.&lt;br/&gt;If you are a &lt;b&gt;partner&lt;/b&gt;, you can obtain these roles by the authorize flow.&lt;br/&gt;&lt;br/&gt;&lt;b&gt;Your clientId must be allowed all of those privileges : &lt;/b&gt; &lt;br/&gt; OrganizationAdministration&lt;br/&gt;&lt;br/&gt;
 

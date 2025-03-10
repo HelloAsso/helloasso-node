@@ -308,8 +308,8 @@ let paymentId = 56; // Number | The payment identifier.
 let opts = {
   'comment': "comment_example", // String | The comment about this refund.
   'cancelOrder': false, // Boolean | Whether the future payments and linked items of this order must be canceled (possible only if the payment is fully refunded)
-  'sendRefundMail': true, // Boolean | Whether a refund mail must be send or not.
-  'amount': 0 // Number | The amount in euros to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded
+  'sendRefundMail': true, // Boolean | Whether a refund mail must be sent or not.
+  'amount': 0 // Number | The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded
 };
 apiInstance.paymentsPaymentIdRefundPost(paymentId, opts, (error, data, response) => {
   if (error) {
@@ -328,8 +328,8 @@ Name | Type | Description  | Notes
  **paymentId** | **Number**| The payment identifier. | 
  **comment** | **String**| The comment about this refund. | [optional] 
  **cancelOrder** | **Boolean**| Whether the future payments and linked items of this order must be canceled (possible only if the payment is fully refunded) | [optional] [default to false]
- **sendRefundMail** | **Boolean**| Whether a refund mail must be send or not. | [optional] [default to true]
- **amount** | **Number**| The amount in euros to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded | [optional] [default to 0]
+ **sendRefundMail** | **Boolean**| Whether a refund mail must be sent or not. | [optional] [default to true]
+ **amount** | **Number**| The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded | [optional] [default to 0]
 
 ### Return type
 

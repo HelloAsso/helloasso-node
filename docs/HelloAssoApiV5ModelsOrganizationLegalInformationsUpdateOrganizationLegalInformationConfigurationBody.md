@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**legalStructureId** | **Number** |  | [optional] 
-**isColuche** | **Boolean** |  | [optional] 
-**allowIfiTaxReductions** | **Boolean** |  | [optional] 
-**isHelloassoTransmitter** | **Boolean** |  | [optional] 
+**legalStructureId** | **Number** |  | 
+**isColuche** | **Boolean** |  | 
+**allowIfiTaxReductions** | **Boolean** |  | 
 
 

@@ -13,7 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
-import HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationFiscalReceiptOptionsConfiguration from '../model/HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationFiscalReceiptOptionsConfiguration';
+import HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationFiscalReceiptTransmitterBody from '../model/HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationFiscalReceiptTransmitterBody';
+import HelloAssoCoreAccountsTaxReceiptsOrganizationFiscalReceiptOptionsConfiguration from '../model/HelloAssoCoreAccountsTaxReceiptsOrganizationFiscalReceiptOptionsConfiguration';
 
 /**
 * TaxReceipt service.
@@ -38,7 +39,7 @@ export default class TaxReceiptApi {
      * Callback function to receive the result of the organizationsOrganizationSlugTaxReceiptConfigurationGet operation.
      * @callback module:api/TaxReceiptApi~organizationsOrganizationSlugTaxReceiptConfigurationGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationFiscalReceiptOptionsConfiguration} data The data returned by the service call.
+     * @param {module:model/HelloAssoCoreAccountsTaxReceiptsOrganizationFiscalReceiptOptionsConfiguration} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -46,7 +47,7 @@ export default class TaxReceiptApi {
      * <br/><br/><b>Your token must have one of these roles : </b><br/>OrganizationAdmin<br/><br/>If you are an <b>association</b>, you can obtain these roles with your client.<br/>If you are a <b>partner</b>, you can obtain these roles by the authorize flow.<br/><br/><b>Your clientId must be allowed all of those privileges : </b> <br/> OrganizationAdministration<br/><br/>
      * @param {String} organizationSlug 
      * @param {module:api/TaxReceiptApi~organizationsOrganizationSlugTaxReceiptConfigurationGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationFiscalReceiptOptionsConfiguration}
+     * data is of type: {@link module:model/HelloAssoCoreAccountsTaxReceiptsOrganizationFiscalReceiptOptionsConfiguration}
      */
     organizationsOrganizationSlugTaxReceiptConfigurationGet(organizationSlug, callback) {
       let postBody = null;
@@ -68,7 +69,7 @@ export default class TaxReceiptApi {
       let authNames = [];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationFiscalReceiptOptionsConfiguration;
+      let returnType = HelloAssoCoreAccountsTaxReceiptsOrganizationFiscalReceiptOptionsConfiguration;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/tax-receipt/configuration', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -122,6 +123,50 @@ export default class TaxReceiptApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/tax-receipt/configuration', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the organizationsOrganizationSlugTaxReceiptFiscalReceiptTransmitterPut operation.
+     * @callback module:api/TaxReceiptApi~organizationsOrganizationSlugTaxReceiptFiscalReceiptTransmitterPutCallback
+     * @param {String} error Error message, if any.
+     * @param data This operation does not return a value.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * <br/><br/><b>Your token must have one of these roles : </b><br/>OrganizationAdmin<br/><br/>If you are an <b>association</b>, you can obtain these roles with your client.<br/>If you are a <b>partner</b>, you can obtain these roles by the authorize flow.<br/><br/><b>Your clientId must be allowed all of those privileges : </b> <br/> OrganizationAdministration<br/><br/>
+     * @param {String} organizationSlug 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationFiscalReceiptTransmitterBody} [helloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationFiscalReceiptTransmitterBody] 
+     * @param {module:api/TaxReceiptApi~organizationsOrganizationSlugTaxReceiptFiscalReceiptTransmitterPutCallback} callback The callback function, accepting three arguments: error, data, response
+     */
+    organizationsOrganizationSlugTaxReceiptFiscalReceiptTransmitterPut(organizationSlug, opts, callback) {
+      opts = opts || {};
+      let postBody = opts['helloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationFiscalReceiptTransmitterBody'];
+      // verify the required parameter 'organizationSlug' is set
+      if (organizationSlug === undefined || organizationSlug === null) {
+        throw new Error("Missing the required parameter 'organizationSlug' when calling organizationsOrganizationSlugTaxReceiptFiscalReceiptTransmitterPut");
+      }
+
+      let pathParams = {
+        'organizationSlug': organizationSlug
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/organizations/{organizationSlug}/tax-receipt/fiscal-receipt-transmitter', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
