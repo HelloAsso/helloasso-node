@@ -98,7 +98,6 @@ docs/HelloAssoModelsPaymentsCashInFiscalReceiptFiscalReceiptFormatOption.md
 docs/HelloAssoModelsSharedGeoLocation.md
 docs/ListeDeValeursApi.md
 docs/OrganisationApi.md
-docs/OrganizationApi.md
 docs/PaiementsApi.md
 docs/PartenairesApi.md
 docs/ResultsWithPaginationModelFormLightModel.md
@@ -122,7 +121,6 @@ src/api/CommandesApi.js
 src/api/FormulairesApi.js
 src/api/ListeDeValeursApi.js
 src/api/OrganisationApi.js
-src/api/OrganizationApi.js
 src/api/PaiementsApi.js
 src/api/PartenairesApi.js
 src/api/ReusFiscauxApi.js
@@ -227,5 +225,3 @@ src/model/ResultsWithPaginationModelPayment.js
 src/model/ResultsWithPaginationModelPublicPaymentModel.js
 src/model/ResultsWithPaginationModelSynchronizableFormModel.js
 src/model/ResultsWithPaginationModelSynchronizableOrganizationModel.js
-test/api/OrganizationApi.spec.js
-test/api/ReusFiscauxApi.spec.js

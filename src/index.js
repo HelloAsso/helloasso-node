@@ -117,7 +117,6 @@ import CommandesApi from './api/CommandesApi';
 import FormulairesApi from './api/FormulairesApi';
 import ListeDeValeursApi from './api/ListeDeValeursApi';
 import OrganisationApi from './api/OrganisationApi';
-import OrganizationApi from './api/OrganizationApi';
 import PaiementsApi from './api/PaiementsApi';
 import PartenairesApi from './api/PartenairesApi';
 import ReusFiscauxApi from './api/ReusFiscauxApi';
@@ -786,12 +785,6 @@ export {
     * @property {module:api/OrganisationApi}
     */
     OrganisationApi,
-
-    /**
-    * The OrganizationApi service constructor.
-    * @property {module:api/OrganizationApi}
-    */
-    OrganizationApi,
 
     /**
     * The PaiementsApi service constructor.
