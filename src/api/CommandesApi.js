@@ -189,7 +189,7 @@ export default class CommandesApi {
      * @param {module:model/HelloAssoApiV5ModelsEnumsFormType} formType The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
      * @param {Object} opts Optional parameters
      * @param {Date} [from] First Date Filter
-     * @param {Date} [to] End Date Filter
+     * @param {Date} [to] End Date Filter (exclusive)
      * @param {String} [userSearchKey] Filter results on user or payer first name, last name or email
      * @param {Number} [pageIndex = 1)] The page of results to retrieve
      * @param {Number} [pageSize = 20)] The number of items per page
@@ -200,7 +200,7 @@ export default class CommandesApi {
      * @param {Boolean} [withDetails = false)] Set to true to return CustomFields and Options
      * @param {module:model/HelloAssoApiV5ModelsEnumsSortOrder} [sortOrder] Sort forms items by ascending or descending order. Default is descending
      * @param {module:model/HelloAssoApiV5ModelsEnumsSortField} [sortField] Sort forms items by a specific field (Date or UpdateDate). Default is date
-     * @param {Boolean} [withCount = true)] Whether the pagination should include totalCount and totalPages.
+     * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/CommandesApi~organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetCallback} callback The callback function, accepting three arguments: error, data, response
      */
     organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet(organizationSlug, formSlug, formType, opts, callback) {
@@ -271,14 +271,14 @@ export default class CommandesApi {
      * @param {module:model/HelloAssoApiV5ModelsEnumsFormType} formType The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
      * @param {Object} opts Optional parameters
      * @param {Date} [from] First Date Filter
-     * @param {Date} [to] End Date Filter
+     * @param {Date} [to] End Date Filter (exclusive)
      * @param {String} [userSearchKey] Filter results on user or payer first name, last name or email
      * @param {Number} [pageIndex = 1)] The page of results to retrieve
      * @param {Number} [pageSize = 20)] The number of items per page
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
      * @param {Boolean} [withDetails = false)] Set to true to return CustomFields
      * @param {module:model/HelloAssoApiV5ModelsEnumsSortOrder} [sortOrder] Sort forms orders by ascending or descending order. Default is descending
-     * @param {Boolean} [withCount = true)] Whether the pagination should include totalCount and totalPages.
+     * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/CommandesApi~organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ResultsWithPaginationModelOrder}
      */
@@ -344,7 +344,7 @@ export default class CommandesApi {
      * @param {String} organizationSlug The organization slug
      * @param {Object} opts Optional parameters
      * @param {Date} [from] First Date Filter
-     * @param {Date} [to] End Date Filter
+     * @param {Date} [to] End Date Filter (exclusive)
      * @param {String} [userSearchKey] Filter results on user or payer first name, last name or email
      * @param {Number} [pageIndex = 1)] The page of results to retrieve
      * @param {Number} [pageSize = 20)] The number of items per page
@@ -355,7 +355,7 @@ export default class CommandesApi {
      * @param {Boolean} [withDetails = false)] Set to true to return CustomFields and Options
      * @param {module:model/HelloAssoApiV5ModelsEnumsSortOrder} [sortOrder] Sort organizations items by ascending or descending order. Default is descending
      * @param {module:model/HelloAssoApiV5ModelsEnumsSortField} [sortField] Sort organizations items by a specific field (Date or UpdateDate). Default is date
-     * @param {Boolean} [withCount = true)] Whether the pagination should include totalCount and totalPages.
+     * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/CommandesApi~organizationsOrganizationSlugItemsGetCallback} callback The callback function, accepting three arguments: error, data, response
      */
     organizationsOrganizationSlugItemsGet(organizationSlug, opts, callback) {
@@ -414,7 +414,7 @@ export default class CommandesApi {
      * @param {String} organizationSlug The organization slug
      * @param {Object} opts Optional parameters
      * @param {Date} [from] First Date Filter
-     * @param {Date} [to] End Date Filter
+     * @param {Date} [to] End Date Filter (exclusive)
      * @param {String} [userSearchKey] Filter results on user or payer first name, last name or email
      * @param {Number} [pageIndex = 1)] The page of results to retrieve
      * @param {Number} [pageSize = 20)] The number of items per page
@@ -422,7 +422,7 @@ export default class CommandesApi {
      * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsFormType>} [formTypes] The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
      * @param {Boolean} [withDetails = false)] Set to true to return CustomFields
      * @param {module:model/HelloAssoApiV5ModelsEnumsSortOrder} [sortOrder] Sort organizations orders by ascending or descending order. Default is descending
-     * @param {Boolean} [withCount = true)] Whether the pagination should include totalCount and totalPages.
+     * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/CommandesApi~organizationsOrganizationSlugOrdersGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ResultsWithPaginationModelOrder}
      */

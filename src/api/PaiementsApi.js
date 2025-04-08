@@ -57,7 +57,7 @@ export default class PaiementsApi {
      * @param {module:model/HelloAssoApiV5ModelsEnumsFormType} formType The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
      * @param {Object} opts Optional parameters
      * @param {Date} [from] First Date Filter
-     * @param {Date} [to] End Date Filter
+     * @param {Date} [to] End Date Filter (exclusive)
      * @param {String} [userSearchKey] Filter results on user or payer first name, last name or email
      * @param {Number} [pageIndex = 1)] The page of results to retrieve
      * @param {Number} [pageSize = 20)] The number of items per page
@@ -65,7 +65,7 @@ export default class PaiementsApi {
      * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsPaymentState>} [states] Filter results by states of payments  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.              Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
      * @param {module:model/HelloAssoApiV5ModelsEnumsSortOrder} [sortOrder] Sort payments by ascending or descending order. Default is descending
      * @param {module:model/HelloAssoApiV5ModelsEnumsSortField} [sortField] Sort payments by a specific field (Date or UpdateDate). Default is date
-     * @param {Boolean} [withCount = true)] Whether the pagination should include totalCount and totalPages.
+     * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/PaiementsApi~organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ResultsWithPaginationModelPayment}
      */
@@ -132,7 +132,7 @@ export default class PaiementsApi {
      * @param {String} organizationSlug The organization Slug
      * @param {Object} opts Optional parameters
      * @param {Date} [from] First Date Filter
-     * @param {Date} [to] End Date Filter
+     * @param {Date} [to] End Date Filter (exclusive)
      * @param {String} [userSearchKey] Filter results on user or payer first name, last name or email
      * @param {Number} [pageIndex = 1)] The page of results to retrieve
      * @param {Number} [pageSize = 20)] The number of items per page
@@ -140,7 +140,7 @@ export default class PaiementsApi {
      * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsPaymentState>} [states] The payment states  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.              Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
      * @param {module:model/HelloAssoApiV5ModelsEnumsSortOrder} [sortOrder] Sort payments by ascending or descending order. Default is descending
      * @param {module:model/HelloAssoApiV5ModelsEnumsSortField} [sortField] Sort payments by a specific field (Date or UpdateDate). Default is date
-     * @param {Boolean} [withCount = true)] Whether the pagination should include totalCount and totalPages.
+     * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/PaiementsApi~organizationsOrganizationSlugPaymentsGetCallback} callback The callback function, accepting three arguments: error, data, response
      */
     organizationsOrganizationSlugPaymentsGet(organizationSlug, opts, callback) {
@@ -196,7 +196,7 @@ export default class PaiementsApi {
      * @param {String} organizationSlug The organization slug
      * @param {Object} opts Optional parameters
      * @param {Date} [from] First Date Filter
-     * @param {Date} [to] End Date Filter
+     * @param {Date} [to] End Date Filter (exclusive)
      * @param {Number} [pageSize = 20)] The number of items to retrieve
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
      * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsFormType>} [formTypes] The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop

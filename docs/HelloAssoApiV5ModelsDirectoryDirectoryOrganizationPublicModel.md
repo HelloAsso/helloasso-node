@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **tags** | **[String]** | The public tags of the organization | [optional] 
 **linkedPartners** | **[String]** | Partners linked to this organization | [optional] 
 **isAuthenticated** | **Boolean** | The organization is authenticated. Property returned only when asked by an organization admin. | [optional] 
+**isCashInCompliant** | **Boolean** | If transaction can be init on the organization or not. | [optional] 
 **banner** | **String** | The organization banner | [optional] 
 **fiscalReceiptEligibility** | **Boolean** | The organism can issue fiscal receipts (type ok and has not deactivated it)  Must configure it and be authenticated to become enabled | [optional] 
 **fiscalReceiptIssuanceEnabled** | **Boolean** | The organism is eligible, has set up his options, and is authenticated. | [optional] 

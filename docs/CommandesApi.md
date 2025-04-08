@@ -188,7 +188,7 @@ let formSlug = "formSlug_example"; // String | The form slug
 let formType = new HelloAssoApi.HelloAssoApiV5ModelsEnumsFormType(); // HelloAssoApiV5ModelsEnumsFormType | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
 let opts = {
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | First Date Filter
-  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter (exclusive)
   'userSearchKey': "userSearchKey_example", // String | Filter results on user or payer first name, last name or email
   'pageIndex': 1, // Number | The page of results to retrieve
   'pageSize': 20, // Number | The number of items per page
@@ -199,7 +199,7 @@ let opts = {
   'withDetails': false, // Boolean | Set to true to return CustomFields and Options
   'sortOrder': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortOrder(), // HelloAssoApiV5ModelsEnumsSortOrder | Sort forms items by ascending or descending order. Default is descending
   'sortField': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortField(), // HelloAssoApiV5ModelsEnumsSortField | Sort forms items by a specific field (Date or UpdateDate). Default is date
-  'withCount': true // Boolean | Whether the pagination should include totalCount and totalPages.
+  'withCount': false // Boolean | Whether the pagination should include totalCount and totalPages.
 };
 apiInstance.organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet(organizationSlug, formSlug, formType, opts, (error, data, response) => {
   if (error) {
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
  **formSlug** | **String**| The form slug | 
  **formType** | [**HelloAssoApiV5ModelsEnumsFormType**](.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | 
  **from** | **Date**| First Date Filter | [optional] 
- **to** | **Date**| End Date Filter | [optional] 
+ **to** | **Date**| End Date Filter (exclusive) | [optional] 
  **userSearchKey** | **String**| Filter results on user or payer first name, last name or email | [optional] 
  **pageIndex** | **Number**| The page of results to retrieve | [optional] [default to 1]
  **pageSize** | **Number**| The number of items per page | [optional] [default to 20]
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
  **withDetails** | **Boolean**| Set to true to return CustomFields and Options | [optional] [default to false]
  **sortOrder** | [**HelloAssoApiV5ModelsEnumsSortOrder**](.md)| Sort forms items by ascending or descending order. Default is descending | [optional] 
  **sortField** | [**HelloAssoApiV5ModelsEnumsSortField**](.md)| Sort forms items by a specific field (Date or UpdateDate). Default is date | [optional] 
- **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to true]
+ **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false]
 
 ### Return type
 
@@ -269,14 +269,14 @@ let formSlug = "formSlug_example"; // String | The form slug
 let formType = new HelloAssoApi.HelloAssoApiV5ModelsEnumsFormType(); // HelloAssoApiV5ModelsEnumsFormType | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
 let opts = {
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | First Date Filter
-  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter (exclusive)
   'userSearchKey': "userSearchKey_example", // String | Filter results on user or payer first name, last name or email
   'pageIndex': 1, // Number | The page of results to retrieve
   'pageSize': 20, // Number | The number of items per page
   'continuationToken': "continuationToken_example", // String | Continuation Token from which we wish to retrieve results
   'withDetails': false, // Boolean | Set to true to return CustomFields
   'sortOrder': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortOrder(), // HelloAssoApiV5ModelsEnumsSortOrder | Sort forms orders by ascending or descending order. Default is descending
-  'withCount': true // Boolean | Whether the pagination should include totalCount and totalPages.
+  'withCount': false // Boolean | Whether the pagination should include totalCount and totalPages.
 };
 apiInstance.organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet(organizationSlug, formSlug, formType, opts, (error, data, response) => {
   if (error) {
@@ -296,14 +296,14 @@ Name | Type | Description  | Notes
  **formSlug** | **String**| The form slug | 
  **formType** | [**HelloAssoApiV5ModelsEnumsFormType**](.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | 
  **from** | **Date**| First Date Filter | [optional] 
- **to** | **Date**| End Date Filter | [optional] 
+ **to** | **Date**| End Date Filter (exclusive) | [optional] 
  **userSearchKey** | **String**| Filter results on user or payer first name, last name or email | [optional] 
  **pageIndex** | **Number**| The page of results to retrieve | [optional] [default to 1]
  **pageSize** | **Number**| The number of items per page | [optional] [default to 20]
  **continuationToken** | **String**| Continuation Token from which we wish to retrieve results | [optional] 
  **withDetails** | **Boolean**| Set to true to return CustomFields | [optional] [default to false]
  **sortOrder** | [**HelloAssoApiV5ModelsEnumsSortOrder**](.md)| Sort forms orders by ascending or descending order. Default is descending | [optional] 
- **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to true]
+ **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false]
 
 ### Return type
 
@@ -340,7 +340,7 @@ let apiInstance = new HelloAssoApi.CommandesApi();
 let organizationSlug = "organizationSlug_example"; // String | The organization slug
 let opts = {
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | First Date Filter
-  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter (exclusive)
   'userSearchKey': "userSearchKey_example", // String | Filter results on user or payer first name, last name or email
   'pageIndex': 1, // Number | The page of results to retrieve
   'pageSize': 20, // Number | The number of items per page
@@ -351,7 +351,7 @@ let opts = {
   'withDetails': false, // Boolean | Set to true to return CustomFields and Options
   'sortOrder': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortOrder(), // HelloAssoApiV5ModelsEnumsSortOrder | Sort organizations items by ascending or descending order. Default is descending
   'sortField': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortField(), // HelloAssoApiV5ModelsEnumsSortField | Sort organizations items by a specific field (Date or UpdateDate). Default is date
-  'withCount': true // Boolean | Whether the pagination should include totalCount and totalPages.
+  'withCount': false // Boolean | Whether the pagination should include totalCount and totalPages.
 };
 apiInstance.organizationsOrganizationSlugItemsGet(organizationSlug, opts, (error, data, response) => {
   if (error) {
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationSlug** | **String**| The organization slug | 
  **from** | **Date**| First Date Filter | [optional] 
- **to** | **Date**| End Date Filter | [optional] 
+ **to** | **Date**| End Date Filter (exclusive) | [optional] 
  **userSearchKey** | **String**| Filter results on user or payer first name, last name or email | [optional] 
  **pageIndex** | **Number**| The page of results to retrieve | [optional] [default to 1]
  **pageSize** | **Number**| The number of items per page | [optional] [default to 20]
@@ -380,7 +380,7 @@ Name | Type | Description  | Notes
  **withDetails** | **Boolean**| Set to true to return CustomFields and Options | [optional] [default to false]
  **sortOrder** | [**HelloAssoApiV5ModelsEnumsSortOrder**](.md)| Sort organizations items by ascending or descending order. Default is descending | [optional] 
  **sortField** | [**HelloAssoApiV5ModelsEnumsSortField**](.md)| Sort organizations items by a specific field (Date or UpdateDate). Default is date | [optional] 
- **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to true]
+ **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false]
 
 ### Return type
 
@@ -417,7 +417,7 @@ let apiInstance = new HelloAssoApi.CommandesApi();
 let organizationSlug = "organizationSlug_example"; // String | The organization slug
 let opts = {
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | First Date Filter
-  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter (exclusive)
   'userSearchKey': "userSearchKey_example", // String | Filter results on user or payer first name, last name or email
   'pageIndex': 1, // Number | The page of results to retrieve
   'pageSize': 20, // Number | The number of items per page
@@ -425,7 +425,7 @@ let opts = {
   'formTypes': [new HelloAssoApi.HelloAssoApiV5ModelsEnumsFormType()], // [HelloAssoApiV5ModelsEnumsFormType] | The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
   'withDetails': false, // Boolean | Set to true to return CustomFields
   'sortOrder': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortOrder(), // HelloAssoApiV5ModelsEnumsSortOrder | Sort organizations orders by ascending or descending order. Default is descending
-  'withCount': true // Boolean | Whether the pagination should include totalCount and totalPages.
+  'withCount': false // Boolean | Whether the pagination should include totalCount and totalPages.
 };
 apiInstance.organizationsOrganizationSlugOrdersGet(organizationSlug, opts, (error, data, response) => {
   if (error) {
@@ -443,7 +443,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationSlug** | **String**| The organization slug | 
  **from** | **Date**| First Date Filter | [optional] 
- **to** | **Date**| End Date Filter | [optional] 
+ **to** | **Date**| End Date Filter (exclusive) | [optional] 
  **userSearchKey** | **String**| Filter results on user or payer first name, last name or email | [optional] 
  **pageIndex** | **Number**| The page of results to retrieve | [optional] [default to 1]
  **pageSize** | **Number**| The number of items per page | [optional] [default to 20]
@@ -451,7 +451,7 @@ Name | Type | Description  | Notes
  **formTypes** | [**[HelloAssoApiV5ModelsEnumsFormType]**](HelloAssoApiV5ModelsEnumsFormType.md)| The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | [optional] 
  **withDetails** | **Boolean**| Set to true to return CustomFields | [optional] [default to false]
  **sortOrder** | [**HelloAssoApiV5ModelsEnumsSortOrder**](.md)| Sort organizations orders by ascending or descending order. Default is descending | [optional] 
- **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to true]
+ **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false]
 
 ### Return type
 

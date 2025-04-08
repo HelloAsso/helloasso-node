@@ -35,7 +35,7 @@ let formSlug = "formSlug_example"; // String | The form slug
 let formType = new HelloAssoApi.HelloAssoApiV5ModelsEnumsFormType(); // HelloAssoApiV5ModelsEnumsFormType | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
 let opts = {
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | First Date Filter
-  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter (exclusive)
   'userSearchKey': "userSearchKey_example", // String | Filter results on user or payer first name, last name or email
   'pageIndex': 1, // Number | The page of results to retrieve
   'pageSize': 20, // Number | The number of items per page
@@ -43,7 +43,7 @@ let opts = {
   'states': [new HelloAssoApi.HelloAssoApiV5ModelsEnumsPaymentState()], // [HelloAssoApiV5ModelsEnumsPaymentState] | Filter results by states of payments  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.              Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
   'sortOrder': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortOrder(), // HelloAssoApiV5ModelsEnumsSortOrder | Sort payments by ascending or descending order. Default is descending
   'sortField': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortField(), // HelloAssoApiV5ModelsEnumsSortField | Sort payments by a specific field (Date or UpdateDate). Default is date
-  'withCount': true // Boolean | Whether the pagination should include totalCount and totalPages.
+  'withCount': false // Boolean | Whether the pagination should include totalCount and totalPages.
 };
 apiInstance.organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet(organizationSlug, formSlug, formType, opts, (error, data, response) => {
   if (error) {
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
  **formSlug** | **String**| The form slug | 
  **formType** | [**HelloAssoApiV5ModelsEnumsFormType**](.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | 
  **from** | **Date**| First Date Filter | [optional] 
- **to** | **Date**| End Date Filter | [optional] 
+ **to** | **Date**| End Date Filter (exclusive) | [optional] 
  **userSearchKey** | **String**| Filter results on user or payer first name, last name or email | [optional] 
  **pageIndex** | **Number**| The page of results to retrieve | [optional] [default to 1]
  **pageSize** | **Number**| The number of items per page | [optional] [default to 20]
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
  **states** | [**[HelloAssoApiV5ModelsEnumsPaymentState]**](HelloAssoApiV5ModelsEnumsPaymentState.md)| Filter results by states of payments  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor | [optional] 
  **sortOrder** | [**HelloAssoApiV5ModelsEnumsSortOrder**](.md)| Sort payments by ascending or descending order. Default is descending | [optional] 
  **sortField** | [**HelloAssoApiV5ModelsEnumsSortField**](.md)| Sort payments by a specific field (Date or UpdateDate). Default is date | [optional] 
- **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to true]
+ **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false]
 
 ### Return type
 
@@ -108,7 +108,7 @@ let apiInstance = new HelloAssoApi.PaiementsApi();
 let organizationSlug = "organizationSlug_example"; // String | The organization Slug
 let opts = {
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | First Date Filter
-  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter (exclusive)
   'userSearchKey': "userSearchKey_example", // String | Filter results on user or payer first name, last name or email
   'pageIndex': 1, // Number | The page of results to retrieve
   'pageSize': 20, // Number | The number of items per page
@@ -116,7 +116,7 @@ let opts = {
   'states': [new HelloAssoApi.HelloAssoApiV5ModelsEnumsPaymentState()], // [HelloAssoApiV5ModelsEnumsPaymentState] | The payment states  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.              Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
   'sortOrder': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortOrder(), // HelloAssoApiV5ModelsEnumsSortOrder | Sort payments by ascending or descending order. Default is descending
   'sortField': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortField(), // HelloAssoApiV5ModelsEnumsSortField | Sort payments by a specific field (Date or UpdateDate). Default is date
-  'withCount': true // Boolean | Whether the pagination should include totalCount and totalPages.
+  'withCount': false // Boolean | Whether the pagination should include totalCount and totalPages.
 };
 apiInstance.organizationsOrganizationSlugPaymentsGet(organizationSlug, opts, (error, data, response) => {
   if (error) {
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationSlug** | **String**| The organization Slug | 
  **from** | **Date**| First Date Filter | [optional] 
- **to** | **Date**| End Date Filter | [optional] 
+ **to** | **Date**| End Date Filter (exclusive) | [optional] 
  **userSearchKey** | **String**| Filter results on user or payer first name, last name or email | [optional] 
  **pageIndex** | **Number**| The page of results to retrieve | [optional] [default to 1]
  **pageSize** | **Number**| The number of items per page | [optional] [default to 20]
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
  **states** | [**[HelloAssoApiV5ModelsEnumsPaymentState]**](HelloAssoApiV5ModelsEnumsPaymentState.md)| The payment states  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor | [optional] 
  **sortOrder** | [**HelloAssoApiV5ModelsEnumsSortOrder**](.md)| Sort payments by ascending or descending order. Default is descending | [optional] 
  **sortField** | [**HelloAssoApiV5ModelsEnumsSortField**](.md)| Sort payments by a specific field (Date or UpdateDate). Default is date | [optional] 
- **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to true]
+ **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false]
 
 ### Return type
 
@@ -179,7 +179,7 @@ let apiInstance = new HelloAssoApi.PaiementsApi();
 let organizationSlug = "organizationSlug_example"; // String | The organization slug
 let opts = {
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | First Date Filter
-  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter
+  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter (exclusive)
   'pageSize': 20, // Number | The number of items to retrieve
   'continuationToken': "continuationToken_example", // String | Continuation Token from which we wish to retrieve results
   'formTypes': [new HelloAssoApi.HelloAssoApiV5ModelsEnumsFormType()], // [HelloAssoApiV5ModelsEnumsFormType] | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationSlug** | **String**| The organization slug | 
  **from** | **Date**| First Date Filter | [optional] 
- **to** | **Date**| End Date Filter | [optional] 
+ **to** | **Date**| End Date Filter (exclusive) | [optional] 
  **pageSize** | **Number**| The number of items to retrieve | [optional] [default to 20]
  **continuationToken** | **String**| Continuation Token from which we wish to retrieve results | [optional] 
  **formTypes** | [**[HelloAssoApiV5ModelsEnumsFormType]**](HelloAssoApiV5ModelsEnumsFormType.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | [optional] 

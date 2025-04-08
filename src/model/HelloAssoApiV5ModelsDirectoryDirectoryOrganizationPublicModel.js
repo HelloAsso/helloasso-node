@@ -60,6 +60,9 @@ class HelloAssoApiV5ModelsDirectoryDirectoryOrganizationPublicModel {
             if (data.hasOwnProperty('isAuthenticated')) {
                 obj['isAuthenticated'] = ApiClient.convertToType(data['isAuthenticated'], 'Boolean');
             }
+            if (data.hasOwnProperty('isCashInCompliant')) {
+                obj['isCashInCompliant'] = ApiClient.convertToType(data['isCashInCompliant'], 'Boolean');
+            }
             if (data.hasOwnProperty('banner')) {
                 obj['banner'] = ApiClient.convertToType(data['banner'], 'String');
             }
@@ -206,6 +209,12 @@ HelloAssoApiV5ModelsDirectoryDirectoryOrganizationPublicModel.prototype['linkedP
  * @member {Boolean} isAuthenticated
  */
 HelloAssoApiV5ModelsDirectoryDirectoryOrganizationPublicModel.prototype['isAuthenticated'] = undefined;
+
+/**
+ * If transaction can be init on the organization or not.
+ * @member {Boolean} isCashInCompliant
+ */
+HelloAssoApiV5ModelsDirectoryDirectoryOrganizationPublicModel.prototype['isCashInCompliant'] = undefined;
 
 /**
  * The organization banner
