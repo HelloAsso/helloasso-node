@@ -1,7 +1,6 @@
 .babelrc
 .gitignore
 .travis.yml
-README.md
 docs/AnnuaireApi.md
 docs/CheckoutApi.md
 docs/CommandesApi.md
