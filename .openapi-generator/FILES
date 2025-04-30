@@ -112,7 +112,6 @@ docs/TagsApi.md
 docs/UtilisateursApi.md
 git_push.sh
 mocha.opts
-package.json
 src/ApiClient.js
 src/api/AnnuaireApi.js
 src/api/CheckoutApi.js
