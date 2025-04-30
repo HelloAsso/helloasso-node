@@ -16,6 +16,8 @@ import HelloAssoApiV5ModelsCommonDocumentModel from './HelloAssoApiV5ModelsCommo
 import HelloAssoApiV5ModelsCommonMetaModel from './HelloAssoApiV5ModelsCommonMetaModel';
 import HelloAssoApiV5ModelsEnumsPaymentFrequencyType from './HelloAssoApiV5ModelsEnumsPaymentFrequencyType';
 import HelloAssoApiV5ModelsEnumsTierType from './HelloAssoApiV5ModelsEnumsTierType';
+import HelloAssoApiV5ModelsFormsCustomFieldPublicModel from './HelloAssoApiV5ModelsFormsCustomFieldPublicModel';
+import HelloAssoApiV5ModelsFormsExtraOptionPublicModel from './HelloAssoApiV5ModelsFormsExtraOptionPublicModel';
 import HelloAssoApiV5ModelsFormsTermModel from './HelloAssoApiV5ModelsFormsTermModel';
 
 /**
@@ -53,6 +55,12 @@ class HelloAssoApiV5ModelsFormsTierPublicModel {
         if (data) {
             obj = obj || new HelloAssoApiV5ModelsFormsTierPublicModel();
 
+            if (data.hasOwnProperty('customFields')) {
+                obj['customFields'] = ApiClient.convertToType(data['customFields'], [HelloAssoApiV5ModelsFormsCustomFieldPublicModel]);
+            }
+            if (data.hasOwnProperty('extraOptions')) {
+                obj['extraOptions'] = ApiClient.convertToType(data['extraOptions'], [HelloAssoApiV5ModelsFormsExtraOptionPublicModel]);
+            }
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'Number');
             }
@@ -111,6 +119,26 @@ class HelloAssoApiV5ModelsFormsTierPublicModel {
      * @return {boolean} to indicate whether the JSON data is valid with respect to <code>HelloAssoApiV5ModelsFormsTierPublicModel</code>.
      */
     static validateJSON(data) {
+        if (data['customFields']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['customFields'])) {
+                throw new Error("Expected the field `customFields` to be an array in the JSON data but got " + data['customFields']);
+            }
+            // validate the optional field `customFields` (array)
+            for (const item of data['customFields']) {
+                HelloAssoApiV5ModelsFormsCustomFieldPublicModel.validateJSON(item);
+            };
+        }
+        if (data['extraOptions']) { // data not null
+            // ensure the json data is an array
+            if (!Array.isArray(data['extraOptions'])) {
+                throw new Error("Expected the field `extraOptions` to be an array in the JSON data but got " + data['extraOptions']);
+            }
+            // validate the optional field `extraOptions` (array)
+            for (const item of data['extraOptions']) {
+                HelloAssoApiV5ModelsFormsExtraOptionPublicModel.validateJSON(item);
+            };
+        }
         // ensure the json data is a string
         if (data['label'] && !(typeof data['label'] === 'string' || data['label'] instanceof String)) {
             throw new Error("Expected the field `label` to be a primitive type in the JSON string but got " + data['label']);
@@ -145,6 +173,18 @@ class HelloAssoApiV5ModelsFormsTierPublicModel {
 }
 
 
+
+/**
+ * List of custom fields to be filled by the user
+ * @member {Array.<module:model/HelloAssoApiV5ModelsFormsCustomFieldPublicModel>} customFields
+ */
+HelloAssoApiV5ModelsFormsTierPublicModel.prototype['customFields'] = undefined;
+
+/**
+ * List of available extra options to buy along the tier
+ * @member {Array.<module:model/HelloAssoApiV5ModelsFormsExtraOptionPublicModel>} extraOptions
+ */
+HelloAssoApiV5ModelsFormsTierPublicModel.prototype['extraOptions'] = undefined;
 
 /**
  * id

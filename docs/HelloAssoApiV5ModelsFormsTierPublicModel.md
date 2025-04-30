@@ -4,6 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**customFields** | [**[HelloAssoApiV5ModelsFormsCustomFieldPublicModel]**](HelloAssoApiV5ModelsFormsCustomFieldPublicModel.md) | List of custom fields to be filled by the user | [optional] 
+**extraOptions** | [**[HelloAssoApiV5ModelsFormsExtraOptionPublicModel]**](HelloAssoApiV5ModelsFormsExtraOptionPublicModel.md) | List of available extra options to buy along the tier | [optional] 
 **id** | **Number** | id | [optional] 
 **label** | **String** | label | [optional] 
 **description** | **String** | description | [optional] 

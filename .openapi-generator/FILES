@@ -48,6 +48,8 @@ docs/HelloAssoApiV5ModelsEnumsSortField.md
 docs/HelloAssoApiV5ModelsEnumsSortOrder.md
 docs/HelloAssoApiV5ModelsEnumsTagType.md
 docs/HelloAssoApiV5ModelsEnumsTierType.md
+docs/HelloAssoApiV5ModelsFormsCustomFieldPublicModel.md
+docs/HelloAssoApiV5ModelsFormsExtraOptionPublicModel.md
 docs/HelloAssoApiV5ModelsFormsFormBasicModel.md
 docs/HelloAssoApiV5ModelsFormsFormLightModel.md
 docs/HelloAssoApiV5ModelsFormsFormPublicModel.md
@@ -168,6 +170,8 @@ src/model/HelloAssoApiV5ModelsEnumsSortField.js
 src/model/HelloAssoApiV5ModelsEnumsSortOrder.js
 src/model/HelloAssoApiV5ModelsEnumsTagType.js
 src/model/HelloAssoApiV5ModelsEnumsTierType.js
+src/model/HelloAssoApiV5ModelsFormsCustomFieldPublicModel.js
+src/model/HelloAssoApiV5ModelsFormsExtraOptionPublicModel.js
 src/model/HelloAssoApiV5ModelsFormsFormBasicModel.js
 src/model/HelloAssoApiV5ModelsFormsFormLightModel.js
 src/model/HelloAssoApiV5ModelsFormsFormPublicModel.js
@@ -223,3 +227,5 @@ src/model/ResultsWithPaginationModelPayment.js
 src/model/ResultsWithPaginationModelPublicPaymentModel.js
 src/model/ResultsWithPaginationModelSynchronizableFormModel.js
 src/model/ResultsWithPaginationModelSynchronizableOrganizationModel.js
+test/model/HelloAssoApiV5ModelsFormsCustomFieldPublicModel.spec.js
+test/model/HelloAssoApiV5ModelsFormsExtraOptionPublicModel.spec.js

@@ -56,6 +56,8 @@ import HelloAssoApiV5ModelsEnumsSortField from './model/HelloAssoApiV5ModelsEnum
 import HelloAssoApiV5ModelsEnumsSortOrder from './model/HelloAssoApiV5ModelsEnumsSortOrder';
 import HelloAssoApiV5ModelsEnumsTagType from './model/HelloAssoApiV5ModelsEnumsTagType';
 import HelloAssoApiV5ModelsEnumsTierType from './model/HelloAssoApiV5ModelsEnumsTierType';
+import HelloAssoApiV5ModelsFormsCustomFieldPublicModel from './model/HelloAssoApiV5ModelsFormsCustomFieldPublicModel';
+import HelloAssoApiV5ModelsFormsExtraOptionPublicModel from './model/HelloAssoApiV5ModelsFormsExtraOptionPublicModel';
 import HelloAssoApiV5ModelsFormsFormBasicModel from './model/HelloAssoApiV5ModelsFormsFormBasicModel';
 import HelloAssoApiV5ModelsFormsFormLightModel from './model/HelloAssoApiV5ModelsFormsFormLightModel';
 import HelloAssoApiV5ModelsFormsFormPublicModel from './model/HelloAssoApiV5ModelsFormsFormPublicModel';
@@ -419,6 +421,18 @@ export {
      * @property {module:model/HelloAssoApiV5ModelsEnumsTierType}
      */
     HelloAssoApiV5ModelsEnumsTierType,
+
+    /**
+     * The HelloAssoApiV5ModelsFormsCustomFieldPublicModel model constructor.
+     * @property {module:model/HelloAssoApiV5ModelsFormsCustomFieldPublicModel}
+     */
+    HelloAssoApiV5ModelsFormsCustomFieldPublicModel,
+
+    /**
+     * The HelloAssoApiV5ModelsFormsExtraOptionPublicModel model constructor.
+     * @property {module:model/HelloAssoApiV5ModelsFormsExtraOptionPublicModel}
+     */
+    HelloAssoApiV5ModelsFormsExtraOptionPublicModel,
 
     /**
      * The HelloAssoApiV5ModelsFormsFormBasicModel model constructor.
