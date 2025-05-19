@@ -72,6 +72,9 @@ import HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalI
 import HelloAssoApiV5ModelsOrganizationOrganizationBasicModel from './model/HelloAssoApiV5ModelsOrganizationOrganizationBasicModel';
 import HelloAssoApiV5ModelsOrganizationOrganizationLightModel from './model/HelloAssoApiV5ModelsOrganizationOrganizationLightModel';
 import HelloAssoApiV5ModelsOrganizationOrganizationModel from './model/HelloAssoApiV5ModelsOrganizationOrganizationModel';
+import HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationKey from './model/HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationKey';
+import HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationModel from './model/HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationModel';
+import HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationsRequest from './model/HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationsRequest';
 import HelloAssoApiV5ModelsPartnerStatisticsModel from './model/HelloAssoApiV5ModelsPartnerStatisticsModel';
 import HelloAssoApiV5ModelsPartnersPartnerPublicModel from './model/HelloAssoApiV5ModelsPartnersPartnerPublicModel';
 import HelloAssoApiV5ModelsPaymentPublicPaymentModel from './model/HelloAssoApiV5ModelsPaymentPublicPaymentModel';
@@ -119,6 +122,7 @@ import CommandesApi from './api/CommandesApi';
 import FormulairesApi from './api/FormulairesApi';
 import ListeDeValeursApi from './api/ListeDeValeursApi';
 import OrganisationApi from './api/OrganisationApi';
+import OrganizationPublicConfigurationsApi from './api/OrganizationPublicConfigurationsApi';
 import PaiementsApi from './api/PaiementsApi';
 import PartenairesApi from './api/PartenairesApi';
 import ReusFiscauxApi from './api/ReusFiscauxApi';
@@ -519,6 +523,24 @@ export {
     HelloAssoApiV5ModelsOrganizationOrganizationModel,
 
     /**
+     * The HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationKey model constructor.
+     * @property {module:model/HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationKey}
+     */
+    HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationKey,
+
+    /**
+     * The HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationModel model constructor.
+     * @property {module:model/HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationModel}
+     */
+    HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationModel,
+
+    /**
+     * The HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationsRequest model constructor.
+     * @property {module:model/HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationsRequest}
+     */
+    HelloAssoApiV5ModelsOrganizationsOrganizationPublicConfigurationsRequest,
+
+    /**
      * The HelloAssoApiV5ModelsPartnerStatisticsModel model constructor.
      * @property {module:model/HelloAssoApiV5ModelsPartnerStatisticsModel}
      */
@@ -799,6 +821,12 @@ export {
     * @property {module:api/OrganisationApi}
     */
     OrganisationApi,
+
+    /**
+    * The OrganizationPublicConfigurationsApi service constructor.
+    * @property {module:api/OrganizationPublicConfigurationsApi}
+    */
+    OrganizationPublicConfigurationsApi,
 
     /**
     * The PaiementsApi service constructor.
