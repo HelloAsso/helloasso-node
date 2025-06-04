@@ -13,7 +13,6 @@
 
 import ApiClient from '../ApiClient';
 import HelloAssoApiV5ModelsCommonMetaModel from './HelloAssoApiV5ModelsCommonMetaModel';
-import HelloAssoApiV5ModelsCommonPlaceModel from './HelloAssoApiV5ModelsCommonPlaceModel';
 import HelloAssoApiV5ModelsEnumsFormType from './HelloAssoApiV5ModelsEnumsFormType';
 import HelloAssoApiV5ModelsEnumsOrganizationType from './HelloAssoApiV5ModelsEnumsOrganizationType';
 
@@ -81,9 +80,6 @@ class HelloAssoApiV5ModelsStatisticsOrderLight {
             if (data.hasOwnProperty('meta')) {
                 obj['meta'] = HelloAssoApiV5ModelsCommonMetaModel.constructFromObject(data['meta']);
             }
-            if (data.hasOwnProperty('place')) {
-                obj['place'] = HelloAssoApiV5ModelsCommonPlaceModel.constructFromObject(data['place']);
-            }
         }
         return obj;
     }
@@ -109,10 +105,6 @@ class HelloAssoApiV5ModelsStatisticsOrderLight {
         // validate the optional field `meta`
         if (data['meta']) { // data not null
           HelloAssoApiV5ModelsCommonMetaModel.validateJSON(data['meta']);
-        }
-        // validate the optional field `place`
-        if (data['place']) { // data not null
-          HelloAssoApiV5ModelsCommonPlaceModel.validateJSON(data['place']);
         }
 
         return true;
@@ -179,11 +171,6 @@ HelloAssoApiV5ModelsStatisticsOrderLight.prototype['checkoutIntentId'] = undefin
  * @member {module:model/HelloAssoApiV5ModelsCommonMetaModel} meta
  */
 HelloAssoApiV5ModelsStatisticsOrderLight.prototype['meta'] = undefined;
-
-/**
- * @member {module:model/HelloAssoApiV5ModelsCommonPlaceModel} place
- */
-HelloAssoApiV5ModelsStatisticsOrderLight.prototype['place'] = undefined;
 
 
 
