@@ -164,6 +164,9 @@ class HelloAssoApiV5ModelsFormsFormQuickCreateRequest {
             if (data.hasOwnProperty('allowIndividualPayer')) {
                 obj['allowIndividualPayer'] = ApiClient.convertToType(data['allowIndividualPayer'], 'Boolean');
             }
+            if (data.hasOwnProperty('displayVersion')) {
+                obj['displayVersion'] = ApiClient.convertToType(data['displayVersion'], 'Number');
+            }
             if (data.hasOwnProperty('maxEntries')) {
                 obj['maxEntries'] = ApiClient.convertToType(data['maxEntries'], 'Number');
             }
@@ -487,6 +490,12 @@ HelloAssoApiV5ModelsFormsFormQuickCreateRequest.prototype['allowOrganismPayer'] 
  * @member {Boolean} allowIndividualPayer
  */
 HelloAssoApiV5ModelsFormsFormQuickCreateRequest.prototype['allowIndividualPayer'] = undefined;
+
+/**
+ * The form display version (only for donation).
+ * @member {Number} displayVersion
+ */
+HelloAssoApiV5ModelsFormsFormQuickCreateRequest.prototype['displayVersion'] = undefined;
 
 /**
  * Indicates the maximum available entries for the whole form. Null means unlimited entries.
