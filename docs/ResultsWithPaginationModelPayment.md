@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**[HelloAssoApiV5ModelsStatisticsPayment]**](HelloAssoApiV5ModelsStatisticsPayment.md) | Data property | [optional] 
-**pagination** | [**HelloAssoApiV5ModelsCommonPaginationModel**](HelloAssoApiV5ModelsCommonPaginationModel.md) |  | [optional] 
+**data** | [**[HelloAssoApiV5CommonModelsStatisticsPayment]**](HelloAssoApiV5CommonModelsStatisticsPayment.md) | Data property | [optional] 
+**pagination** | [**HelloAssoApiV5CommonModelsCommonPaginationModel**](HelloAssoApiV5CommonModelsCommonPaginationModel.md) |  | [optional] 
 
 

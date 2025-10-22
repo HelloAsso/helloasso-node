@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## valuesCompanyLegalStatusGet
 
-> [HelloAssoApiV5ModelsAccountCompanyLegalStatusModel] valuesCompanyLegalStatusGet()
+> [HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel] valuesCompanyLegalStatusGet()
 
 Obtenir la liste des statuts juridiques
 
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[HelloAssoApiV5ModelsAccountCompanyLegalStatusModel]**](HelloAssoApiV5ModelsAccountCompanyLegalStatusModel.md)
+[**[HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel]**](HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel.md)
 
 ### Authorization
 
@@ -57,7 +57,7 @@ This endpoint does not need any parameter.
 
 ## valuesOrganizationCategoriesGet
 
-> [HelloAssoApiV5ModelsAccountOrganismCategoryModel] valuesOrganizationCategoriesGet()
+> [HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel] valuesOrganizationCategoriesGet()
 
 Obtenir la liste des catégories du JO
 
@@ -88,7 +88,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[HelloAssoApiV5ModelsAccountOrganismCategoryModel]**](HelloAssoApiV5ModelsAccountOrganismCategoryModel.md)
+[**[HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel]**](HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ This endpoint does not need any parameter.
 
 ## valuesTagsGet
 
-> [HelloAssoApiV5ModelsTagsPublicTagModel] valuesTagsGet()
+> [HelloAssoApiV5CommonModelsTagsPublicTagModel] valuesTagsGet()
 
 Obtenir la liste des tags publiques
 
@@ -133,7 +133,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[HelloAssoApiV5ModelsTagsPublicTagModel]**](HelloAssoApiV5ModelsTagsPublicTagModel.md)
+[**[HelloAssoApiV5CommonModelsTagsPublicTagModel]**](HelloAssoApiV5CommonModelsTagsPublicTagModel.md)
 
 ### Authorization
 

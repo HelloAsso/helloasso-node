@@ -1,0 +1,27 @@
+# HelloAssoApi.HelloAssoApiV5CommonModelsFormsTierPublicModel
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**customFields** | [**[HelloAssoApiV5CommonModelsFormsCustomFieldPublicModel]**](HelloAssoApiV5CommonModelsFormsCustomFieldPublicModel.md) | List of custom fields to be filled by the user | [optional] 
+**extraOptions** | [**[HelloAssoApiV5CommonModelsFormsExtraOptionPublicModel]**](HelloAssoApiV5CommonModelsFormsExtraOptionPublicModel.md) | List of available extra options to buy along the tier | [optional] 
+**id** | **Number** | id | [optional] 
+**label** | **String** | label | [optional] 
+**description** | **String** | description | [optional] 
+**tierType** | [**HelloAssoApiV5CommonModelsEnumsTierType**](HelloAssoApiV5CommonModelsEnumsTierType.md) |  | [optional] 
+**price** | **Number** | the Price in cents  if price equals 0 then it is free or there is a MinAmount | [optional] 
+**vatRate** | **Number** | Vat rate if applicable  Amount have to be 0.10 for 10% | [optional] 
+**minAmount** | **Number** | If set, it means the payment is free to choose, according to the specified minAmount in cents | [optional] 
+**paymentFrequency** | [**HelloAssoApiV5CommonModelsEnumsPaymentFrequencyType**](HelloAssoApiV5CommonModelsEnumsPaymentFrequencyType.md) |  | [optional] 
+**maxPerUser** | **Number** | Max quantity buyable in this cart | [optional] 
+**meta** | [**HelloAssoApiV5CommonModelsCommonMetaModel**](HelloAssoApiV5CommonModelsCommonMetaModel.md) |  | [optional] 
+**saleStartDate** | **Date** | The datetime (Inclusive) at which the users can start buying this tier.  If null the tier will be available at the start of the event. | [optional] 
+**saleEndDate** | **Date** | The datetime (Inclusive) at which the tier is no longer available.  If null the tier will be available until the end of the event. | [optional] 
+**isEligibleTaxReceipt** | **Boolean** | Whether this is eligible to a deduction | [optional] 
+**terms** | [**[HelloAssoApiV5CommonModelsFormsTermModel]**](HelloAssoApiV5CommonModelsFormsTermModel.md) | Terms of tier | [optional] 
+**picture** | [**HelloAssoApiV5CommonModelsCommonDocumentModel**](HelloAssoApiV5CommonModelsCommonDocumentModel.md) |  | [optional] 
+**isExcludedFromFormPaymentTerms** | **Boolean** | True means this tier must be paid in the initial payment, false means it can be paid in payment with installments  Null when the form payment terms are disabled or not compatible with the related form | [optional] 
+**isFavorite** | **Boolean** | Indicates whether this tier is marked as a favorite.  Used only in Donation form type. | [optional] 
+
+

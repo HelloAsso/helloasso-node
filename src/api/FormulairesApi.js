@@ -13,11 +13,11 @@
 
 
 import ApiClient from "../ApiClient";
-import HelloAssoApiV5ModelsEnumsFormState from '../model/HelloAssoApiV5ModelsEnumsFormState';
-import HelloAssoApiV5ModelsEnumsFormType from '../model/HelloAssoApiV5ModelsEnumsFormType';
-import HelloAssoApiV5ModelsFormsFormPublicModel from '../model/HelloAssoApiV5ModelsFormsFormPublicModel';
-import HelloAssoApiV5ModelsFormsFormQuickCreateModel from '../model/HelloAssoApiV5ModelsFormsFormQuickCreateModel';
-import HelloAssoApiV5ModelsFormsFormQuickCreateRequest from '../model/HelloAssoApiV5ModelsFormsFormQuickCreateRequest';
+import HelloAssoApiV5CommonModelsEnumsFormState from '../model/HelloAssoApiV5CommonModelsEnumsFormState';
+import HelloAssoApiV5CommonModelsEnumsFormType from '../model/HelloAssoApiV5CommonModelsEnumsFormType';
+import HelloAssoApiV5CommonModelsFormsFormPublicModel from '../model/HelloAssoApiV5CommonModelsFormsFormPublicModel';
+import HelloAssoApiV5CommonModelsFormsFormQuickCreateModel from '../model/HelloAssoApiV5CommonModelsFormsFormQuickCreateModel';
+import HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest from '../model/HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest';
 import ResultsWithPaginationModelFormLightModel from '../model/ResultsWithPaginationModelFormLightModel';
 
 /**
@@ -43,7 +43,7 @@ export default class FormulairesApi {
      * Callback function to receive the result of the organizationsOrganizationSlugFormTypesGet operation.
      * @callback module:api/FormulairesApi~organizationsOrganizationSlugFormTypesGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsFormType>} data The data returned by the service call.
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsEnumsFormType>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -52,9 +52,9 @@ export default class FormulairesApi {
      * Liste tous les types de formulaires où l'organisation possède au moins un formulaire. Cela peut également être filtré par états.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {String} organizationSlug The organization Slug
      * @param {Object} opts Optional parameters
-     * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsFormState>} [states] List of Form States to filter with. If none specified, it won't filter results.  Available values: * `Public` - The form is publicly visible and findable on search engines * `Private` - The form is visible only with the URL, you cannot find it on search engines * `Draft` - The form is not yet published but visible if you have admin rights * `Disabled` - The form is disabled and can be reenabled by changing state to public or private
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsEnumsFormState>} [states] List of Form States to filter with. If none specified, it won't filter results.  Available values: * `Public` - The form is publicly visible and findable on search engines * `Private` - The form is visible only with the URL, you cannot find it on search engines * `Draft` - The form is not yet published but visible if you have admin rights * `Disabled` - The form is disabled and can be reenabled by changing state to public or private
      * @param {module:api/FormulairesApi~organizationsOrganizationSlugFormTypesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/HelloAssoApiV5ModelsEnumsFormType>}
+     * data is of type: {@link Array.<module:model/HelloAssoApiV5CommonModelsEnumsFormType>}
      */
     organizationsOrganizationSlugFormTypesGet(organizationSlug, opts, callback) {
       opts = opts || {};
@@ -78,7 +78,7 @@ export default class FormulairesApi {
       let authNames = ['OAuth2'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [HelloAssoApiV5ModelsEnumsFormType];
+      let returnType = [HelloAssoApiV5CommonModelsEnumsFormType];
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/formTypes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -90,7 +90,7 @@ export default class FormulairesApi {
      * Callback function to receive the result of the organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost operation.
      * @callback module:api/FormulairesApi~organizationsOrganizationSlugFormsFormTypeActionQuickCreatePostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5ModelsFormsFormQuickCreateModel} data The data returned by the service call.
+     * @param {module:model/HelloAssoApiV5CommonModelsFormsFormQuickCreateModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -98,15 +98,15 @@ export default class FormulairesApi {
      * Créer un événement simplifié pour un organisme
      * Permet la création d'un événement avec seulement des informations limitées et quelques tarifications simples. L'événement créé de cette manière peut être modifié ultérieurement avec d'autres services<br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> FormAdministration<br/><br/>
      * @param {String} organizationSlug The organization Slug
-     * @param {module:model/HelloAssoApiV5ModelsEnumsFormType} formType The form type to create - only Event type is supported
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsFormType} formType The form type to create - only Event type is supported
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelloAssoApiV5ModelsFormsFormQuickCreateRequest} [helloAssoApiV5ModelsFormsFormQuickCreateRequest] The body of the request.
+     * @param {module:model/HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest} [helloAssoApiV5CommonModelsFormsFormQuickCreateRequest] The body of the request.
      * @param {module:api/FormulairesApi~organizationsOrganizationSlugFormsFormTypeActionQuickCreatePostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5ModelsFormsFormQuickCreateModel}
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsFormsFormQuickCreateModel}
      */
     organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost(organizationSlug, formType, opts, callback) {
       opts = opts || {};
-      let postBody = opts['helloAssoApiV5ModelsFormsFormQuickCreateRequest'];
+      let postBody = opts['helloAssoApiV5CommonModelsFormsFormQuickCreateRequest'];
       // verify the required parameter 'organizationSlug' is set
       if (organizationSlug === undefined || organizationSlug === null) {
         throw new Error("Missing the required parameter 'organizationSlug' when calling organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost");
@@ -130,7 +130,7 @@ export default class FormulairesApi {
       let authNames = ['OAuth2'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5ModelsFormsFormQuickCreateModel;
+      let returnType = HelloAssoApiV5CommonModelsFormsFormQuickCreateModel;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/forms/{formType}/action/quick-create', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -142,7 +142,7 @@ export default class FormulairesApi {
      * Callback function to receive the result of the organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet operation.
      * @callback module:api/FormulairesApi~organizationsOrganizationSlugFormsFormTypeFormSlugPublicGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5ModelsFormsFormPublicModel} data The data returned by the service call.
+     * @param {module:model/HelloAssoApiV5CommonModelsFormsFormPublicModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -150,10 +150,10 @@ export default class FormulairesApi {
      * Obtenir des données publiques détaillées sur un formulaire
      * Permet de récupérer toutes les informations publiques d'un formulaire, qu'il s'agisse de Crowdfunding, d'Adhésion, d'Événement, de Don...<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {String} organizationSlug 
-     * @param {module:model/HelloAssoApiV5ModelsEnumsFormType} formType 
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsFormType} formType 
      * @param {String} formSlug 
      * @param {module:api/FormulairesApi~organizationsOrganizationSlugFormsFormTypeFormSlugPublicGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5ModelsFormsFormPublicModel}
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsFormsFormPublicModel}
      */
     organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet(organizationSlug, formType, formSlug, callback) {
       let postBody = null;
@@ -185,7 +185,7 @@ export default class FormulairesApi {
       let authNames = ['OAuth2'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5ModelsFormsFormPublicModel;
+      let returnType = HelloAssoApiV5CommonModelsFormsFormPublicModel;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/forms/{formType}/{formSlug}/public', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -206,8 +206,8 @@ export default class FormulairesApi {
      * Liste tous les formulaires correspondant aux états et types. Si aucun filtre n'est spécifié, aucun filtre n'est appliqué. Les résultats sont classés par date de création en ordre décroissant.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {String} organizationSlug The organization Slug
      * @param {Object} opts Optional parameters
-     * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsFormState>} [states] States to filter  Available values: * `Public` - The form is publicly visible and findable on search engines * `Private` - The form is visible only with the URL, you cannot find it on search engines * `Draft` - The form is not yet published but visible if you have admin rights * `Disabled` - The form is disabled and can be reenabled by changing state to public or private
-     * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsFormType>} [formTypes] Types to filter
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsEnumsFormState>} [states] States to filter  Available values: * `Public` - The form is publicly visible and findable on search engines * `Private` - The form is visible only with the URL, you cannot find it on search engines * `Draft` - The form is not yet published but visible if you have admin rights * `Disabled` - The form is disabled and can be reenabled by changing state to public or private
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsEnumsFormType>} [formTypes] Types to filter
      * @param {Number} [pageIndex = 1)] The page of results to retrieve
      * @param {Number} [pageSize = 20)] The number of items per page
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results

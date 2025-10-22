@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## usersMeOrganizationsGet
 
-> [HelloAssoApiV5ModelsOrganizationOrganizationLightModel] usersMeOrganizationsGet()
+> [HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel] usersMeOrganizationsGet()
 
 Obtenir mes organisations
 
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[HelloAssoApiV5ModelsOrganizationOrganizationLightModel]**](HelloAssoApiV5ModelsOrganizationOrganizationLightModel.md)
+[**[HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel]**](HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel.md)
 
 ### Authorization
 

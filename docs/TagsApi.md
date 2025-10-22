@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## tagsTagNameGet
 
-> HelloAssoApiV5ModelsTagsInternalTagModel tagsTagNameGet(tagName, opts)
+> HelloAssoApiV5CommonModelsTagsInternalTagModel tagsTagNameGet(tagName, opts)
 
 Obtenir le détail d&#39;un tag interne
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HelloAssoApiV5ModelsTagsInternalTagModel**](HelloAssoApiV5ModelsTagsInternalTagModel.md)
+[**HelloAssoApiV5CommonModelsTagsInternalTagModel**](HelloAssoApiV5CommonModelsTagsInternalTagModel.md)
 
 ### Authorization
 

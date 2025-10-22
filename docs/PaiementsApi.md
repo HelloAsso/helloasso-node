@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet**](PaiementsApi.md#organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet) | **GET** /organizations/{organizationSlug}/forms/{formType}/{formSlug}/payments | Obtenir les informations des paiements effectués sur un formulaire
 [**organizationsOrganizationSlugPaymentsGet**](PaiementsApi.md#organizationsOrganizationSlugPaymentsGet) | **GET** /organizations/{organizationSlug}/payments | Obtenir les informations des paiements effectués sur une organisation
-[**organizationsOrganizationSlugPaymentsSearchGet**](PaiementsApi.md#organizationsOrganizationSlugPaymentsSearchGet) | **GET** /organizations/{organizationSlug}/payments/search | Rechercher des paiements.
 [**paymentsPaymentIdGet**](PaiementsApi.md#paymentsPaymentIdGet) | **GET** /payments/{paymentId} | Obtenir les informations détaillées d&#39;un paiement.
 [**paymentsPaymentIdRefundPost**](PaiementsApi.md#paymentsPaymentIdRefundPost) | **POST** /payments/{paymentId}/refund | Rembourser un paiement.
 
@@ -32,7 +31,7 @@ OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new HelloAssoApi.PaiementsApi();
 let organizationSlug = "organizationSlug_example"; // String | The organization slug
 let formSlug = "formSlug_example"; // String | The form slug
-let formType = new HelloAssoApi.HelloAssoApiV5ModelsEnumsFormType(); // HelloAssoApiV5ModelsEnumsFormType | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
+let formType = new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsFormType(); // HelloAssoApiV5CommonModelsEnumsFormType | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
 let opts = {
   'from': new Date("2013-10-20T19:20:30+01:00"), // Date | First Date Filter
   'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter (exclusive)
@@ -40,9 +39,9 @@ let opts = {
   'pageIndex': 1, // Number | The page of results to retrieve
   'pageSize': 20, // Number | The number of items per page
   'continuationToken': "continuationToken_example", // String | Continuation Token from which we wish to retrieve results
-  'states': [new HelloAssoApi.HelloAssoApiV5ModelsEnumsPaymentState()], // [HelloAssoApiV5ModelsEnumsPaymentState] | Filter results by states of payments  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.              Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
-  'sortOrder': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortOrder(), // HelloAssoApiV5ModelsEnumsSortOrder | Sort payments by ascending or descending order. Default is descending
-  'sortField': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortField(), // HelloAssoApiV5ModelsEnumsSortField | Sort payments by a specific field (Date or UpdateDate). Default is date
+  'states': [new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsPaymentState()], // [HelloAssoApiV5CommonModelsEnumsPaymentState] | Filter results by states of payments  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.             Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
+  'sortOrder': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortOrder(), // HelloAssoApiV5CommonModelsEnumsSortOrder | Sort payments by ascending or descending order. Default is descending
+  'sortField': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortField(), // HelloAssoApiV5CommonModelsEnumsSortField | Sort payments by a specific field (Date or UpdateDate). Default is date
   'withCount': false // Boolean | Whether the pagination should include totalCount and totalPages.
 };
 apiInstance.organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet(organizationSlug, formSlug, formType, opts, (error, data, response) => {
@@ -61,16 +60,16 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationSlug** | **String**| The organization slug | 
  **formSlug** | **String**| The form slug | 
- **formType** | [**HelloAssoApiV5ModelsEnumsFormType**](.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | 
+ **formType** | [**HelloAssoApiV5CommonModelsEnumsFormType**](.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | 
  **from** | **Date**| First Date Filter | [optional] 
  **to** | **Date**| End Date Filter (exclusive) | [optional] 
  **userSearchKey** | **String**| Filter results on user or payer first name, last name or email | [optional] 
  **pageIndex** | **Number**| The page of results to retrieve | [optional] [default to 1]
  **pageSize** | **Number**| The number of items per page | [optional] [default to 20]
  **continuationToken** | **String**| Continuation Token from which we wish to retrieve results | [optional] 
- **states** | [**[HelloAssoApiV5ModelsEnumsPaymentState]**](HelloAssoApiV5ModelsEnumsPaymentState.md)| Filter results by states of payments  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor | [optional] 
- **sortOrder** | [**HelloAssoApiV5ModelsEnumsSortOrder**](.md)| Sort payments by ascending or descending order. Default is descending | [optional] 
- **sortField** | [**HelloAssoApiV5ModelsEnumsSortField**](.md)| Sort payments by a specific field (Date or UpdateDate). Default is date | [optional] 
+ **states** | [**[HelloAssoApiV5CommonModelsEnumsPaymentState]**](HelloAssoApiV5CommonModelsEnumsPaymentState.md)| Filter results by states of payments  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.             Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor | [optional] 
+ **sortOrder** | [**HelloAssoApiV5CommonModelsEnumsSortOrder**](.md)| Sort payments by ascending or descending order. Default is descending | [optional] 
+ **sortField** | [**HelloAssoApiV5CommonModelsEnumsSortField**](.md)| Sort payments by a specific field (Date or UpdateDate). Default is date | [optional] 
  **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false]
 
 ### Return type
@@ -113,9 +112,9 @@ let opts = {
   'pageIndex': 1, // Number | The page of results to retrieve
   'pageSize': 20, // Number | The number of items per page
   'continuationToken': "continuationToken_example", // String | Continuation Token from which we wish to retrieve results
-  'states': [new HelloAssoApi.HelloAssoApiV5ModelsEnumsPaymentState()], // [HelloAssoApiV5ModelsEnumsPaymentState] | The payment states  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.              Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
-  'sortOrder': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortOrder(), // HelloAssoApiV5ModelsEnumsSortOrder | Sort payments by ascending or descending order. Default is descending
-  'sortField': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortField(), // HelloAssoApiV5ModelsEnumsSortField | Sort payments by a specific field (Date or UpdateDate). Default is date
+  'states': [new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsPaymentState()], // [HelloAssoApiV5CommonModelsEnumsPaymentState] | The payment states  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.             Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
+  'sortOrder': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortOrder(), // HelloAssoApiV5CommonModelsEnumsSortOrder | Sort payments by ascending or descending order. Default is descending
+  'sortField': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortField(), // HelloAssoApiV5CommonModelsEnumsSortField | Sort payments by a specific field (Date or UpdateDate). Default is date
   'withCount': false // Boolean | Whether the pagination should include totalCount and totalPages.
 };
 apiInstance.organizationsOrganizationSlugPaymentsGet(organizationSlug, opts, (error, data, response) => {
@@ -139,9 +138,9 @@ Name | Type | Description  | Notes
  **pageIndex** | **Number**| The page of results to retrieve | [optional] [default to 1]
  **pageSize** | **Number**| The number of items per page | [optional] [default to 20]
  **continuationToken** | **String**| Continuation Token from which we wish to retrieve results | [optional] 
- **states** | [**[HelloAssoApiV5ModelsEnumsPaymentState]**](HelloAssoApiV5ModelsEnumsPaymentState.md)| The payment states  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor | [optional] 
- **sortOrder** | [**HelloAssoApiV5ModelsEnumsSortOrder**](.md)| Sort payments by ascending or descending order. Default is descending | [optional] 
- **sortField** | [**HelloAssoApiV5ModelsEnumsSortField**](.md)| Sort payments by a specific field (Date or UpdateDate). Default is date | [optional] 
+ **states** | [**[HelloAssoApiV5CommonModelsEnumsPaymentState]**](HelloAssoApiV5CommonModelsEnumsPaymentState.md)| The payment states  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.             Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor | [optional] 
+ **sortOrder** | [**HelloAssoApiV5CommonModelsEnumsSortOrder**](.md)| Sort payments by ascending or descending order. Default is descending | [optional] 
+ **sortField** | [**HelloAssoApiV5CommonModelsEnumsSortField**](.md)| Sort payments by a specific field (Date or UpdateDate). Default is date | [optional] 
  **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false]
 
 ### Return type
@@ -158,84 +157,9 @@ null (empty response body)
 - **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, text/csv
 
 
-## organizationsOrganizationSlugPaymentsSearchGet
-
-> ResultsWithPaginationModelPublicPaymentModel organizationsOrganizationSlugPaymentsSearchGet(organizationSlug, opts)
-
-Rechercher des paiements.
-
-&lt;p&gt;Attention : Le compte total est désactivé, nous retournons la liste des paiements et le continuationToken. &lt;/p&gt;&lt;p&gt;Recherchez des paiements basés sur de nombreux critères La recherche doit utiliser au moins l&#39;un des paramètres suivants : &lt;/p&gt;&lt;ul&gt;&lt;li&gt;ID de l&#39;organisation : paiements effectués pour cette organisation &lt;/li&gt;&lt;li&gt;Formulaire : Paiements effectués par ce formulaire en utilisant le couple ID du formulaire et type du formulaire &lt;/li&gt;&lt;li&gt;ID de l&#39;utilisateur : Paiements effectués par cet utilisateur &lt;/li&gt;&lt;li&gt;États : Une liste d&#39;états de paiement à filtrer. (si vide, tous les paiements seront retournés)&lt;/li&gt;&lt;li&gt;Plage de dates : En utilisant du et/ou au &lt;/li&gt;&lt;li&gt;Requête de recherche : Une liste de mots qui doivent être contenus soit sur les noms des payeurs ou des utilisateurs ou l&#39;email &lt;/li&gt;&lt;li&gt;Montant du paiement : En centimes, qui doit exactement correspondre au montant des paiements (avec ou sans la contribution) &lt;/li&gt;&lt;/ul&gt;&lt;p&gt;L&#39;ordre des résultats est également personnalisable : &lt;/p&gt;&lt;ul&gt;&lt;li&gt;Le champ de tri peut être la date, la date de mise à jour ou la date de création &lt;/li&gt;&lt;li&gt;L&#39;ordre peut être ascendant ou descendant&lt;br&gt;&lt;br&gt;&lt;b&gt;Votre token doit avoir l&#39;un de ces rôles : &lt;/b&gt;&lt;br&gt;OrganizationAdmin&lt;br&gt;&lt;br&gt;Si vous êtes une &lt;b&gt;association&lt;/b&gt;, vous pouvez obtenir ces rôles avec votre client.&lt;br&gt;Si vous êtes un &lt;b&gt;partenaire&lt;/b&gt;, vous pouvez obtenir ces rôles par le flux d&#39;autorisation.&lt;br&gt;&lt;br&gt;&lt;b&gt;Votre clientId doit être autorisé à tous ces privilèges : &lt;/b&gt; &lt;br&gt; AccessTransactions&lt;br&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;
-
-### Example
-
-```javascript
-import HelloAssoApi from 'hello_asso_api';
-let defaultClient = HelloAssoApi.ApiClient.instance;
-// Configure OAuth2 access token for authorization: OAuth2
-let OAuth2 = defaultClient.authentications['OAuth2'];
-OAuth2.accessToken = 'YOUR ACCESS TOKEN';
-
-let apiInstance = new HelloAssoApi.PaiementsApi();
-let organizationSlug = "organizationSlug_example"; // String | The organization slug
-let opts = {
-  'from': new Date("2013-10-20T19:20:30+01:00"), // Date | First Date Filter
-  'to': new Date("2013-10-20T19:20:30+01:00"), // Date | End Date Filter (exclusive)
-  'pageSize': 20, // Number | The number of items to retrieve
-  'continuationToken': "continuationToken_example", // String | Continuation Token from which we wish to retrieve results
-  'formTypes': [new HelloAssoApi.HelloAssoApiV5ModelsEnumsFormType()], // [HelloAssoApiV5ModelsEnumsFormType] | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
-  'formType': new HelloAssoApi.HelloAssoApiV5ModelsEnumsFormType(), // HelloAssoApiV5ModelsEnumsFormType | The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop. This parameter must be used with the parameter formId.
-  'states': [new HelloAssoApi.HelloAssoApiV5ModelsEnumsPaymentState()], // [HelloAssoApiV5ModelsEnumsPaymentState] | Filter results by states of payments  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.              Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
-  'userId': 56, // Number | The User identifier
-  'searchKey': "searchKey_example", // String | Filter results on user or payer first name, last name or email.
-  'amount': 56, // Number | Amount of the payment in cents. Filter payments with exact amount with or without the contribution.
-  'sortOrder': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortOrder(), // HelloAssoApiV5ModelsEnumsSortOrder | Sort payments by ascending or descending order. Default is descending
-  'sortField': new HelloAssoApi.HelloAssoApiV5ModelsEnumsSortField() // HelloAssoApiV5ModelsEnumsSortField | Sort payments by a specific field (Date or UpdateDate). Default is date
-};
-apiInstance.organizationsOrganizationSlugPaymentsSearchGet(organizationSlug, opts, (error, data, response) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-});
-```
-
-### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **organizationSlug** | **String**| The organization slug | 
- **from** | **Date**| First Date Filter | [optional] 
- **to** | **Date**| End Date Filter (exclusive) | [optional] 
- **pageSize** | **Number**| The number of items to retrieve | [optional] [default to 20]
- **continuationToken** | **String**| Continuation Token from which we wish to retrieve results | [optional] 
- **formTypes** | [**[HelloAssoApiV5ModelsEnumsFormType]**](HelloAssoApiV5ModelsEnumsFormType.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | [optional] 
- **formType** | [**HelloAssoApiV5ModelsEnumsFormType**](.md)| The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop. This parameter must be used with the parameter formId. | [optional] 
- **states** | [**[HelloAssoApiV5ModelsEnumsPaymentState]**](HelloAssoApiV5ModelsEnumsPaymentState.md)| Filter results by states of payments  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.              Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor | [optional] 
- **userId** | **Number**| The User identifier | [optional] 
- **searchKey** | **String**| Filter results on user or payer first name, last name or email. | [optional] 
- **amount** | **Number**| Amount of the payment in cents. Filter payments with exact amount with or without the contribution. | [optional] 
- **sortOrder** | [**HelloAssoApiV5ModelsEnumsSortOrder**](.md)| Sort payments by ascending or descending order. Default is descending | [optional] 
- **sortField** | [**HelloAssoApiV5ModelsEnumsSortField**](.md)| Sort payments by a specific field (Date or UpdateDate). Default is date | [optional] 
-
-### Return type
-
-[**ResultsWithPaginationModelPublicPaymentModel**](ResultsWithPaginationModelPublicPaymentModel.md)
-
-### Authorization
-
-[OAuth2](../README.md#OAuth2)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
-
-
 ## paymentsPaymentIdGet
 
-> HelloAssoApiV5ModelsStatisticsPaymentDetail paymentsPaymentIdGet(paymentId, opts)
+> HelloAssoApiV5CommonModelsStatisticsPaymentDetail paymentsPaymentIdGet(paymentId, opts)
 
 Obtenir les informations détaillées d&#39;un paiement.
 
@@ -274,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HelloAssoApiV5ModelsStatisticsPaymentDetail**](HelloAssoApiV5ModelsStatisticsPaymentDetail.md)
+[**HelloAssoApiV5CommonModelsStatisticsPaymentDetail**](HelloAssoApiV5CommonModelsStatisticsPaymentDetail.md)
 
 ### Authorization
 
@@ -288,7 +212,7 @@ Name | Type | Description  | Notes
 
 ## paymentsPaymentIdRefundPost
 
-> HelloAssoApiV5ModelsPaymentRefundOperationModel paymentsPaymentIdRefundPost(paymentId, opts)
+> HelloAssoApiV5CommonModelsPaymentRefundOperationModel paymentsPaymentIdRefundPost(paymentId, opts)
 
 Rembourser un paiement.
 
@@ -333,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HelloAssoApiV5ModelsPaymentRefundOperationModel**](HelloAssoApiV5ModelsPaymentRefundOperationModel.md)
+[**HelloAssoApiV5CommonModelsPaymentRefundOperationModel**](HelloAssoApiV5CommonModelsPaymentRefundOperationModel.md)
 
 ### Authorization
 

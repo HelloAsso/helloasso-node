@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import HelloAssoApiV5ModelsCommonPaginationModel from './HelloAssoApiV5ModelsCommonPaginationModel';
-import HelloAssoApiV5ModelsStatisticsOrder from './HelloAssoApiV5ModelsStatisticsOrder';
+import HelloAssoApiV5CommonModelsCommonPaginationModel from './HelloAssoApiV5CommonModelsCommonPaginationModel';
+import HelloAssoApiV5CommonModelsStatisticsOrder from './HelloAssoApiV5CommonModelsStatisticsOrder';
 
 /**
  * The ResultsWithPaginationModelOrder model module.
@@ -51,10 +51,10 @@ class ResultsWithPaginationModelOrder {
             obj = obj || new ResultsWithPaginationModelOrder();
 
             if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [HelloAssoApiV5ModelsStatisticsOrder]);
+                obj['data'] = ApiClient.convertToType(data['data'], [HelloAssoApiV5CommonModelsStatisticsOrder]);
             }
             if (data.hasOwnProperty('pagination')) {
-                obj['pagination'] = HelloAssoApiV5ModelsCommonPaginationModel.constructFromObject(data['pagination']);
+                obj['pagination'] = HelloAssoApiV5CommonModelsCommonPaginationModel.constructFromObject(data['pagination']);
             }
         }
         return obj;
@@ -73,12 +73,12 @@ class ResultsWithPaginationModelOrder {
             }
             // validate the optional field `data` (array)
             for (const item of data['data']) {
-                HelloAssoApiV5ModelsStatisticsOrder.validateJSON(item);
+                HelloAssoApiV5CommonModelsStatisticsOrder.validateJSON(item);
             };
         }
         // validate the optional field `pagination`
         if (data['pagination']) { // data not null
-          HelloAssoApiV5ModelsCommonPaginationModel.validateJSON(data['pagination']);
+          HelloAssoApiV5CommonModelsCommonPaginationModel.validateJSON(data['pagination']);
         }
 
         return true;
@@ -91,12 +91,12 @@ class ResultsWithPaginationModelOrder {
 
 /**
  * Data property
- * @member {Array.<module:model/HelloAssoApiV5ModelsStatisticsOrder>} data
+ * @member {Array.<module:model/HelloAssoApiV5CommonModelsStatisticsOrder>} data
  */
 ResultsWithPaginationModelOrder.prototype['data'] = undefined;
 
 /**
- * @member {module:model/HelloAssoApiV5ModelsCommonPaginationModel} pagination
+ * @member {module:model/HelloAssoApiV5CommonModelsCommonPaginationModel} pagination
  */
 ResultsWithPaginationModelOrder.prototype['pagination'] = undefined;
 

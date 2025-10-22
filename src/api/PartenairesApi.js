@@ -13,11 +13,11 @@
 
 
 import ApiClient from "../ApiClient";
-import HelloAssoApiV5ModelsAccountsClientsPublicPutApiClientRequest from '../model/HelloAssoApiV5ModelsAccountsClientsPublicPutApiClientRequest';
-import HelloAssoApiV5ModelsApiNotificationsApiNotificationType from '../model/HelloAssoApiV5ModelsApiNotificationsApiNotificationType';
-import HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel from '../model/HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel';
-import HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody from '../model/HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody';
-import HelloAssoApiV5ModelsPartnersPartnerPublicModel from '../model/HelloAssoApiV5ModelsPartnersPartnerPublicModel';
+import HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest from '../model/HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest';
+import HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType from '../model/HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType';
+import HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel from '../model/HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel';
+import HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody from '../model/HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody';
+import HelloAssoApiV5CommonModelsPartnersPartnerPublicModel from '../model/HelloAssoApiV5CommonModelsPartnersPartnerPublicModel';
 import ResultsWithPaginationModelPartnerOrganizationModel from '../model/ResultsWithPaginationModelPartnerOrganizationModel';
 
 /**
@@ -51,12 +51,12 @@ export default class PartenairesApi {
      * Mise à jour du domaine
      * <br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelloAssoApiV5ModelsAccountsClientsPublicPutApiClientRequest} [helloAssoApiV5ModelsAccountsClientsPublicPutApiClientRequest] 
+     * @param {module:model/HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest} [helloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest] 
      * @param {module:api/PartenairesApi~partnersMeApiClientsPutCallback} callback The callback function, accepting three arguments: error, data, response
      */
     partnersMeApiClientsPut(opts, callback) {
       opts = opts || {};
-      let postBody = opts['helloAssoApiV5ModelsAccountsClientsPublicPutApiClientRequest'];
+      let postBody = opts['helloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest'];
 
       let pathParams = {
       };
@@ -90,7 +90,7 @@ export default class PartenairesApi {
      * Suppression de l'URL de notification principale
      * <br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelloAssoApiV5ModelsApiNotificationsApiNotificationType} [notificationType] Do not specify a notification type to remove the main notification Url
+     * @param {module:model/HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType} [notificationType] Do not specify a notification type to remove the main notification Url
      * @param {module:api/PartenairesApi~partnersMeApiNotificationsDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      */
     partnersMeApiNotificationsDelete(opts, callback) {
@@ -131,7 +131,7 @@ export default class PartenairesApi {
      * <br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {String} organizationSlug 
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelloAssoApiV5ModelsApiNotificationsApiNotificationType} [notificationType] Do not specify a notification type to remove the main notification Url
+     * @param {module:model/HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType} [notificationType] Do not specify a notification type to remove the main notification Url
      * @param {module:api/PartenairesApi~partnersMeApiNotificationsOrganizationsOrganizationSlugDeleteCallback} callback The callback function, accepting three arguments: error, data, response
      */
     partnersMeApiNotificationsOrganizationsOrganizationSlugDelete(organizationSlug, opts, callback) {
@@ -168,7 +168,7 @@ export default class PartenairesApi {
      * Callback function to receive the result of the partnersMeApiNotificationsOrganizationsOrganizationSlugPut operation.
      * @callback module:api/PartenairesApi~partnersMeApiNotificationsOrganizationsOrganizationSlugPutCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel} data The data returned by the service call.
+     * @param {module:model/HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -177,13 +177,13 @@ export default class PartenairesApi {
      * <br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {String} organizationSlug 
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody} [helloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody] The body of the request, do not specify a notification type to update the main notification Url
+     * @param {module:model/HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody} [helloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody] The body of the request, do not specify a notification type to update the main notification Url
      * @param {module:api/PartenairesApi~partnersMeApiNotificationsOrganizationsOrganizationSlugPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel}
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel}
      */
     partnersMeApiNotificationsOrganizationsOrganizationSlugPut(organizationSlug, opts, callback) {
       opts = opts || {};
-      let postBody = opts['helloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody'];
+      let postBody = opts['helloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody'];
       // verify the required parameter 'organizationSlug' is set
       if (organizationSlug === undefined || organizationSlug === null) {
         throw new Error("Missing the required parameter 'organizationSlug' when calling partnersMeApiNotificationsOrganizationsOrganizationSlugPut");
@@ -202,7 +202,7 @@ export default class PartenairesApi {
       let authNames = ['OAuth2'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel;
+      let returnType = HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel;
       return this.apiClient.callApi(
         '/partners/me/api-notifications/organizations/{organizationSlug}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -214,7 +214,7 @@ export default class PartenairesApi {
      * Callback function to receive the result of the partnersMeApiNotificationsPut operation.
      * @callback module:api/PartenairesApi~partnersMeApiNotificationsPutCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel} data The data returned by the service call.
+     * @param {module:model/HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -222,13 +222,13 @@ export default class PartenairesApi {
      * Mise à jour de l'URL de notification principale
      * <br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {Object} opts Optional parameters
-     * @param {module:model/HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody} [helloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody] The body of the request, do not specify a notification type to update the main notification Url
+     * @param {module:model/HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody} [helloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody] The body of the request, do not specify a notification type to update the main notification Url
      * @param {module:api/PartenairesApi~partnersMeApiNotificationsPutCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel}
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel}
      */
     partnersMeApiNotificationsPut(opts, callback) {
       opts = opts || {};
-      let postBody = opts['helloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody'];
+      let postBody = opts['helloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody'];
 
       let pathParams = {
       };
@@ -242,7 +242,7 @@ export default class PartenairesApi {
       let authNames = ['OAuth2'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel;
+      let returnType = HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel;
       return this.apiClient.callApi(
         '/partners/me/api-notifications', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -254,7 +254,7 @@ export default class PartenairesApi {
      * Callback function to receive the result of the partnersMeGet operation.
      * @callback module:api/PartenairesApi~partnersMeGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5ModelsPartnersPartnerPublicModel} data The data returned by the service call.
+     * @param {module:model/HelloAssoApiV5CommonModelsPartnersPartnerPublicModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -262,7 +262,7 @@ export default class PartenairesApi {
      * Récupération des informations
      * <br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {module:api/PartenairesApi~partnersMeGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5ModelsPartnersPartnerPublicModel}
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsPartnersPartnerPublicModel}
      */
     partnersMeGet(callback) {
       let postBody = null;
@@ -279,7 +279,7 @@ export default class PartenairesApi {
       let authNames = ['OAuth2'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5ModelsPartnersPartnerPublicModel;
+      let returnType = HelloAssoApiV5CommonModelsPartnersPartnerPublicModel;
       return this.apiClient.callApi(
         '/partners/me', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

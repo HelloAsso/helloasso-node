@@ -13,14 +13,13 @@
 
 
 import ApiClient from "../ApiClient";
-import HelloAssoApiV5ModelsEnumsFormType from '../model/HelloAssoApiV5ModelsEnumsFormType';
-import HelloAssoApiV5ModelsEnumsPaymentState from '../model/HelloAssoApiV5ModelsEnumsPaymentState';
-import HelloAssoApiV5ModelsEnumsSortField from '../model/HelloAssoApiV5ModelsEnumsSortField';
-import HelloAssoApiV5ModelsEnumsSortOrder from '../model/HelloAssoApiV5ModelsEnumsSortOrder';
-import HelloAssoApiV5ModelsPaymentRefundOperationModel from '../model/HelloAssoApiV5ModelsPaymentRefundOperationModel';
-import HelloAssoApiV5ModelsStatisticsPaymentDetail from '../model/HelloAssoApiV5ModelsStatisticsPaymentDetail';
+import HelloAssoApiV5CommonModelsEnumsFormType from '../model/HelloAssoApiV5CommonModelsEnumsFormType';
+import HelloAssoApiV5CommonModelsEnumsPaymentState from '../model/HelloAssoApiV5CommonModelsEnumsPaymentState';
+import HelloAssoApiV5CommonModelsEnumsSortField from '../model/HelloAssoApiV5CommonModelsEnumsSortField';
+import HelloAssoApiV5CommonModelsEnumsSortOrder from '../model/HelloAssoApiV5CommonModelsEnumsSortOrder';
+import HelloAssoApiV5CommonModelsPaymentRefundOperationModel from '../model/HelloAssoApiV5CommonModelsPaymentRefundOperationModel';
+import HelloAssoApiV5CommonModelsStatisticsPaymentDetail from '../model/HelloAssoApiV5CommonModelsStatisticsPaymentDetail';
 import ResultsWithPaginationModelPayment from '../model/ResultsWithPaginationModelPayment';
-import ResultsWithPaginationModelPublicPaymentModel from '../model/ResultsWithPaginationModelPublicPaymentModel';
 
 /**
 * Paiements service.
@@ -54,7 +53,7 @@ export default class PaiementsApi {
      * <br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>FormAdmin<br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessTransactions<br/><br/>
      * @param {String} organizationSlug The organization slug
      * @param {String} formSlug The form slug
-     * @param {module:model/HelloAssoApiV5ModelsEnumsFormType} formType The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsFormType} formType The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
      * @param {Object} opts Optional parameters
      * @param {Date} [from] First Date Filter
      * @param {Date} [to] End Date Filter (exclusive)
@@ -62,9 +61,9 @@ export default class PaiementsApi {
      * @param {Number} [pageIndex = 1)] The page of results to retrieve
      * @param {Number} [pageSize = 20)] The number of items per page
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
-     * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsPaymentState>} [states] Filter results by states of payments  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.              Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
-     * @param {module:model/HelloAssoApiV5ModelsEnumsSortOrder} [sortOrder] Sort payments by ascending or descending order. Default is descending
-     * @param {module:model/HelloAssoApiV5ModelsEnumsSortField} [sortField] Sort payments by a specific field (Date or UpdateDate). Default is date
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsEnumsPaymentState>} [states] Filter results by states of payments  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.             Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortOrder} [sortOrder] Sort payments by ascending or descending order. Default is descending
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortField} [sortField] Sort payments by a specific field (Date or UpdateDate). Default is date
      * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/PaiementsApi~organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ResultsWithPaginationModelPayment}
@@ -137,9 +136,9 @@ export default class PaiementsApi {
      * @param {Number} [pageIndex = 1)] The page of results to retrieve
      * @param {Number} [pageSize = 20)] The number of items per page
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
-     * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsPaymentState>} [states] The payment states  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.              Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
-     * @param {module:model/HelloAssoApiV5ModelsEnumsSortOrder} [sortOrder] Sort payments by ascending or descending order. Default is descending
-     * @param {module:model/HelloAssoApiV5ModelsEnumsSortField} [sortField] Sort payments by a specific field (Date or UpdateDate). Default is date
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsEnumsPaymentState>} [states] The payment states  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.             Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortOrder} [sortOrder] Sort payments by ascending or descending order. Default is descending
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortField} [sortField] Sort payments by a specific field (Date or UpdateDate). Default is date
      * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/PaiementsApi~organizationsOrganizationSlugPaymentsGetCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -183,79 +182,10 @@ export default class PaiementsApi {
     }
 
     /**
-     * Callback function to receive the result of the organizationsOrganizationSlugPaymentsSearchGet operation.
-     * @callback module:api/PaiementsApi~organizationsOrganizationSlugPaymentsSearchGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/ResultsWithPaginationModelPublicPaymentModel} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Rechercher des paiements.
-     * <p>Attention : Le compte total est désactivé, nous retournons la liste des paiements et le continuationToken. </p><p>Recherchez des paiements basés sur de nombreux critères La recherche doit utiliser au moins l'un des paramètres suivants : </p><ul><li>ID de l'organisation : paiements effectués pour cette organisation </li><li>Formulaire : Paiements effectués par ce formulaire en utilisant le couple ID du formulaire et type du formulaire </li><li>ID de l'utilisateur : Paiements effectués par cet utilisateur </li><li>États : Une liste d'états de paiement à filtrer. (si vide, tous les paiements seront retournés)</li><li>Plage de dates : En utilisant du et/ou au </li><li>Requête de recherche : Une liste de mots qui doivent être contenus soit sur les noms des payeurs ou des utilisateurs ou l'email </li><li>Montant du paiement : En centimes, qui doit exactement correspondre au montant des paiements (avec ou sans la contribution) </li></ul><p>L'ordre des résultats est également personnalisable : </p><ul><li>Le champ de tri peut être la date, la date de mise à jour ou la date de création </li><li>L'ordre peut être ascendant ou descendant<br><br><b>Votre token doit avoir l'un de ces rôles : </b><br>OrganizationAdmin<br><br>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br><br><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br> AccessTransactions<br><br></li></ul>
-     * @param {String} organizationSlug The organization slug
-     * @param {Object} opts Optional parameters
-     * @param {Date} [from] First Date Filter
-     * @param {Date} [to] End Date Filter (exclusive)
-     * @param {Number} [pageSize = 20)] The number of items to retrieve
-     * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
-     * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsFormType>} [formTypes] The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
-     * @param {module:model/HelloAssoApiV5ModelsEnumsFormType} [formType] The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop. This parameter must be used with the parameter formId.
-     * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsPaymentState>} [states] Filter results by states of payments  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.              Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
-     * @param {Number} [userId] The User identifier
-     * @param {String} [searchKey] Filter results on user or payer first name, last name or email.
-     * @param {Number} [amount] Amount of the payment in cents. Filter payments with exact amount with or without the contribution.
-     * @param {module:model/HelloAssoApiV5ModelsEnumsSortOrder} [sortOrder] Sort payments by ascending or descending order. Default is descending
-     * @param {module:model/HelloAssoApiV5ModelsEnumsSortField} [sortField] Sort payments by a specific field (Date or UpdateDate). Default is date
-     * @param {module:api/PaiementsApi~organizationsOrganizationSlugPaymentsSearchGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ResultsWithPaginationModelPublicPaymentModel}
-     */
-    organizationsOrganizationSlugPaymentsSearchGet(organizationSlug, opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-      // verify the required parameter 'organizationSlug' is set
-      if (organizationSlug === undefined || organizationSlug === null) {
-        throw new Error("Missing the required parameter 'organizationSlug' when calling organizationsOrganizationSlugPaymentsSearchGet");
-      }
-
-      let pathParams = {
-        'organizationSlug': organizationSlug
-      };
-      let queryParams = {
-        'from': opts['from'],
-        'to': opts['to'],
-        'pageSize': opts['pageSize'],
-        'continuationToken': opts['continuationToken'],
-        'formTypes': this.apiClient.buildCollectionParam(opts['formTypes'], 'multi'),
-        'formType': opts['formType'],
-        'states': this.apiClient.buildCollectionParam(opts['states'], 'multi'),
-        'userId': opts['userId'],
-        'searchKey': opts['searchKey'],
-        'amount': opts['amount'],
-        'sortOrder': opts['sortOrder'],
-        'sortField': opts['sortField']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2'];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ResultsWithPaginationModelPublicPaymentModel;
-      return this.apiClient.callApi(
-        '/organizations/{organizationSlug}/payments/search', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the paymentsPaymentIdGet operation.
      * @callback module:api/PaiementsApi~paymentsPaymentIdGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5ModelsStatisticsPaymentDetail} data The data returned by the service call.
+     * @param {module:model/HelloAssoApiV5CommonModelsStatisticsPaymentDetail} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -266,7 +196,7 @@ export default class PaiementsApi {
      * @param {Object} opts Optional parameters
      * @param {Boolean} [withFailedRefundOperation = false)] True to retrieve the refund operation in the states 'ABORTED', 'CANCELED', 'ERROR', 'REFUSED'.
      * @param {module:api/PaiementsApi~paymentsPaymentIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5ModelsStatisticsPaymentDetail}
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsStatisticsPaymentDetail}
      */
     paymentsPaymentIdGet(paymentId, opts, callback) {
       opts = opts || {};
@@ -290,7 +220,7 @@ export default class PaiementsApi {
       let authNames = ['OAuth2'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5ModelsStatisticsPaymentDetail;
+      let returnType = HelloAssoApiV5CommonModelsStatisticsPaymentDetail;
       return this.apiClient.callApi(
         '/payments/{paymentId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -302,7 +232,7 @@ export default class PaiementsApi {
      * Callback function to receive the result of the paymentsPaymentIdRefundPost operation.
      * @callback module:api/PaiementsApi~paymentsPaymentIdRefundPostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5ModelsPaymentRefundOperationModel} data The data returned by the service call.
+     * @param {module:model/HelloAssoApiV5CommonModelsPaymentRefundOperationModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -316,7 +246,7 @@ export default class PaiementsApi {
      * @param {Boolean} [sendRefundMail = true)] Whether a refund mail must be sent or not.
      * @param {Number} [amount = 0)] The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded
      * @param {module:api/PaiementsApi~paymentsPaymentIdRefundPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5ModelsPaymentRefundOperationModel}
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsPaymentRefundOperationModel}
      */
     paymentsPaymentIdRefundPost(paymentId, opts, callback) {
       opts = opts || {};
@@ -343,7 +273,7 @@ export default class PaiementsApi {
       let authNames = ['OAuth2'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5ModelsPaymentRefundOperationModel;
+      let returnType = HelloAssoApiV5CommonModelsPaymentRefundOperationModel;
       return this.apiClient.callApi(
         '/payments/{paymentId}/refund', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

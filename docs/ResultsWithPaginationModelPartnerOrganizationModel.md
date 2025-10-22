@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**[HelloAssoApiV5ModelsDirectoryPartnerOrganizationModel]**](HelloAssoApiV5ModelsDirectoryPartnerOrganizationModel.md) | Data property | [optional] 
-**pagination** | [**HelloAssoApiV5ModelsCommonPaginationModel**](HelloAssoApiV5ModelsCommonPaginationModel.md) |  | [optional] 
+**data** | [**[HelloAssoApiV5CommonModelsDirectoryPartnerOrganizationModel]**](HelloAssoApiV5CommonModelsDirectoryPartnerOrganizationModel.md) | Data property | [optional] 
+**pagination** | [**HelloAssoApiV5CommonModelsCommonPaginationModel**](HelloAssoApiV5CommonModelsCommonPaginationModel.md) |  | [optional] 
 
 

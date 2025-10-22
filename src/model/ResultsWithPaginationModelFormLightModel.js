@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import HelloAssoApiV5ModelsCommonPaginationModel from './HelloAssoApiV5ModelsCommonPaginationModel';
-import HelloAssoApiV5ModelsFormsFormLightModel from './HelloAssoApiV5ModelsFormsFormLightModel';
+import HelloAssoApiV5CommonModelsCommonPaginationModel from './HelloAssoApiV5CommonModelsCommonPaginationModel';
+import HelloAssoApiV5CommonModelsFormsFormLightModel from './HelloAssoApiV5CommonModelsFormsFormLightModel';
 
 /**
  * The ResultsWithPaginationModelFormLightModel model module.
@@ -51,10 +51,10 @@ class ResultsWithPaginationModelFormLightModel {
             obj = obj || new ResultsWithPaginationModelFormLightModel();
 
             if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [HelloAssoApiV5ModelsFormsFormLightModel]);
+                obj['data'] = ApiClient.convertToType(data['data'], [HelloAssoApiV5CommonModelsFormsFormLightModel]);
             }
             if (data.hasOwnProperty('pagination')) {
-                obj['pagination'] = HelloAssoApiV5ModelsCommonPaginationModel.constructFromObject(data['pagination']);
+                obj['pagination'] = HelloAssoApiV5CommonModelsCommonPaginationModel.constructFromObject(data['pagination']);
             }
         }
         return obj;
@@ -73,12 +73,12 @@ class ResultsWithPaginationModelFormLightModel {
             }
             // validate the optional field `data` (array)
             for (const item of data['data']) {
-                HelloAssoApiV5ModelsFormsFormLightModel.validateJSON(item);
+                HelloAssoApiV5CommonModelsFormsFormLightModel.validateJSON(item);
             };
         }
         // validate the optional field `pagination`
         if (data['pagination']) { // data not null
-          HelloAssoApiV5ModelsCommonPaginationModel.validateJSON(data['pagination']);
+          HelloAssoApiV5CommonModelsCommonPaginationModel.validateJSON(data['pagination']);
         }
 
         return true;
@@ -91,12 +91,12 @@ class ResultsWithPaginationModelFormLightModel {
 
 /**
  * Data property
- * @member {Array.<module:model/HelloAssoApiV5ModelsFormsFormLightModel>} data
+ * @member {Array.<module:model/HelloAssoApiV5CommonModelsFormsFormLightModel>} data
  */
 ResultsWithPaginationModelFormLightModel.prototype['data'] = undefined;
 
 /**
- * @member {module:model/HelloAssoApiV5ModelsCommonPaginationModel} pagination
+ * @member {module:model/HelloAssoApiV5CommonModelsCommonPaginationModel} pagination
  */
 ResultsWithPaginationModelFormLightModel.prototype['pagination'] = undefined;
 

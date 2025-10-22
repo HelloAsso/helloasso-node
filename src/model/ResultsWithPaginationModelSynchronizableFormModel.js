@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import HelloAssoApiV5ModelsCommonPaginationModel from './HelloAssoApiV5ModelsCommonPaginationModel';
-import HelloAssoApiV5ModelsDirectorySynchronizableFormModel from './HelloAssoApiV5ModelsDirectorySynchronizableFormModel';
+import HelloAssoApiV5CommonModelsCommonPaginationModel from './HelloAssoApiV5CommonModelsCommonPaginationModel';
+import HelloAssoApiV5CommonModelsDirectorySynchronizableFormModel from './HelloAssoApiV5CommonModelsDirectorySynchronizableFormModel';
 
 /**
  * The ResultsWithPaginationModelSynchronizableFormModel model module.
@@ -51,10 +51,10 @@ class ResultsWithPaginationModelSynchronizableFormModel {
             obj = obj || new ResultsWithPaginationModelSynchronizableFormModel();
 
             if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [HelloAssoApiV5ModelsDirectorySynchronizableFormModel]);
+                obj['data'] = ApiClient.convertToType(data['data'], [HelloAssoApiV5CommonModelsDirectorySynchronizableFormModel]);
             }
             if (data.hasOwnProperty('pagination')) {
-                obj['pagination'] = HelloAssoApiV5ModelsCommonPaginationModel.constructFromObject(data['pagination']);
+                obj['pagination'] = HelloAssoApiV5CommonModelsCommonPaginationModel.constructFromObject(data['pagination']);
             }
         }
         return obj;
@@ -73,12 +73,12 @@ class ResultsWithPaginationModelSynchronizableFormModel {
             }
             // validate the optional field `data` (array)
             for (const item of data['data']) {
-                HelloAssoApiV5ModelsDirectorySynchronizableFormModel.validateJSON(item);
+                HelloAssoApiV5CommonModelsDirectorySynchronizableFormModel.validateJSON(item);
             };
         }
         // validate the optional field `pagination`
         if (data['pagination']) { // data not null
-          HelloAssoApiV5ModelsCommonPaginationModel.validateJSON(data['pagination']);
+          HelloAssoApiV5CommonModelsCommonPaginationModel.validateJSON(data['pagination']);
         }
 
         return true;
@@ -91,12 +91,12 @@ class ResultsWithPaginationModelSynchronizableFormModel {
 
 /**
  * Data property
- * @member {Array.<module:model/HelloAssoApiV5ModelsDirectorySynchronizableFormModel>} data
+ * @member {Array.<module:model/HelloAssoApiV5CommonModelsDirectorySynchronizableFormModel>} data
  */
 ResultsWithPaginationModelSynchronizableFormModel.prototype['data'] = undefined;
 
 /**
- * @member {module:model/HelloAssoApiV5ModelsCommonPaginationModel} pagination
+ * @member {module:model/HelloAssoApiV5CommonModelsCommonPaginationModel} pagination
  */
 ResultsWithPaginationModelSynchronizableFormModel.prototype['pagination'] = undefined;
 

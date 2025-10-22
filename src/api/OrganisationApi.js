@@ -13,11 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import HelloAssoApiV5ModelsOrganizationLegalInformationsOrganizationLegalStructuresModel from '../model/HelloAssoApiV5ModelsOrganizationLegalInformationsOrganizationLegalStructuresModel';
-import HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody from '../model/HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody';
-import HelloAssoApiV5ModelsOrganizationOrganizationModel from '../model/HelloAssoApiV5ModelsOrganizationOrganizationModel';
-import HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationLegalInformationConfiguration from '../model/HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationLegalInformationConfiguration';
-import HelloAssoModelsAccountsOrganizationLegalInformationsTaxInformationText from '../model/HelloAssoModelsAccountsOrganizationLegalInformationsTaxInformationText';
+import HelloAssoApiV5CommonModelsOrganizationOrganizationModel from '../model/HelloAssoApiV5CommonModelsOrganizationOrganizationModel';
 
 /**
 * Organisation service.
@@ -39,176 +35,10 @@ export default class OrganisationApi {
 
 
     /**
-     * Callback function to receive the result of the organizationsLegalInformationsLegalStructuresGet operation.
-     * @callback module:api/OrganisationApi~organizationsLegalInformationsLegalStructuresGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/HelloAssoApiV5ModelsOrganizationLegalInformationsOrganizationLegalStructuresModel>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Obtenir la structure juridique d'une organisation visible.
-     * <br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> OrganizationAdministration<br/><br/>
-     * @param {module:api/OrganisationApi~organizationsLegalInformationsLegalStructuresGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/HelloAssoApiV5ModelsOrganizationLegalInformationsOrganizationLegalStructuresModel>}
-     */
-    organizationsLegalInformationsLegalStructuresGet(callback) {
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2'];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [HelloAssoApiV5ModelsOrganizationLegalInformationsOrganizationLegalStructuresModel];
-      return this.apiClient.callApi(
-        '/organizations/legal-informations/legal-structures', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the organizationsLegalInformationsOrganizationSlugConfigurationGet operation.
-     * @callback module:api/OrganisationApi~organizationsLegalInformationsOrganizationSlugConfigurationGetCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationLegalInformationConfiguration} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Obtenir la configuration des informations juridiques de l'organisation.
-     * <br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> OrganizationAdministration<br/><br/>
-     * @param {String} organizationSlug 
-     * @param {module:api/OrganisationApi~organizationsLegalInformationsOrganizationSlugConfigurationGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationLegalInformationConfiguration}
-     */
-    organizationsLegalInformationsOrganizationSlugConfigurationGet(organizationSlug, callback) {
-      let postBody = null;
-      // verify the required parameter 'organizationSlug' is set
-      if (organizationSlug === undefined || organizationSlug === null) {
-        throw new Error("Missing the required parameter 'organizationSlug' when calling organizationsLegalInformationsOrganizationSlugConfigurationGet");
-      }
-
-      let pathParams = {
-        'organizationSlug': organizationSlug
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2'];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoModelsAccountsOrganizationLegalInformationsOrganizationLegalInformationConfiguration;
-      return this.apiClient.callApi(
-        '/organizations/legal-informations/{organizationSlug}/configuration', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the organizationsLegalInformationsOrganizationSlugConfigurationPut operation.
-     * @callback module:api/OrganisationApi~organizationsLegalInformationsOrganizationSlugConfigurationPutCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Mettre à jour la configuration des informations juridiques de l'organisation.
-     * <br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> OrganizationAdministration<br/><br/>
-     * @param {String} organizationSlug 
-     * @param {Object} opts Optional parameters
-     * @param {module:model/HelloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody} [helloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody] 
-     * @param {module:api/OrganisationApi~organizationsLegalInformationsOrganizationSlugConfigurationPutCallback} callback The callback function, accepting three arguments: error, data, response
-     */
-    organizationsLegalInformationsOrganizationSlugConfigurationPut(organizationSlug, opts, callback) {
-      opts = opts || {};
-      let postBody = opts['helloAssoApiV5ModelsOrganizationLegalInformationsUpdateOrganizationLegalInformationConfigurationBody'];
-      // verify the required parameter 'organizationSlug' is set
-      if (organizationSlug === undefined || organizationSlug === null) {
-        throw new Error("Missing the required parameter 'organizationSlug' when calling organizationsLegalInformationsOrganizationSlugConfigurationPut");
-      }
-
-      let pathParams = {
-        'organizationSlug': organizationSlug
-      };
-      let queryParams = {
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2'];
-      let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
-      let accepts = [];
-      let returnType = null;
-      return this.apiClient.callApi(
-        '/organizations/legal-informations/{organizationSlug}/configuration', 'PUT',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the organizationsLegalInformationsTaxInformationTextsGet operation.
-     * @callback module:api/OrganisationApi~organizationsLegalInformationsTaxInformationTextsGetCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/HelloAssoModelsAccountsOrganizationLegalInformationsTaxInformationText>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * Obtenir les textes d'information fiscale de l'organisation.
-     * <br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> OrganizationAdministration<br/><br/>
-     * @param {Object} opts Optional parameters
-     * @param {String} [organizationSlug] 
-     * @param {module:api/OrganisationApi~organizationsLegalInformationsTaxInformationTextsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/HelloAssoModelsAccountsOrganizationLegalInformationsTaxInformationText>}
-     */
-    organizationsLegalInformationsTaxInformationTextsGet(opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'organizationSlug': opts['organizationSlug']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = ['OAuth2'];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [HelloAssoModelsAccountsOrganizationLegalInformationsTaxInformationText];
-      return this.apiClient.callApi(
-        '/organizations/legal-informations/tax-information-texts', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the organizationsOrganizationSlugGet operation.
      * @callback module:api/OrganisationApi~organizationsOrganizationSlugGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5ModelsOrganizationOrganizationModel} data The data returned by the service call.
+     * @param {module:model/HelloAssoApiV5CommonModelsOrganizationOrganizationModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -217,7 +47,7 @@ export default class OrganisationApi {
      * Obtenir les informations publiques de l'organisation spécifiée.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {String} organizationSlug The organization Slug
      * @param {module:api/OrganisationApi~organizationsOrganizationSlugGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5ModelsOrganizationOrganizationModel}
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsOrganizationOrganizationModel}
      */
     organizationsOrganizationSlugGet(organizationSlug, callback) {
       let postBody = null;
@@ -239,7 +69,7 @@ export default class OrganisationApi {
       let authNames = ['OAuth2'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5ModelsOrganizationOrganizationModel;
+      let returnType = HelloAssoApiV5CommonModelsOrganizationOrganizationModel;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

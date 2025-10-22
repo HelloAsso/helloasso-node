@@ -30,7 +30,7 @@ let apiInstance = new HelloAssoApi.AnnuaireApi();
 let opts = {
   'pageSize': 20, // Number | The number of items per page
   'continuationToken': "continuationToken_example", // String | Continuation Token from which we wish to retrieve results
-  'helloAssoApiV5ModelsDirectoryListFormsRequest': new HelloAssoApi.HelloAssoApiV5ModelsDirectoryListFormsRequest() // HelloAssoApiV5ModelsDirectoryListFormsRequest | Body which contains the filters to apply
+  'helloAssoApiV5CommonModelsDirectoryListFormsRequest': new HelloAssoApi.HelloAssoApiV5CommonModelsDirectoryListFormsRequest() // HelloAssoApiV5CommonModelsDirectoryListFormsRequest | Body which contains the filters to apply
 };
 apiInstance.directoryFormsPost(opts, (error, data, response) => {
   if (error) {
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageSize** | **Number**| The number of items per page | [optional] [default to 20]
  **continuationToken** | **String**| Continuation Token from which we wish to retrieve results | [optional] 
- **helloAssoApiV5ModelsDirectoryListFormsRequest** | [**HelloAssoApiV5ModelsDirectoryListFormsRequest**](HelloAssoApiV5ModelsDirectoryListFormsRequest.md)| Body which contains the filters to apply | [optional] 
+ **helloAssoApiV5CommonModelsDirectoryListFormsRequest** | [**HelloAssoApiV5CommonModelsDirectoryListFormsRequest**](HelloAssoApiV5CommonModelsDirectoryListFormsRequest.md)| Body which contains the filters to apply | [optional] 
 
 ### Return type
 
@@ -85,7 +85,7 @@ let apiInstance = new HelloAssoApi.AnnuaireApi();
 let opts = {
   'pageSize': 20, // Number | The number of items per page
   'continuationToken': "continuationToken_example", // String | Continuation Token from which we wish to retrieve results
-  'helloAssoApiV5ModelsDirectoryListOrganizationsRequest': new HelloAssoApi.HelloAssoApiV5ModelsDirectoryListOrganizationsRequest() // HelloAssoApiV5ModelsDirectoryListOrganizationsRequest | Body which contains the filters to apply
+  'helloAssoApiV5CommonModelsDirectoryListOrganizationsRequest': new HelloAssoApi.HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest() // HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest | Body which contains the filters to apply
 };
 apiInstance.directoryOrganizationsPost(opts, (error, data, response) => {
   if (error) {
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pageSize** | **Number**| The number of items per page | [optional] [default to 20]
  **continuationToken** | **String**| Continuation Token from which we wish to retrieve results | [optional] 
- **helloAssoApiV5ModelsDirectoryListOrganizationsRequest** | [**HelloAssoApiV5ModelsDirectoryListOrganizationsRequest**](HelloAssoApiV5ModelsDirectoryListOrganizationsRequest.md)| Body which contains the filters to apply | [optional] 
+ **helloAssoApiV5CommonModelsDirectoryListOrganizationsRequest** | [**HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest**](HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest.md)| Body which contains the filters to apply | [optional] 
 
 ### Return type
 

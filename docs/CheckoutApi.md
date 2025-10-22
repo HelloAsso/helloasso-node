@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## organizationsOrganizationSlugCheckoutIntentsCheckoutIntentIdGet
 
-> HelloAssoApiV5ModelsCartsCheckoutIntentResponse organizationsOrganizationSlugCheckoutIntentsCheckoutIntentIdGet(organizationSlug, checkoutIntentId, opts)
+> HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse organizationsOrganizationSlugCheckoutIntentsCheckoutIntentIdGet(organizationSlug, checkoutIntentId, opts)
 
 Récupérer une intention de paiement
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HelloAssoApiV5ModelsCartsCheckoutIntentResponse**](HelloAssoApiV5ModelsCartsCheckoutIntentResponse.md)
+[**HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse**](HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ## organizationsOrganizationSlugCheckoutIntentsPost
 
-> HelloAssoApiV5ModelsCartsInitCheckoutResponse organizationsOrganizationSlugCheckoutIntentsPost(organizationSlug, opts)
+> HelloAssoApiV5CommonModelsCartsInitCheckoutResponse organizationsOrganizationSlugCheckoutIntentsPost(organizationSlug, opts)
 
 Initialisation d&#39;un Checkout
 
@@ -84,7 +84,7 @@ OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new HelloAssoApi.CheckoutApi();
 let organizationSlug = "organizationSlug_example"; // String | 
 let opts = {
-  'helloAssoApiV5ModelsCartsInitCheckoutBody': new HelloAssoApi.HelloAssoApiV5ModelsCartsInitCheckoutBody() // HelloAssoApiV5ModelsCartsInitCheckoutBody | 
+  'helloAssoApiV5CommonModelsCartsInitCheckoutBody': new HelloAssoApi.HelloAssoApiV5CommonModelsCartsInitCheckoutBody() // HelloAssoApiV5CommonModelsCartsInitCheckoutBody | 
 };
 apiInstance.organizationsOrganizationSlugCheckoutIntentsPost(organizationSlug, opts, (error, data, response) => {
   if (error) {
@@ -101,11 +101,11 @@ apiInstance.organizationsOrganizationSlugCheckoutIntentsPost(organizationSlug, o
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationSlug** | **String**|  | 
- **helloAssoApiV5ModelsCartsInitCheckoutBody** | [**HelloAssoApiV5ModelsCartsInitCheckoutBody**](HelloAssoApiV5ModelsCartsInitCheckoutBody.md)|  | [optional] 
+ **helloAssoApiV5CommonModelsCartsInitCheckoutBody** | [**HelloAssoApiV5CommonModelsCartsInitCheckoutBody**](HelloAssoApiV5CommonModelsCartsInitCheckoutBody.md)|  | [optional] 
 
 ### Return type
 
-[**HelloAssoApiV5ModelsCartsInitCheckoutResponse**](HelloAssoApiV5ModelsCartsInitCheckoutResponse.md)
+[**HelloAssoApiV5CommonModelsCartsInitCheckoutResponse**](HelloAssoApiV5CommonModelsCartsInitCheckoutResponse.md)
 
 ### Authorization
 

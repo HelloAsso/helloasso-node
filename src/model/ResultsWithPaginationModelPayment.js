@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import HelloAssoApiV5ModelsCommonPaginationModel from './HelloAssoApiV5ModelsCommonPaginationModel';
-import HelloAssoApiV5ModelsStatisticsPayment from './HelloAssoApiV5ModelsStatisticsPayment';
+import HelloAssoApiV5CommonModelsCommonPaginationModel from './HelloAssoApiV5CommonModelsCommonPaginationModel';
+import HelloAssoApiV5CommonModelsStatisticsPayment from './HelloAssoApiV5CommonModelsStatisticsPayment';
 
 /**
  * The ResultsWithPaginationModelPayment model module.
@@ -51,10 +51,10 @@ class ResultsWithPaginationModelPayment {
             obj = obj || new ResultsWithPaginationModelPayment();
 
             if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [HelloAssoApiV5ModelsStatisticsPayment]);
+                obj['data'] = ApiClient.convertToType(data['data'], [HelloAssoApiV5CommonModelsStatisticsPayment]);
             }
             if (data.hasOwnProperty('pagination')) {
-                obj['pagination'] = HelloAssoApiV5ModelsCommonPaginationModel.constructFromObject(data['pagination']);
+                obj['pagination'] = HelloAssoApiV5CommonModelsCommonPaginationModel.constructFromObject(data['pagination']);
             }
         }
         return obj;
@@ -73,12 +73,12 @@ class ResultsWithPaginationModelPayment {
             }
             // validate the optional field `data` (array)
             for (const item of data['data']) {
-                HelloAssoApiV5ModelsStatisticsPayment.validateJSON(item);
+                HelloAssoApiV5CommonModelsStatisticsPayment.validateJSON(item);
             };
         }
         // validate the optional field `pagination`
         if (data['pagination']) { // data not null
-          HelloAssoApiV5ModelsCommonPaginationModel.validateJSON(data['pagination']);
+          HelloAssoApiV5CommonModelsCommonPaginationModel.validateJSON(data['pagination']);
         }
 
         return true;
@@ -91,12 +91,12 @@ class ResultsWithPaginationModelPayment {
 
 /**
  * Data property
- * @member {Array.<module:model/HelloAssoApiV5ModelsStatisticsPayment>} data
+ * @member {Array.<module:model/HelloAssoApiV5CommonModelsStatisticsPayment>} data
  */
 ResultsWithPaginationModelPayment.prototype['data'] = undefined;
 
 /**
- * @member {module:model/HelloAssoApiV5ModelsCommonPaginationModel} pagination
+ * @member {module:model/HelloAssoApiV5CommonModelsCommonPaginationModel} pagination
  */
 ResultsWithPaginationModelPayment.prototype['pagination'] = undefined;
 

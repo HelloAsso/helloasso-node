@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## organizationsOrganizationSlugFormTypesGet
 
-> [HelloAssoApiV5ModelsEnumsFormType] organizationsOrganizationSlugFormTypesGet(organizationSlug, opts)
+> [HelloAssoApiV5CommonModelsEnumsFormType] organizationsOrganizationSlugFormTypesGet(organizationSlug, opts)
 
 Obtenir une liste des types de formulaires pour une organisation
 
@@ -31,7 +31,7 @@ OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new HelloAssoApi.FormulairesApi();
 let organizationSlug = "organizationSlug_example"; // String | The organization Slug
 let opts = {
-  'states': [new HelloAssoApi.HelloAssoApiV5ModelsEnumsFormState()] // [HelloAssoApiV5ModelsEnumsFormState] | List of Form States to filter with. If none specified, it won't filter results.  Available values: * `Public` - The form is publicly visible and findable on search engines * `Private` - The form is visible only with the URL, you cannot find it on search engines * `Draft` - The form is not yet published but visible if you have admin rights * `Disabled` - The form is disabled and can be reenabled by changing state to public or private
+  'states': [new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsFormState()] // [HelloAssoApiV5CommonModelsEnumsFormState] | List of Form States to filter with. If none specified, it won't filter results.  Available values: * `Public` - The form is publicly visible and findable on search engines * `Private` - The form is visible only with the URL, you cannot find it on search engines * `Draft` - The form is not yet published but visible if you have admin rights * `Disabled` - The form is disabled and can be reenabled by changing state to public or private
 };
 apiInstance.organizationsOrganizationSlugFormTypesGet(organizationSlug, opts, (error, data, response) => {
   if (error) {
@@ -48,11 +48,11 @@ apiInstance.organizationsOrganizationSlugFormTypesGet(organizationSlug, opts, (e
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationSlug** | **String**| The organization Slug | 
- **states** | [**[HelloAssoApiV5ModelsEnumsFormState]**](HelloAssoApiV5ModelsEnumsFormState.md)| List of Form States to filter with. If none specified, it won&#39;t filter results.  Available values: * &#x60;Public&#x60; - The form is publicly visible and findable on search engines * &#x60;Private&#x60; - The form is visible only with the URL, you cannot find it on search engines * &#x60;Draft&#x60; - The form is not yet published but visible if you have admin rights * &#x60;Disabled&#x60; - The form is disabled and can be reenabled by changing state to public or private | [optional] 
+ **states** | [**[HelloAssoApiV5CommonModelsEnumsFormState]**](HelloAssoApiV5CommonModelsEnumsFormState.md)| List of Form States to filter with. If none specified, it won&#39;t filter results.  Available values: * &#x60;Public&#x60; - The form is publicly visible and findable on search engines * &#x60;Private&#x60; - The form is visible only with the URL, you cannot find it on search engines * &#x60;Draft&#x60; - The form is not yet published but visible if you have admin rights * &#x60;Disabled&#x60; - The form is disabled and can be reenabled by changing state to public or private | [optional] 
 
 ### Return type
 
-[**[HelloAssoApiV5ModelsEnumsFormType]**](HelloAssoApiV5ModelsEnumsFormType.md)
+[**[HelloAssoApiV5CommonModelsEnumsFormType]**](HelloAssoApiV5CommonModelsEnumsFormType.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ## organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost
 
-> HelloAssoApiV5ModelsFormsFormQuickCreateModel organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost(organizationSlug, formType, opts)
+> HelloAssoApiV5CommonModelsFormsFormQuickCreateModel organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost(organizationSlug, formType, opts)
 
 Créer un événement simplifié pour un organisme
 
@@ -83,9 +83,9 @@ OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new HelloAssoApi.FormulairesApi();
 let organizationSlug = "organizationSlug_example"; // String | The organization Slug
-let formType = new HelloAssoApi.HelloAssoApiV5ModelsEnumsFormType(); // HelloAssoApiV5ModelsEnumsFormType | The form type to create - only Event type is supported
+let formType = new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsFormType(); // HelloAssoApiV5CommonModelsEnumsFormType | The form type to create - only Event type is supported
 let opts = {
-  'helloAssoApiV5ModelsFormsFormQuickCreateRequest': new HelloAssoApi.HelloAssoApiV5ModelsFormsFormQuickCreateRequest() // HelloAssoApiV5ModelsFormsFormQuickCreateRequest | The body of the request.
+  'helloAssoApiV5CommonModelsFormsFormQuickCreateRequest': new HelloAssoApi.HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest() // HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest | The body of the request.
 };
 apiInstance.organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost(organizationSlug, formType, opts, (error, data, response) => {
   if (error) {
@@ -102,12 +102,12 @@ apiInstance.organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost(orga
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationSlug** | **String**| The organization Slug | 
- **formType** | [**HelloAssoApiV5ModelsEnumsFormType**](.md)| The form type to create - only Event type is supported | 
- **helloAssoApiV5ModelsFormsFormQuickCreateRequest** | [**HelloAssoApiV5ModelsFormsFormQuickCreateRequest**](HelloAssoApiV5ModelsFormsFormQuickCreateRequest.md)| The body of the request. | [optional] 
+ **formType** | [**HelloAssoApiV5CommonModelsEnumsFormType**](.md)| The form type to create - only Event type is supported | 
+ **helloAssoApiV5CommonModelsFormsFormQuickCreateRequest** | [**HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest**](HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest.md)| The body of the request. | [optional] 
 
 ### Return type
 
-[**HelloAssoApiV5ModelsFormsFormQuickCreateModel**](HelloAssoApiV5ModelsFormsFormQuickCreateModel.md)
+[**HelloAssoApiV5CommonModelsFormsFormQuickCreateModel**](HelloAssoApiV5CommonModelsFormsFormQuickCreateModel.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ## organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet
 
-> HelloAssoApiV5ModelsFormsFormPublicModel organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet(organizationSlug, formType, formSlug)
+> HelloAssoApiV5CommonModelsFormsFormPublicModel organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet(organizationSlug, formType, formSlug)
 
 Obtenir des données publiques détaillées sur un formulaire
 
@@ -138,7 +138,7 @@ OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new HelloAssoApi.FormulairesApi();
 let organizationSlug = "organizationSlug_example"; // String | 
-let formType = new HelloAssoApi.HelloAssoApiV5ModelsEnumsFormType(); // HelloAssoApiV5ModelsEnumsFormType | 
+let formType = new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsFormType(); // HelloAssoApiV5CommonModelsEnumsFormType | 
 let formSlug = "formSlug_example"; // String | 
 apiInstance.organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet(organizationSlug, formType, formSlug, (error, data, response) => {
   if (error) {
@@ -155,12 +155,12 @@ apiInstance.organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet(organiza
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationSlug** | **String**|  | 
- **formType** | [**HelloAssoApiV5ModelsEnumsFormType**](.md)|  | 
+ **formType** | [**HelloAssoApiV5CommonModelsEnumsFormType**](.md)|  | 
  **formSlug** | **String**|  | 
 
 ### Return type
 
-[**HelloAssoApiV5ModelsFormsFormPublicModel**](HelloAssoApiV5ModelsFormsFormPublicModel.md)
+[**HelloAssoApiV5CommonModelsFormsFormPublicModel**](HelloAssoApiV5CommonModelsFormsFormPublicModel.md)
 
 ### Authorization
 
@@ -192,8 +192,8 @@ OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new HelloAssoApi.FormulairesApi();
 let organizationSlug = "organizationSlug_example"; // String | The organization Slug
 let opts = {
-  'states': [new HelloAssoApi.HelloAssoApiV5ModelsEnumsFormState()], // [HelloAssoApiV5ModelsEnumsFormState] | States to filter  Available values: * `Public` - The form is publicly visible and findable on search engines * `Private` - The form is visible only with the URL, you cannot find it on search engines * `Draft` - The form is not yet published but visible if you have admin rights * `Disabled` - The form is disabled and can be reenabled by changing state to public or private
-  'formTypes': [new HelloAssoApi.HelloAssoApiV5ModelsEnumsFormType()], // [HelloAssoApiV5ModelsEnumsFormType] | Types to filter
+  'states': [new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsFormState()], // [HelloAssoApiV5CommonModelsEnumsFormState] | States to filter  Available values: * `Public` - The form is publicly visible and findable on search engines * `Private` - The form is visible only with the URL, you cannot find it on search engines * `Draft` - The form is not yet published but visible if you have admin rights * `Disabled` - The form is disabled and can be reenabled by changing state to public or private
+  'formTypes': [new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsFormType()], // [HelloAssoApiV5CommonModelsEnumsFormType] | Types to filter
   'pageIndex': 1, // Number | The page of results to retrieve
   'pageSize': 20, // Number | The number of items per page
   'continuationToken': "continuationToken_example" // String | Continuation Token from which we wish to retrieve results
@@ -213,8 +213,8 @@ apiInstance.organizationsOrganizationSlugFormsGet(organizationSlug, opts, (error
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationSlug** | **String**| The organization Slug | 
- **states** | [**[HelloAssoApiV5ModelsEnumsFormState]**](HelloAssoApiV5ModelsEnumsFormState.md)| States to filter  Available values: * &#x60;Public&#x60; - The form is publicly visible and findable on search engines * &#x60;Private&#x60; - The form is visible only with the URL, you cannot find it on search engines * &#x60;Draft&#x60; - The form is not yet published but visible if you have admin rights * &#x60;Disabled&#x60; - The form is disabled and can be reenabled by changing state to public or private | [optional] 
- **formTypes** | [**[HelloAssoApiV5ModelsEnumsFormType]**](HelloAssoApiV5ModelsEnumsFormType.md)| Types to filter | [optional] 
+ **states** | [**[HelloAssoApiV5CommonModelsEnumsFormState]**](HelloAssoApiV5CommonModelsEnumsFormState.md)| States to filter  Available values: * &#x60;Public&#x60; - The form is publicly visible and findable on search engines * &#x60;Private&#x60; - The form is visible only with the URL, you cannot find it on search engines * &#x60;Draft&#x60; - The form is not yet published but visible if you have admin rights * &#x60;Disabled&#x60; - The form is disabled and can be reenabled by changing state to public or private | [optional] 
+ **formTypes** | [**[HelloAssoApiV5CommonModelsEnumsFormType]**](HelloAssoApiV5CommonModelsEnumsFormType.md)| Types to filter | [optional] 
  **pageIndex** | **Number**| The page of results to retrieve | [optional] [default to 1]
  **pageSize** | **Number**| The number of items per page | [optional] [default to 20]
  **continuationToken** | **String**| Continuation Token from which we wish to retrieve results | [optional] 

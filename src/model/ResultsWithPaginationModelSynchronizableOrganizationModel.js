@@ -12,8 +12,8 @@
  */
 
 import ApiClient from '../ApiClient';
-import HelloAssoApiV5ModelsCommonPaginationModel from './HelloAssoApiV5ModelsCommonPaginationModel';
-import HelloAssoApiV5ModelsDirectorySynchronizableOrganizationModel from './HelloAssoApiV5ModelsDirectorySynchronizableOrganizationModel';
+import HelloAssoApiV5CommonModelsCommonPaginationModel from './HelloAssoApiV5CommonModelsCommonPaginationModel';
+import HelloAssoApiV5CommonModelsDirectorySynchronizableOrganizationModel from './HelloAssoApiV5CommonModelsDirectorySynchronizableOrganizationModel';
 
 /**
  * The ResultsWithPaginationModelSynchronizableOrganizationModel model module.
@@ -51,10 +51,10 @@ class ResultsWithPaginationModelSynchronizableOrganizationModel {
             obj = obj || new ResultsWithPaginationModelSynchronizableOrganizationModel();
 
             if (data.hasOwnProperty('data')) {
-                obj['data'] = ApiClient.convertToType(data['data'], [HelloAssoApiV5ModelsDirectorySynchronizableOrganizationModel]);
+                obj['data'] = ApiClient.convertToType(data['data'], [HelloAssoApiV5CommonModelsDirectorySynchronizableOrganizationModel]);
             }
             if (data.hasOwnProperty('pagination')) {
-                obj['pagination'] = HelloAssoApiV5ModelsCommonPaginationModel.constructFromObject(data['pagination']);
+                obj['pagination'] = HelloAssoApiV5CommonModelsCommonPaginationModel.constructFromObject(data['pagination']);
             }
         }
         return obj;
@@ -73,12 +73,12 @@ class ResultsWithPaginationModelSynchronizableOrganizationModel {
             }
             // validate the optional field `data` (array)
             for (const item of data['data']) {
-                HelloAssoApiV5ModelsDirectorySynchronizableOrganizationModel.validateJSON(item);
+                HelloAssoApiV5CommonModelsDirectorySynchronizableOrganizationModel.validateJSON(item);
             };
         }
         // validate the optional field `pagination`
         if (data['pagination']) { // data not null
-          HelloAssoApiV5ModelsCommonPaginationModel.validateJSON(data['pagination']);
+          HelloAssoApiV5CommonModelsCommonPaginationModel.validateJSON(data['pagination']);
         }
 
         return true;
@@ -91,12 +91,12 @@ class ResultsWithPaginationModelSynchronizableOrganizationModel {
 
 /**
  * Data property
- * @member {Array.<module:model/HelloAssoApiV5ModelsDirectorySynchronizableOrganizationModel>} data
+ * @member {Array.<module:model/HelloAssoApiV5CommonModelsDirectorySynchronizableOrganizationModel>} data
  */
 ResultsWithPaginationModelSynchronizableOrganizationModel.prototype['data'] = undefined;
 
 /**
- * @member {module:model/HelloAssoApiV5ModelsCommonPaginationModel} pagination
+ * @member {module:model/HelloAssoApiV5CommonModelsCommonPaginationModel} pagination
  */
 ResultsWithPaginationModelSynchronizableOrganizationModel.prototype['pagination'] = undefined;
 

@@ -13,13 +13,13 @@
 
 
 import ApiClient from "../ApiClient";
-import HelloAssoApiV5ModelsEnumsFormType from '../model/HelloAssoApiV5ModelsEnumsFormType';
-import HelloAssoApiV5ModelsEnumsItemState from '../model/HelloAssoApiV5ModelsEnumsItemState';
-import HelloAssoApiV5ModelsEnumsSortField from '../model/HelloAssoApiV5ModelsEnumsSortField';
-import HelloAssoApiV5ModelsEnumsSortOrder from '../model/HelloAssoApiV5ModelsEnumsSortOrder';
-import HelloAssoApiV5ModelsEnumsTierType from '../model/HelloAssoApiV5ModelsEnumsTierType';
-import HelloAssoApiV5ModelsStatisticsItemDetail from '../model/HelloAssoApiV5ModelsStatisticsItemDetail';
-import HelloAssoApiV5ModelsStatisticsOrderDetail from '../model/HelloAssoApiV5ModelsStatisticsOrderDetail';
+import HelloAssoApiV5CommonModelsEnumsFormType from '../model/HelloAssoApiV5CommonModelsEnumsFormType';
+import HelloAssoApiV5CommonModelsEnumsItemState from '../model/HelloAssoApiV5CommonModelsEnumsItemState';
+import HelloAssoApiV5CommonModelsEnumsSortField from '../model/HelloAssoApiV5CommonModelsEnumsSortField';
+import HelloAssoApiV5CommonModelsEnumsSortOrder from '../model/HelloAssoApiV5CommonModelsEnumsSortOrder';
+import HelloAssoApiV5CommonModelsEnumsTierType from '../model/HelloAssoApiV5CommonModelsEnumsTierType';
+import HelloAssoApiV5CommonModelsStatisticsItemDetail from '../model/HelloAssoApiV5CommonModelsStatisticsItemDetail';
+import HelloAssoApiV5CommonModelsStatisticsOrderDetail from '../model/HelloAssoApiV5CommonModelsStatisticsOrderDetail';
 import ResultsWithPaginationModelOrder from '../model/ResultsWithPaginationModelOrder';
 
 /**
@@ -45,7 +45,7 @@ export default class CommandesApi {
      * Callback function to receive the result of the itemsItemIdGet operation.
      * @callback module:api/CommandesApi~itemsItemIdGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5ModelsStatisticsItemDetail} data The data returned by the service call.
+     * @param {module:model/HelloAssoApiV5CommonModelsStatisticsItemDetail} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -56,7 +56,7 @@ export default class CommandesApi {
      * @param {Object} opts Optional parameters
      * @param {Boolean} [withDetails = false)] Set to true to return CustomFields and Options
      * @param {module:api/CommandesApi~itemsItemIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5ModelsStatisticsItemDetail}
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsStatisticsItemDetail}
      */
     itemsItemIdGet(itemId, opts, callback) {
       opts = opts || {};
@@ -80,7 +80,7 @@ export default class CommandesApi {
       let authNames = ['OAuth2'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5ModelsStatisticsItemDetail;
+      let returnType = HelloAssoApiV5CommonModelsStatisticsItemDetail;
       return this.apiClient.callApi(
         '/items/{itemId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -134,7 +134,7 @@ export default class CommandesApi {
      * Callback function to receive the result of the ordersOrderIdGet operation.
      * @callback module:api/CommandesApi~ordersOrderIdGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5ModelsStatisticsOrderDetail} data The data returned by the service call.
+     * @param {module:model/HelloAssoApiV5CommonModelsStatisticsOrderDetail} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -143,7 +143,7 @@ export default class CommandesApi {
      * <br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>FormAdmin<br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessTransactions<br/><br/>
      * @param {Number} orderId 
      * @param {module:api/CommandesApi~ordersOrderIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5ModelsStatisticsOrderDetail}
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsStatisticsOrderDetail}
      */
     ordersOrderIdGet(orderId, callback) {
       let postBody = null;
@@ -165,7 +165,7 @@ export default class CommandesApi {
       let authNames = ['OAuth2'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5ModelsStatisticsOrderDetail;
+      let returnType = HelloAssoApiV5CommonModelsStatisticsOrderDetail;
       return this.apiClient.callApi(
         '/orders/{orderId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -186,7 +186,7 @@ export default class CommandesApi {
      * <br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>FormAdmin<br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessTransactions<br/><br/>
      * @param {String} organizationSlug The organization slug
      * @param {String} formSlug The form slug
-     * @param {module:model/HelloAssoApiV5ModelsEnumsFormType} formType The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsFormType} formType The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
      * @param {Object} opts Optional parameters
      * @param {Date} [from] First Date Filter
      * @param {Date} [to] End Date Filter (exclusive)
@@ -194,12 +194,12 @@ export default class CommandesApi {
      * @param {Number} [pageIndex = 1)] The page of results to retrieve
      * @param {Number} [pageSize = 20)] The number of items per page
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
-     * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsTierType>} [tierTypes] The type of tiers
-     * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsItemState>} [itemStates] The item states  Available values: * `Processed` - The item is paid and is valid * `Registered` - The item has been registered manually by the organization and is valid * `Unknown` * `Canceled` - The item has been canceled, and is no longer valid
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsEnumsTierType>} [tierTypes] The type of tiers
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsEnumsItemState>} [itemStates] The item states  Available values: * `Processed` - The item is paid and is valid * `Registered` - The item has been registered manually by the organization and is valid * `Unknown` * `Canceled` - The item has been canceled, and is no longer valid
      * @param {String} [tierName] The name of a tier
      * @param {Boolean} [withDetails = false)] Set to true to return CustomFields and Options
-     * @param {module:model/HelloAssoApiV5ModelsEnumsSortOrder} [sortOrder] Sort forms items by ascending or descending order. Default is descending
-     * @param {module:model/HelloAssoApiV5ModelsEnumsSortField} [sortField] Sort forms items by a specific field (Date or UpdateDate). Default is date
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortOrder} [sortOrder] Sort forms items by ascending or descending order. Default is descending
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortField} [sortField] Sort forms items by a specific field (Date or UpdateDate). Default is date
      * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/CommandesApi~organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -268,7 +268,7 @@ export default class CommandesApi {
      * <br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>FormAdmin<br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessTransactions<br/><br/>
      * @param {String} organizationSlug The organization slug
      * @param {String} formSlug The form slug
-     * @param {module:model/HelloAssoApiV5ModelsEnumsFormType} formType The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsFormType} formType The form type CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
      * @param {Object} opts Optional parameters
      * @param {Date} [from] First Date Filter
      * @param {Date} [to] End Date Filter (exclusive)
@@ -277,7 +277,7 @@ export default class CommandesApi {
      * @param {Number} [pageSize = 20)] The number of items per page
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
      * @param {Boolean} [withDetails = false)] Set to true to return CustomFields
-     * @param {module:model/HelloAssoApiV5ModelsEnumsSortOrder} [sortOrder] Sort forms orders by ascending or descending order. Default is descending
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortOrder} [sortOrder] Sort forms orders by ascending or descending order. Default is descending
      * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/CommandesApi~organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ResultsWithPaginationModelOrder}
@@ -349,12 +349,12 @@ export default class CommandesApi {
      * @param {Number} [pageIndex = 1)] The page of results to retrieve
      * @param {Number} [pageSize = 20)] The number of items per page
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
-     * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsTierType>} [tierTypes] The type of tiers Donation, Payment, Registration, Membership, MonthlyDonation, MonthlyPayment, OfflineDonation, Contribution, Bonus
-     * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsItemState>} [itemStates] The item states  Available values: * `Processed` - The item is paid and is valid * `Registered` - The item has been registered manually by the organization and is valid * `Unknown` * `Canceled` - The item has been canceled, and is no longer valid
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsEnumsTierType>} [tierTypes] The type of tiers Donation, Payment, Registration, Membership, MonthlyDonation, MonthlyPayment, OfflineDonation, Contribution, Bonus
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsEnumsItemState>} [itemStates] The item states  Available values: * `Processed` - The item is paid and is valid * `Registered` - The item has been registered manually by the organization and is valid * `Unknown` * `Canceled` - The item has been canceled, and is no longer valid
      * @param {String} [tierName] The name of a tier
      * @param {Boolean} [withDetails = false)] Set to true to return CustomFields and Options
-     * @param {module:model/HelloAssoApiV5ModelsEnumsSortOrder} [sortOrder] Sort organizations items by ascending or descending order. Default is descending
-     * @param {module:model/HelloAssoApiV5ModelsEnumsSortField} [sortField] Sort organizations items by a specific field (Date or UpdateDate). Default is date
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortOrder} [sortOrder] Sort organizations items by ascending or descending order. Default is descending
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortField} [sortField] Sort organizations items by a specific field (Date or UpdateDate). Default is date
      * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/CommandesApi~organizationsOrganizationSlugItemsGetCallback} callback The callback function, accepting three arguments: error, data, response
      */
@@ -419,9 +419,9 @@ export default class CommandesApi {
      * @param {Number} [pageIndex = 1)] The page of results to retrieve
      * @param {Number} [pageSize = 20)] The number of items per page
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
-     * @param {Array.<module:model/HelloAssoApiV5ModelsEnumsFormType>} [formTypes] The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsEnumsFormType>} [formTypes] The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
      * @param {Boolean} [withDetails = false)] Set to true to return CustomFields
-     * @param {module:model/HelloAssoApiV5ModelsEnumsSortOrder} [sortOrder] Sort organizations orders by ascending or descending order. Default is descending
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortOrder} [sortOrder] Sort organizations orders by ascending or descending order. Default is descending
      * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/CommandesApi~organizationsOrganizationSlugOrdersGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ResultsWithPaginationModelOrder}

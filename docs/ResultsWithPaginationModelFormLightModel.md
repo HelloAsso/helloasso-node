@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**[HelloAssoApiV5ModelsFormsFormLightModel]**](HelloAssoApiV5ModelsFormsFormLightModel.md) | Data property | [optional] 
-**pagination** | [**HelloAssoApiV5ModelsCommonPaginationModel**](HelloAssoApiV5ModelsCommonPaginationModel.md) |  | [optional] 
+**data** | [**[HelloAssoApiV5CommonModelsFormsFormLightModel]**](HelloAssoApiV5CommonModelsFormsFormLightModel.md) | Data property | [optional] 
+**pagination** | [**HelloAssoApiV5CommonModelsCommonPaginationModel**](HelloAssoApiV5CommonModelsCommonPaginationModel.md) |  | [optional] 
 
 

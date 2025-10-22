@@ -13,8 +13,8 @@
 
 
 import ApiClient from "../ApiClient";
-import HelloAssoApiV5ModelsDirectoryListFormsRequest from '../model/HelloAssoApiV5ModelsDirectoryListFormsRequest';
-import HelloAssoApiV5ModelsDirectoryListOrganizationsRequest from '../model/HelloAssoApiV5ModelsDirectoryListOrganizationsRequest';
+import HelloAssoApiV5CommonModelsDirectoryListFormsRequest from '../model/HelloAssoApiV5CommonModelsDirectoryListFormsRequest';
+import HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest from '../model/HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest';
 import ResultsWithPaginationModelSynchronizableFormModel from '../model/ResultsWithPaginationModelSynchronizableFormModel';
 import ResultsWithPaginationModelSynchronizableOrganizationModel from '../model/ResultsWithPaginationModelSynchronizableOrganizationModel';
 
@@ -51,13 +51,13 @@ export default class AnnuaireApi {
      * @param {Object} opts Optional parameters
      * @param {Number} [pageSize = 20)] The number of items per page
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
-     * @param {module:model/HelloAssoApiV5ModelsDirectoryListFormsRequest} [helloAssoApiV5ModelsDirectoryListFormsRequest] Body which contains the filters to apply
+     * @param {module:model/HelloAssoApiV5CommonModelsDirectoryListFormsRequest} [helloAssoApiV5CommonModelsDirectoryListFormsRequest] Body which contains the filters to apply
      * @param {module:api/AnnuaireApi~directoryFormsPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ResultsWithPaginationModelSynchronizableFormModel}
      */
     directoryFormsPost(opts, callback) {
       opts = opts || {};
-      let postBody = opts['helloAssoApiV5ModelsDirectoryListFormsRequest'];
+      let postBody = opts['helloAssoApiV5CommonModelsDirectoryListFormsRequest'];
 
       let pathParams = {
       };
@@ -95,13 +95,13 @@ export default class AnnuaireApi {
      * @param {Object} opts Optional parameters
      * @param {Number} [pageSize = 20)] The number of items per page
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
-     * @param {module:model/HelloAssoApiV5ModelsDirectoryListOrganizationsRequest} [helloAssoApiV5ModelsDirectoryListOrganizationsRequest] Body which contains the filters to apply
+     * @param {module:model/HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest} [helloAssoApiV5CommonModelsDirectoryListOrganizationsRequest] Body which contains the filters to apply
      * @param {module:api/AnnuaireApi~directoryOrganizationsPostCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ResultsWithPaginationModelSynchronizableOrganizationModel}
      */
     directoryOrganizationsPost(opts, callback) {
       opts = opts || {};
-      let postBody = opts['helloAssoApiV5ModelsDirectoryListOrganizationsRequest'];
+      let postBody = opts['helloAssoApiV5CommonModelsDirectoryListOrganizationsRequest'];
 
       let pathParams = {
       };

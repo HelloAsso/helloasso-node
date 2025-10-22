@@ -33,7 +33,7 @@ OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new HelloAssoApi.PartenairesApi();
 let opts = {
-  'helloAssoApiV5ModelsAccountsClientsPublicPutApiClientRequest': new HelloAssoApi.HelloAssoApiV5ModelsAccountsClientsPublicPutApiClientRequest() // HelloAssoApiV5ModelsAccountsClientsPublicPutApiClientRequest | 
+  'helloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest': new HelloAssoApi.HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest() // HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest | 
 };
 apiInstance.partnersMeApiClientsPut(opts, (error, data, response) => {
   if (error) {
@@ -49,7 +49,7 @@ apiInstance.partnersMeApiClientsPut(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **helloAssoApiV5ModelsAccountsClientsPublicPutApiClientRequest** | [**HelloAssoApiV5ModelsAccountsClientsPublicPutApiClientRequest**](HelloAssoApiV5ModelsAccountsClientsPublicPutApiClientRequest.md)|  | [optional] 
+ **helloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest** | [**HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest**](HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest.md)|  | [optional] 
 
 ### Return type
 
@@ -84,7 +84,7 @@ OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new HelloAssoApi.PartenairesApi();
 let opts = {
-  'notificationType': new HelloAssoApi.HelloAssoApiV5ModelsApiNotificationsApiNotificationType() // HelloAssoApiV5ModelsApiNotificationsApiNotificationType | Do not specify a notification type to remove the main notification Url
+  'notificationType': new HelloAssoApi.HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType() // HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType | Do not specify a notification type to remove the main notification Url
 };
 apiInstance.partnersMeApiNotificationsDelete(opts, (error, data, response) => {
   if (error) {
@@ -100,7 +100,7 @@ apiInstance.partnersMeApiNotificationsDelete(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **notificationType** | [**HelloAssoApiV5ModelsApiNotificationsApiNotificationType**](.md)| Do not specify a notification type to remove the main notification Url | [optional] 
+ **notificationType** | [**HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType**](.md)| Do not specify a notification type to remove the main notification Url | [optional] 
 
 ### Return type
 
@@ -136,7 +136,7 @@ OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new HelloAssoApi.PartenairesApi();
 let organizationSlug = "organizationSlug_example"; // String | 
 let opts = {
-  'notificationType': new HelloAssoApi.HelloAssoApiV5ModelsApiNotificationsApiNotificationType() // HelloAssoApiV5ModelsApiNotificationsApiNotificationType | Do not specify a notification type to remove the main notification Url
+  'notificationType': new HelloAssoApi.HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType() // HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType | Do not specify a notification type to remove the main notification Url
 };
 apiInstance.partnersMeApiNotificationsOrganizationsOrganizationSlugDelete(organizationSlug, opts, (error, data, response) => {
   if (error) {
@@ -153,7 +153,7 @@ apiInstance.partnersMeApiNotificationsOrganizationsOrganizationSlugDelete(organi
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationSlug** | **String**|  | 
- **notificationType** | [**HelloAssoApiV5ModelsApiNotificationsApiNotificationType**](.md)| Do not specify a notification type to remove the main notification Url | [optional] 
+ **notificationType** | [**HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType**](.md)| Do not specify a notification type to remove the main notification Url | [optional] 
 
 ### Return type
 
@@ -171,7 +171,7 @@ null (empty response body)
 
 ## partnersMeApiNotificationsOrganizationsOrganizationSlugPut
 
-> HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel partnersMeApiNotificationsOrganizationsOrganizationSlugPut(organizationSlug, opts)
+> HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel partnersMeApiNotificationsOrganizationsOrganizationSlugPut(organizationSlug, opts)
 
 Mise à jour d&#39;une URL de notification liée à une organisation
 
@@ -189,7 +189,7 @@ OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new HelloAssoApi.PartenairesApi();
 let organizationSlug = "organizationSlug_example"; // String | 
 let opts = {
-  'helloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody': new HelloAssoApi.HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody() // HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody | The body of the request, do not specify a notification type to update the main notification Url
+  'helloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody': new HelloAssoApi.HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody() // HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody | The body of the request, do not specify a notification type to update the main notification Url
 };
 apiInstance.partnersMeApiNotificationsOrganizationsOrganizationSlugPut(organizationSlug, opts, (error, data, response) => {
   if (error) {
@@ -206,11 +206,11 @@ apiInstance.partnersMeApiNotificationsOrganizationsOrganizationSlugPut(organizat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **organizationSlug** | **String**|  | 
- **helloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody** | [**HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody**](HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody.md)| The body of the request, do not specify a notification type to update the main notification Url | [optional] 
+ **helloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody** | [**HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody**](HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody.md)| The body of the request, do not specify a notification type to update the main notification Url | [optional] 
 
 ### Return type
 
-[**HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel**](HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel.md)
+[**HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel**](HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel.md)
 
 ### Authorization
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 ## partnersMeApiNotificationsPut
 
-> HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel partnersMeApiNotificationsPut(opts)
+> HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel partnersMeApiNotificationsPut(opts)
 
 Mise à jour de l&#39;URL de notification principale
 
@@ -241,7 +241,7 @@ OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new HelloAssoApi.PartenairesApi();
 let opts = {
-  'helloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody': new HelloAssoApi.HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody() // HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody | The body of the request, do not specify a notification type to update the main notification Url
+  'helloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody': new HelloAssoApi.HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody() // HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody | The body of the request, do not specify a notification type to update the main notification Url
 };
 apiInstance.partnersMeApiNotificationsPut(opts, (error, data, response) => {
   if (error) {
@@ -257,11 +257,11 @@ apiInstance.partnersMeApiNotificationsPut(opts, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **helloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody** | [**HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody**](HelloAssoApiV5ModelsApiNotificationsPostApiUrlNotificationBody.md)| The body of the request, do not specify a notification type to update the main notification Url | [optional] 
+ **helloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody** | [**HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody**](HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody.md)| The body of the request, do not specify a notification type to update the main notification Url | [optional] 
 
 ### Return type
 
-[**HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel**](HelloAssoApiV5ModelsApiNotificationsApiUrlNotificationModel.md)
+[**HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel**](HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 
 ## partnersMeGet
 
-> HelloAssoApiV5ModelsPartnersPartnerPublicModel partnersMeGet()
+> HelloAssoApiV5CommonModelsPartnersPartnerPublicModel partnersMeGet()
 
 Récupération des informations
 
@@ -306,7 +306,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**HelloAssoApiV5ModelsPartnersPartnerPublicModel**](HelloAssoApiV5ModelsPartnersPartnerPublicModel.md)
+[**HelloAssoApiV5CommonModelsPartnersPartnerPublicModel**](HelloAssoApiV5CommonModelsPartnersPartnerPublicModel.md)
 
 ### Authorization
 
