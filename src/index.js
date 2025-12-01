@@ -22,6 +22,7 @@ import HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel from '.
 import HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody from './model/HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody';
 import HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse from './model/HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse';
 import HelloAssoApiV5CommonModelsCartsCheckoutPayer from './model/HelloAssoApiV5CommonModelsCartsCheckoutPayer';
+import HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions from './model/HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions';
 import HelloAssoApiV5CommonModelsCartsCheckoutTerm from './model/HelloAssoApiV5CommonModelsCartsCheckoutTerm';
 import HelloAssoApiV5CommonModelsCartsInitCheckoutBody from './model/HelloAssoApiV5CommonModelsCartsInitCheckoutBody';
 import HelloAssoApiV5CommonModelsCartsInitCheckoutResponse from './model/HelloAssoApiV5CommonModelsCartsInitCheckoutResponse';
@@ -212,6 +213,12 @@ export {
      * @property {module:model/HelloAssoApiV5CommonModelsCartsCheckoutPayer}
      */
     HelloAssoApiV5CommonModelsCartsCheckoutPayer,
+
+    /**
+     * The HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions}
+     */
+    HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions,
 
     /**
      * The HelloAssoApiV5CommonModelsCartsCheckoutTerm model constructor.

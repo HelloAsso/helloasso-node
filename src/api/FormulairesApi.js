@@ -15,10 +15,7 @@
 import ApiClient from "../ApiClient";
 import HelloAssoApiV5CommonModelsEnumsFormState from '../model/HelloAssoApiV5CommonModelsEnumsFormState';
 import HelloAssoApiV5CommonModelsEnumsFormType from '../model/HelloAssoApiV5CommonModelsEnumsFormType';
-import HelloAssoApiV5CommonModelsFormsFormPublicModel from '../model/HelloAssoApiV5CommonModelsFormsFormPublicModel';
-import HelloAssoApiV5CommonModelsFormsFormQuickCreateModel from '../model/HelloAssoApiV5CommonModelsFormsFormQuickCreateModel';
 import HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest from '../model/HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest';
-import ResultsWithPaginationModelFormLightModel from '../model/ResultsWithPaginationModelFormLightModel';
 
 /**
 * Formulaires service.
@@ -43,7 +40,7 @@ export default class FormulairesApi {
      * Callback function to receive the result of the organizationsOrganizationSlugFormTypesGet operation.
      * @callback module:api/FormulairesApi~organizationsOrganizationSlugFormTypesGetCallback
      * @param {String} error Error message, if any.
-     * @param {Array.<module:model/HelloAssoApiV5CommonModelsEnumsFormType>} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -54,7 +51,6 @@ export default class FormulairesApi {
      * @param {Object} opts Optional parameters
      * @param {Array.<module:model/HelloAssoApiV5CommonModelsEnumsFormState>} [states] List of Form States to filter with. If none specified, it won't filter results.  Available values: * `Public` - The form is publicly visible and findable on search engines * `Private` - The form is visible only with the URL, you cannot find it on search engines * `Draft` - The form is not yet published but visible if you have admin rights * `Disabled` - The form is disabled and can be reenabled by changing state to public or private
      * @param {module:api/FormulairesApi~organizationsOrganizationSlugFormTypesGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/HelloAssoApiV5CommonModelsEnumsFormType>}
      */
     organizationsOrganizationSlugFormTypesGet(organizationSlug, opts, callback) {
       opts = opts || {};
@@ -77,8 +73,8 @@ export default class FormulairesApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [HelloAssoApiV5CommonModelsEnumsFormType];
+      let accepts = [];
+      let returnType = null;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/formTypes', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -90,7 +86,7 @@ export default class FormulairesApi {
      * Callback function to receive the result of the organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost operation.
      * @callback module:api/FormulairesApi~organizationsOrganizationSlugFormsFormTypeActionQuickCreatePostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5CommonModelsFormsFormQuickCreateModel} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -102,7 +98,6 @@ export default class FormulairesApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest} [helloAssoApiV5CommonModelsFormsFormQuickCreateRequest] The body of the request.
      * @param {module:api/FormulairesApi~organizationsOrganizationSlugFormsFormTypeActionQuickCreatePostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsFormsFormQuickCreateModel}
      */
     organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost(organizationSlug, formType, opts, callback) {
       opts = opts || {};
@@ -129,8 +124,8 @@ export default class FormulairesApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5CommonModelsFormsFormQuickCreateModel;
+      let accepts = [];
+      let returnType = null;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/forms/{formType}/action/quick-create', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -142,7 +137,7 @@ export default class FormulairesApi {
      * Callback function to receive the result of the organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet operation.
      * @callback module:api/FormulairesApi~organizationsOrganizationSlugFormsFormTypeFormSlugPublicGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5CommonModelsFormsFormPublicModel} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -153,7 +148,6 @@ export default class FormulairesApi {
      * @param {module:model/HelloAssoApiV5CommonModelsEnumsFormType} formType 
      * @param {String} formSlug 
      * @param {module:api/FormulairesApi~organizationsOrganizationSlugFormsFormTypeFormSlugPublicGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsFormsFormPublicModel}
      */
     organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet(organizationSlug, formType, formSlug, callback) {
       let postBody = null;
@@ -184,8 +178,8 @@ export default class FormulairesApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5CommonModelsFormsFormPublicModel;
+      let accepts = [];
+      let returnType = null;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/forms/{formType}/{formSlug}/public', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -197,7 +191,7 @@ export default class FormulairesApi {
      * Callback function to receive the result of the organizationsOrganizationSlugFormsGet operation.
      * @callback module:api/FormulairesApi~organizationsOrganizationSlugFormsGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ResultsWithPaginationModelFormLightModel} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -212,7 +206,6 @@ export default class FormulairesApi {
      * @param {Number} [pageSize = 20)] The number of items per page
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
      * @param {module:api/FormulairesApi~organizationsOrganizationSlugFormsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ResultsWithPaginationModelFormLightModel}
      */
     organizationsOrganizationSlugFormsGet(organizationSlug, opts, callback) {
       opts = opts || {};
@@ -239,8 +232,8 @@ export default class FormulairesApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ResultsWithPaginationModelFormLightModel;
+      let accepts = [];
+      let returnType = null;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/forms', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

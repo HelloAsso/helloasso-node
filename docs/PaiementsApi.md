@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet
 
-> ResultsWithPaginationModelPayment organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet(organizationSlug, formSlug, formType, opts)
+> organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet(organizationSlug, formSlug, formType, opts)
 
 Obtenir les informations des paiements effectués sur un formulaire
 
@@ -48,7 +48,7 @@ apiInstance.organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet(organi
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResultsWithPaginationModelPayment**](ResultsWithPaginationModelPayment.md)
+null (empty response body)
 
 ### Authorization
 
@@ -83,12 +83,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 
 
 ## organizationsOrganizationSlugPaymentsGet
 
-> organizationsOrganizationSlugPaymentsGet(organizationSlug, opts)
+> ResultsWithPaginationModelPayment organizationsOrganizationSlugPaymentsGet(organizationSlug, opts)
 
 Obtenir les informations des paiements effectués sur une organisation
 
@@ -121,7 +121,7 @@ apiInstance.organizationsOrganizationSlugPaymentsGet(organizationSlug, opts, (er
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ResultsWithPaginationModelPayment**](ResultsWithPaginationModelPayment.md)
 
 ### Authorization
 
@@ -154,12 +154,12 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, text/csv
+- **Accept**: text/csv
 
 
 ## paymentsPaymentIdGet
 
-> HelloAssoApiV5CommonModelsStatisticsPaymentDetail paymentsPaymentIdGet(paymentId, opts)
+> paymentsPaymentIdGet(paymentId, opts)
 
 Obtenir les informations détaillées d&#39;un paiement.
 
@@ -183,7 +183,7 @@ apiInstance.paymentsPaymentIdGet(paymentId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HelloAssoApiV5CommonModelsStatisticsPaymentDetail**](HelloAssoApiV5CommonModelsStatisticsPaymentDetail.md)
+null (empty response body)
 
 ### Authorization
 
@@ -207,12 +207,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 
 
 ## paymentsPaymentIdRefundPost
 
-> HelloAssoApiV5CommonModelsPaymentRefundOperationModel paymentsPaymentIdRefundPost(paymentId, opts)
+> paymentsPaymentIdRefundPost(paymentId, opts)
 
 Rembourser un paiement.
 
@@ -239,7 +239,7 @@ apiInstance.paymentsPaymentIdRefundPost(paymentId, opts, (error, data, response)
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -257,7 +257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HelloAssoApiV5CommonModelsPaymentRefundOperationModel**](HelloAssoApiV5CommonModelsPaymentRefundOperationModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -266,5 +266,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 

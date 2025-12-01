@@ -13,7 +13,6 @@
 
 
 import ApiClient from "../ApiClient";
-import HelloAssoApiV5CommonModelsOrganizationOrganizationModel from '../model/HelloAssoApiV5CommonModelsOrganizationOrganizationModel';
 
 /**
 * Organisation service.
@@ -38,7 +37,7 @@ export default class OrganisationApi {
      * Callback function to receive the result of the organizationsOrganizationSlugGet operation.
      * @callback module:api/OrganisationApi~organizationsOrganizationSlugGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5CommonModelsOrganizationOrganizationModel} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -47,7 +46,6 @@ export default class OrganisationApi {
      * Obtenir les informations publiques de l'organisation spécifiée.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {String} organizationSlug The organization Slug
      * @param {module:api/OrganisationApi~organizationsOrganizationSlugGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsOrganizationOrganizationModel}
      */
     organizationsOrganizationSlugGet(organizationSlug, callback) {
       let postBody = null;
@@ -68,8 +66,8 @@ export default class OrganisationApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5CommonModelsOrganizationOrganizationModel;
+      let accepts = [];
+      let returnType = null;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

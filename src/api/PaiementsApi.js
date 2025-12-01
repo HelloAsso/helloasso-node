@@ -17,8 +17,6 @@ import HelloAssoApiV5CommonModelsEnumsFormType from '../model/HelloAssoApiV5Comm
 import HelloAssoApiV5CommonModelsEnumsPaymentState from '../model/HelloAssoApiV5CommonModelsEnumsPaymentState';
 import HelloAssoApiV5CommonModelsEnumsSortField from '../model/HelloAssoApiV5CommonModelsEnumsSortField';
 import HelloAssoApiV5CommonModelsEnumsSortOrder from '../model/HelloAssoApiV5CommonModelsEnumsSortOrder';
-import HelloAssoApiV5CommonModelsPaymentRefundOperationModel from '../model/HelloAssoApiV5CommonModelsPaymentRefundOperationModel';
-import HelloAssoApiV5CommonModelsStatisticsPaymentDetail from '../model/HelloAssoApiV5CommonModelsStatisticsPaymentDetail';
 import ResultsWithPaginationModelPayment from '../model/ResultsWithPaginationModelPayment';
 
 /**
@@ -44,7 +42,7 @@ export default class PaiementsApi {
      * Callback function to receive the result of the organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet operation.
      * @callback module:api/PaiementsApi~organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ResultsWithPaginationModelPayment} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -66,7 +64,6 @@ export default class PaiementsApi {
      * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortField} [sortField] Sort payments by a specific field (Date or UpdateDate). Default is date
      * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/PaiementsApi~organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ResultsWithPaginationModelPayment}
      */
     organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet(organizationSlug, formSlug, formType, opts, callback) {
       opts = opts || {};
@@ -108,8 +105,8 @@ export default class PaiementsApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ResultsWithPaginationModelPayment;
+      let accepts = [];
+      let returnType = null;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/forms/{formType}/{formSlug}/payments', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -121,7 +118,7 @@ export default class PaiementsApi {
      * Callback function to receive the result of the organizationsOrganizationSlugPaymentsGet operation.
      * @callback module:api/PaiementsApi~organizationsOrganizationSlugPaymentsGetCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/ResultsWithPaginationModelPayment} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -141,6 +138,7 @@ export default class PaiementsApi {
      * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortField} [sortField] Sort payments by a specific field (Date or UpdateDate). Default is date
      * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/PaiementsApi~organizationsOrganizationSlugPaymentsGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ResultsWithPaginationModelPayment}
      */
     organizationsOrganizationSlugPaymentsGet(organizationSlug, opts, callback) {
       opts = opts || {};
@@ -172,8 +170,8 @@ export default class PaiementsApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = ['application/json', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'text/csv'];
-      let returnType = null;
+      let accepts = ['text/csv'];
+      let returnType = ResultsWithPaginationModelPayment;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/payments', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -185,7 +183,7 @@ export default class PaiementsApi {
      * Callback function to receive the result of the paymentsPaymentIdGet operation.
      * @callback module:api/PaiementsApi~paymentsPaymentIdGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5CommonModelsStatisticsPaymentDetail} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -196,7 +194,6 @@ export default class PaiementsApi {
      * @param {Object} opts Optional parameters
      * @param {Boolean} [withFailedRefundOperation = false)] True to retrieve the refund operation in the states 'ABORTED', 'CANCELED', 'ERROR', 'REFUSED'.
      * @param {module:api/PaiementsApi~paymentsPaymentIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsStatisticsPaymentDetail}
      */
     paymentsPaymentIdGet(paymentId, opts, callback) {
       opts = opts || {};
@@ -219,8 +216,8 @@ export default class PaiementsApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5CommonModelsStatisticsPaymentDetail;
+      let accepts = [];
+      let returnType = null;
       return this.apiClient.callApi(
         '/payments/{paymentId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -232,7 +229,7 @@ export default class PaiementsApi {
      * Callback function to receive the result of the paymentsPaymentIdRefundPost operation.
      * @callback module:api/PaiementsApi~paymentsPaymentIdRefundPostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5CommonModelsPaymentRefundOperationModel} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -246,7 +243,6 @@ export default class PaiementsApi {
      * @param {Boolean} [sendRefundMail = true)] Whether a refund mail must be sent or not.
      * @param {Number} [amount = 0)] The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded
      * @param {module:api/PaiementsApi~paymentsPaymentIdRefundPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsPaymentRefundOperationModel}
      */
     paymentsPaymentIdRefundPost(paymentId, opts, callback) {
       opts = opts || {};
@@ -272,8 +268,8 @@ export default class PaiementsApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5CommonModelsPaymentRefundOperationModel;
+      let accepts = [];
+      let returnType = null;
       return this.apiClient.callApi(
         '/payments/{paymentId}/refund', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

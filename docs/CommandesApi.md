@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## itemsItemIdGet
 
-> HelloAssoApiV5CommonModelsStatisticsItemDetail itemsItemIdGet(itemId, opts)
+> itemsItemIdGet(itemId, opts)
 
 Obtenir le détail d&#39;un article contenu dans une commande
 
@@ -40,7 +40,7 @@ apiInstance.itemsItemIdGet(itemId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HelloAssoApiV5CommonModelsStatisticsItemDetail**](HelloAssoApiV5CommonModelsStatisticsItemDetail.md)
+null (empty response body)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 
 
 ## ordersOrderIdCancelPost
@@ -118,7 +118,7 @@ null (empty response body)
 
 ## ordersOrderIdGet
 
-> HelloAssoApiV5CommonModelsStatisticsOrderDetail ordersOrderIdGet(orderId)
+> ordersOrderIdGet(orderId)
 
 Obtenir des informations détaillées sur une commande
 
@@ -139,7 +139,7 @@ apiInstance.ordersOrderIdGet(orderId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HelloAssoApiV5CommonModelsStatisticsOrderDetail**](HelloAssoApiV5CommonModelsStatisticsOrderDetail.md)
+null (empty response body)
 
 ### Authorization
 
@@ -162,12 +162,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 
 
 ## organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet
 
-> organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet(organizationSlug, formSlug, formType, opts)
+> ResultsWithPaginationModelItem organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet(organizationSlug, formSlug, formType, opts)
 
 Obtenir une liste d&#39;articles vendus dans un formulaire
 
@@ -205,7 +205,7 @@ apiInstance.organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet(organizat
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ResultsWithPaginationModelItem**](ResultsWithPaginationModelItem.md)
 
 ### Authorization
 
@@ -243,12 +243,12 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, text/csv
+- **Accept**: text/csv
 
 
 ## organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet
 
-> ResultsWithPaginationModelOrder organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet(organizationSlug, formSlug, formType, opts)
+> organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet(organizationSlug, formSlug, formType, opts)
 
 Obtenir les commandes d&#39;un formulaire
 
@@ -282,7 +282,7 @@ apiInstance.organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet(organiza
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResultsWithPaginationModelOrder**](ResultsWithPaginationModelOrder.md)
+null (empty response body)
 
 ### Authorization
 
@@ -316,12 +316,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 
 
 ## organizationsOrganizationSlugItemsGet
 
-> organizationsOrganizationSlugItemsGet(organizationSlug, opts)
+> ResultsWithPaginationModelItem organizationsOrganizationSlugItemsGet(organizationSlug, opts)
 
 Obtenir une liste d&#39;articles vendus par une organisation
 
@@ -357,7 +357,7 @@ apiInstance.organizationsOrganizationSlugItemsGet(organizationSlug, opts, (error
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -384,7 +384,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**ResultsWithPaginationModelItem**](ResultsWithPaginationModelItem.md)
 
 ### Authorization
 
@@ -393,12 +393,12 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, text/csv
+- **Accept**: text/csv
 
 
 ## organizationsOrganizationSlugOrdersGet
 
-> ResultsWithPaginationModelOrder organizationsOrganizationSlugOrdersGet(organizationSlug, opts)
+> organizationsOrganizationSlugOrdersGet(organizationSlug, opts)
 
 Obtenir les commandes d&#39;une organisation
 
@@ -431,7 +431,7 @@ apiInstance.organizationsOrganizationSlugOrdersGet(organizationSlug, opts, (erro
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -455,7 +455,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResultsWithPaginationModelOrder**](ResultsWithPaginationModelOrder.md)
+null (empty response body)
 
 ### Authorization
 
@@ -464,5 +464,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 

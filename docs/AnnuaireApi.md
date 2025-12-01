@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## directoryFormsPost
 
-> ResultsWithPaginationModelSynchronizableFormModel directoryFormsPost(opts)
+> directoryFormsPost(opts)
 
 Récupérer les formulaires
 
@@ -36,7 +36,7 @@ apiInstance.directoryFormsPost(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResultsWithPaginationModelSynchronizableFormModel**](ResultsWithPaginationModelSynchronizableFormModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -61,12 +61,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 
 
 ## directoryOrganizationsPost
 
-> ResultsWithPaginationModelSynchronizableOrganizationModel directoryOrganizationsPost(opts)
+> directoryOrganizationsPost(opts)
 
 Récupérer les organisations
 
@@ -91,7 +91,7 @@ apiInstance.directoryOrganizationsPost(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResultsWithPaginationModelSynchronizableOrganizationModel**](ResultsWithPaginationModelSynchronizableOrganizationModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -116,5 +116,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 

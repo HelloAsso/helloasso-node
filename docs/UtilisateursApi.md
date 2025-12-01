@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## usersMeOrganizationsGet
 
-> [HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel] usersMeOrganizationsGet()
+> usersMeOrganizationsGet()
 
 Obtenir mes organisations
 
@@ -30,7 +30,7 @@ apiInstance.usersMeOrganizationsGet((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel]**](HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -50,5 +50,5 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 

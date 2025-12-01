@@ -13,6 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import HelloAssoApiV5CommonModelsCartsCheckoutPayer from './HelloAssoApiV5CommonModelsCartsCheckoutPayer';
+import HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions from './HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions';
 import HelloAssoApiV5CommonModelsCartsCheckoutTerm from './HelloAssoApiV5CommonModelsCartsCheckoutTerm';
 
 /**
@@ -93,6 +94,9 @@ class HelloAssoApiV5CommonModelsCartsInitCheckoutBody {
             if (data.hasOwnProperty('metadata')) {
                 obj['metadata'] = ApiClient.convertToType(data['metadata'], Object);
             }
+            if (data.hasOwnProperty('paymentOptions')) {
+                obj['paymentOptions'] = HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions.constructFromObject(data['paymentOptions']);
+            }
         }
         return obj;
     }
@@ -138,6 +142,10 @@ class HelloAssoApiV5CommonModelsCartsInitCheckoutBody {
         // validate the optional field `payer`
         if (data['payer']) { // data not null
           HelloAssoApiV5CommonModelsCartsCheckoutPayer.validateJSON(data['payer']);
+        }
+        // validate the optional field `paymentOptions`
+        if (data['paymentOptions']) { // data not null
+          HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions.validateJSON(data['paymentOptions']);
         }
 
         return true;
@@ -206,6 +214,11 @@ HelloAssoApiV5CommonModelsCartsInitCheckoutBody.prototype['payer'] = undefined;
  * @member {Object} metadata
  */
 HelloAssoApiV5CommonModelsCartsInitCheckoutBody.prototype['metadata'] = undefined;
+
+/**
+ * @member {module:model/HelloAssoApiV5CommonModelsCartsCheckoutPaymentOptions} paymentOptions
+ */
+HelloAssoApiV5CommonModelsCartsInitCheckoutBody.prototype['paymentOptions'] = undefined;
 
 
 

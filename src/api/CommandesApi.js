@@ -18,9 +18,7 @@ import HelloAssoApiV5CommonModelsEnumsItemState from '../model/HelloAssoApiV5Com
 import HelloAssoApiV5CommonModelsEnumsSortField from '../model/HelloAssoApiV5CommonModelsEnumsSortField';
 import HelloAssoApiV5CommonModelsEnumsSortOrder from '../model/HelloAssoApiV5CommonModelsEnumsSortOrder';
 import HelloAssoApiV5CommonModelsEnumsTierType from '../model/HelloAssoApiV5CommonModelsEnumsTierType';
-import HelloAssoApiV5CommonModelsStatisticsItemDetail from '../model/HelloAssoApiV5CommonModelsStatisticsItemDetail';
-import HelloAssoApiV5CommonModelsStatisticsOrderDetail from '../model/HelloAssoApiV5CommonModelsStatisticsOrderDetail';
-import ResultsWithPaginationModelOrder from '../model/ResultsWithPaginationModelOrder';
+import ResultsWithPaginationModelItem from '../model/ResultsWithPaginationModelItem';
 
 /**
 * Commandes service.
@@ -45,7 +43,7 @@ export default class CommandesApi {
      * Callback function to receive the result of the itemsItemIdGet operation.
      * @callback module:api/CommandesApi~itemsItemIdGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5CommonModelsStatisticsItemDetail} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -56,7 +54,6 @@ export default class CommandesApi {
      * @param {Object} opts Optional parameters
      * @param {Boolean} [withDetails = false)] Set to true to return CustomFields and Options
      * @param {module:api/CommandesApi~itemsItemIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsStatisticsItemDetail}
      */
     itemsItemIdGet(itemId, opts, callback) {
       opts = opts || {};
@@ -79,8 +76,8 @@ export default class CommandesApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5CommonModelsStatisticsItemDetail;
+      let accepts = [];
+      let returnType = null;
       return this.apiClient.callApi(
         '/items/{itemId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -134,7 +131,7 @@ export default class CommandesApi {
      * Callback function to receive the result of the ordersOrderIdGet operation.
      * @callback module:api/CommandesApi~ordersOrderIdGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5CommonModelsStatisticsOrderDetail} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -143,7 +140,6 @@ export default class CommandesApi {
      * <br/><br/><b>Votre token doit avoir l'un de ces rôles : </b><br/>FormAdmin<br/>OrganizationAdmin<br/><br/>Si vous êtes une <b>association</b>, vous pouvez obtenir ces rôles avec votre client.<br/>Si vous êtes un <b>partenaire</b>, vous pouvez obtenir ces rôles par le flux d'autorisation.<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessTransactions<br/><br/>
      * @param {Number} orderId 
      * @param {module:api/CommandesApi~ordersOrderIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsStatisticsOrderDetail}
      */
     ordersOrderIdGet(orderId, callback) {
       let postBody = null;
@@ -164,8 +160,8 @@ export default class CommandesApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5CommonModelsStatisticsOrderDetail;
+      let accepts = [];
+      let returnType = null;
       return this.apiClient.callApi(
         '/orders/{orderId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -177,7 +173,7 @@ export default class CommandesApi {
      * Callback function to receive the result of the organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet operation.
      * @callback module:api/CommandesApi~organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/ResultsWithPaginationModelItem} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -202,6 +198,7 @@ export default class CommandesApi {
      * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortField} [sortField] Sort forms items by a specific field (Date or UpdateDate). Default is date
      * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/CommandesApi~organizationsOrganizationSlugFormsFormTypeFormSlugItemsGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ResultsWithPaginationModelItem}
      */
     organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet(organizationSlug, formSlug, formType, opts, callback) {
       opts = opts || {};
@@ -246,8 +243,8 @@ export default class CommandesApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = ['application/json', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'text/csv'];
-      let returnType = null;
+      let accepts = ['text/csv'];
+      let returnType = ResultsWithPaginationModelItem;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/forms/{formType}/{formSlug}/items', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -259,7 +256,7 @@ export default class CommandesApi {
      * Callback function to receive the result of the organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet operation.
      * @callback module:api/CommandesApi~organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ResultsWithPaginationModelOrder} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -280,7 +277,6 @@ export default class CommandesApi {
      * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortOrder} [sortOrder] Sort forms orders by ascending or descending order. Default is descending
      * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/CommandesApi~organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ResultsWithPaginationModelOrder}
      */
     organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet(organizationSlug, formSlug, formType, opts, callback) {
       opts = opts || {};
@@ -321,8 +317,8 @@ export default class CommandesApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ResultsWithPaginationModelOrder;
+      let accepts = [];
+      let returnType = null;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/forms/{formType}/{formSlug}/orders', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -334,7 +330,7 @@ export default class CommandesApi {
      * Callback function to receive the result of the organizationsOrganizationSlugItemsGet operation.
      * @callback module:api/CommandesApi~organizationsOrganizationSlugItemsGetCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/ResultsWithPaginationModelItem} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -357,6 +353,7 @@ export default class CommandesApi {
      * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortField} [sortField] Sort organizations items by a specific field (Date or UpdateDate). Default is date
      * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/CommandesApi~organizationsOrganizationSlugItemsGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ResultsWithPaginationModelItem}
      */
     organizationsOrganizationSlugItemsGet(organizationSlug, opts, callback) {
       opts = opts || {};
@@ -391,8 +388,8 @@ export default class CommandesApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = ['application/json', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'text/csv'];
-      let returnType = null;
+      let accepts = ['text/csv'];
+      let returnType = ResultsWithPaginationModelItem;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/items', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -404,7 +401,7 @@ export default class CommandesApi {
      * Callback function to receive the result of the organizationsOrganizationSlugOrdersGet operation.
      * @callback module:api/CommandesApi~organizationsOrganizationSlugOrdersGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ResultsWithPaginationModelOrder} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -424,7 +421,6 @@ export default class CommandesApi {
      * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortOrder} [sortOrder] Sort organizations orders by ascending or descending order. Default is descending
      * @param {Boolean} [withCount = false)] Whether the pagination should include totalCount and totalPages.
      * @param {module:api/CommandesApi~organizationsOrganizationSlugOrdersGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ResultsWithPaginationModelOrder}
      */
     organizationsOrganizationSlugOrdersGet(organizationSlug, opts, callback) {
       opts = opts || {};
@@ -456,8 +452,8 @@ export default class CommandesApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ResultsWithPaginationModelOrder;
+      let accepts = [];
+      let returnType = null;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/orders', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

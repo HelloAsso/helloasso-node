@@ -171,7 +171,7 @@ null (empty response body)
 
 ## partnersMeApiNotificationsOrganizationsOrganizationSlugPut
 
-> HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel partnersMeApiNotificationsOrganizationsOrganizationSlugPut(organizationSlug, opts)
+> partnersMeApiNotificationsOrganizationsOrganizationSlugPut(organizationSlug, opts)
 
 Mise à jour d&#39;une URL de notification liée à une organisation
 
@@ -195,7 +195,7 @@ apiInstance.partnersMeApiNotificationsOrganizationsOrganizationSlugPut(organizat
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel**](HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -219,12 +219,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 
 
 ## partnersMeApiNotificationsPut
 
-> HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel partnersMeApiNotificationsPut(opts)
+> partnersMeApiNotificationsPut(opts)
 
 Mise à jour de l&#39;URL de notification principale
 
@@ -247,7 +247,7 @@ apiInstance.partnersMeApiNotificationsPut(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -261,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel**](HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -270,12 +270,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 
 
 ## partnersMeGet
 
-> HelloAssoApiV5CommonModelsPartnersPartnerPublicModel partnersMeGet()
+> partnersMeGet()
 
 Récupération des informations
 
@@ -295,7 +295,7 @@ apiInstance.partnersMeGet((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -306,7 +306,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**HelloAssoApiV5CommonModelsPartnersPartnerPublicModel**](HelloAssoApiV5CommonModelsPartnersPartnerPublicModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -315,12 +315,12 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 
 
 ## partnersMeOrganizationsGet
 
-> ResultsWithPaginationModelPartnerOrganizationModel partnersMeOrganizationsGet(opts)
+> partnersMeOrganizationsGet(opts)
 
 Obtenir toutes les organisations
 
@@ -344,7 +344,7 @@ apiInstance.partnersMeOrganizationsGet(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResultsWithPaginationModelPartnerOrganizationModel**](ResultsWithPaginationModelPartnerOrganizationModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -368,5 +368,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 

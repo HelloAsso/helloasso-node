@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## organizationsOrganizationSlugCashOutCashOutIdExportGet
 
-> [HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportRowModel] organizationsOrganizationSlugCashOutCashOutIdExportGet(organizationSlug, cashOutId)
+> organizationsOrganizationSlugCashOutCashOutIdExportGet(organizationSlug, cashOutId)
 
 Détails d&#39;un versement
 
@@ -32,7 +32,7 @@ apiInstance.organizationsOrganizationSlugCashOutCashOutIdExportGet(organizationS
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportRowModel]**](HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportRowModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -56,5 +56,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, text/csv
+- **Accept**: Not defined
 

@@ -13,9 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
-import HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse from '../model/HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse';
 import HelloAssoApiV5CommonModelsCartsInitCheckoutBody from '../model/HelloAssoApiV5CommonModelsCartsInitCheckoutBody';
-import HelloAssoApiV5CommonModelsCartsInitCheckoutResponse from '../model/HelloAssoApiV5CommonModelsCartsInitCheckoutResponse';
 
 /**
 * Checkout service.
@@ -40,7 +38,7 @@ export default class CheckoutApi {
      * Callback function to receive the result of the organizationsOrganizationSlugCheckoutIntentsCheckoutIntentIdGet operation.
      * @callback module:api/CheckoutApi~organizationsOrganizationSlugCheckoutIntentsCheckoutIntentIdGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -52,7 +50,6 @@ export default class CheckoutApi {
      * @param {Object} opts Optional parameters
      * @param {Boolean} [withFailedRefundOperation = false)] 
      * @param {module:api/CheckoutApi~organizationsOrganizationSlugCheckoutIntentsCheckoutIntentIdGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse}
      */
     organizationsOrganizationSlugCheckoutIntentsCheckoutIntentIdGet(organizationSlug, checkoutIntentId, opts, callback) {
       opts = opts || {};
@@ -80,8 +77,8 @@ export default class CheckoutApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse;
+      let accepts = [];
+      let returnType = null;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/checkout-intents/{checkoutIntentId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -93,7 +90,7 @@ export default class CheckoutApi {
      * Callback function to receive the result of the organizationsOrganizationSlugCheckoutIntentsPost operation.
      * @callback module:api/CheckoutApi~organizationsOrganizationSlugCheckoutIntentsPostCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/HelloAssoApiV5CommonModelsCartsInitCheckoutResponse} data The data returned by the service call.
+     * @param data This operation does not return a value.
      * @param {String} response The complete HTTP response.
      */
 
@@ -104,7 +101,6 @@ export default class CheckoutApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/HelloAssoApiV5CommonModelsCartsInitCheckoutBody} [helloAssoApiV5CommonModelsCartsInitCheckoutBody] 
      * @param {module:api/CheckoutApi~organizationsOrganizationSlugCheckoutIntentsPostCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsCartsInitCheckoutResponse}
      */
     organizationsOrganizationSlugCheckoutIntentsPost(organizationSlug, opts, callback) {
       opts = opts || {};
@@ -126,8 +122,8 @@ export default class CheckoutApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = HelloAssoApiV5CommonModelsCartsInitCheckoutResponse;
+      let accepts = [];
+      let returnType = null;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/checkout-intents', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

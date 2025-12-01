@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## organizationsOrganizationSlugFormTypesGet
 
-> [HelloAssoApiV5CommonModelsEnumsFormType] organizationsOrganizationSlugFormTypesGet(organizationSlug, opts)
+> organizationsOrganizationSlugFormTypesGet(organizationSlug, opts)
 
 Obtenir une liste des types de formulaires pour une organisation
 
@@ -37,7 +37,7 @@ apiInstance.organizationsOrganizationSlugFormTypesGet(organizationSlug, opts, (e
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[HelloAssoApiV5CommonModelsEnumsFormType]**](HelloAssoApiV5CommonModelsEnumsFormType.md)
+null (empty response body)
 
 ### Authorization
 
@@ -61,12 +61,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 
 
 ## organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost
 
-> HelloAssoApiV5CommonModelsFormsFormQuickCreateModel organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost(organizationSlug, formType, opts)
+> organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost(organizationSlug, formType, opts)
 
 Créer un événement simplifié pour un organisme
 
@@ -91,7 +91,7 @@ apiInstance.organizationsOrganizationSlugFormsFormTypeActionQuickCreatePost(orga
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HelloAssoApiV5CommonModelsFormsFormQuickCreateModel**](HelloAssoApiV5CommonModelsFormsFormQuickCreateModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -116,12 +116,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 
 
 ## organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet
 
-> HelloAssoApiV5CommonModelsFormsFormPublicModel organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet(organizationSlug, formType, formSlug)
+> organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet(organizationSlug, formType, formSlug)
 
 Obtenir des données publiques détaillées sur un formulaire
 
@@ -144,7 +144,7 @@ apiInstance.organizationsOrganizationSlugFormsFormTypeFormSlugPublicGet(organiza
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**HelloAssoApiV5CommonModelsFormsFormPublicModel**](HelloAssoApiV5CommonModelsFormsFormPublicModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -169,12 +169,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 
 
 ## organizationsOrganizationSlugFormsGet
 
-> ResultsWithPaginationModelFormLightModel organizationsOrganizationSlugFormsGet(organizationSlug, opts)
+> organizationsOrganizationSlugFormsGet(organizationSlug, opts)
 
 Obtenir les formulaires d&#39;une organisation
 
@@ -202,7 +202,7 @@ apiInstance.organizationsOrganizationSlugFormsGet(organizationSlug, opts, (error
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResultsWithPaginationModelFormLightModel**](ResultsWithPaginationModelFormLightModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -230,5 +230,5 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 

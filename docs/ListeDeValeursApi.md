@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## valuesCompanyLegalStatusGet
 
-> [HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel] valuesCompanyLegalStatusGet()
+> valuesCompanyLegalStatusGet()
 
 Obtenir la liste des statuts juridiques
 
@@ -32,7 +32,7 @@ apiInstance.valuesCompanyLegalStatusGet((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -43,7 +43,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel]**](HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -52,12 +52,12 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 
 
 ## valuesOrganizationCategoriesGet
 
-> [HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel] valuesOrganizationCategoriesGet()
+> valuesOrganizationCategoriesGet()
 
 Obtenir la liste des catégories du JO
 
@@ -77,7 +77,7 @@ apiInstance.valuesOrganizationCategoriesGet((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -88,7 +88,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel]**](HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -97,12 +97,12 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 
 
 ## valuesTagsGet
 
-> [HelloAssoApiV5CommonModelsTagsPublicTagModel] valuesTagsGet()
+> valuesTagsGet()
 
 Obtenir la liste des tags publiques
 
@@ -122,7 +122,7 @@ apiInstance.valuesTagsGet((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -133,7 +133,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[HelloAssoApiV5CommonModelsTagsPublicTagModel]**](HelloAssoApiV5CommonModelsTagsPublicTagModel.md)
+null (empty response body)
 
 ### Authorization
 
@@ -142,5 +142,5 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/plain, application/json, text/json
+- **Accept**: Not defined
 
