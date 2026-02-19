@@ -32,6 +32,13 @@ import HelloAssoApiV5CommonModelsCommonImageModel from './model/HelloAssoApiV5Co
 import HelloAssoApiV5CommonModelsCommonMetaModel from './model/HelloAssoApiV5CommonModelsCommonMetaModel';
 import HelloAssoApiV5CommonModelsCommonPaginationModel from './model/HelloAssoApiV5CommonModelsCommonPaginationModel';
 import HelloAssoApiV5CommonModelsCommonPlaceModel from './model/HelloAssoApiV5CommonModelsCommonPlaceModel';
+import HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel from './model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel';
+import HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelItem from './model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelItem';
+import HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder from './model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder';
+import HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel from './model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel';
+import HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment from './model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment';
+import HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel from './model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel';
+import HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel from './model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel';
 import HelloAssoApiV5CommonModelsCommonVideoModel from './model/HelloAssoApiV5CommonModelsCommonVideoModel';
 import HelloAssoApiV5CommonModelsComplianceV2DocumentsDocumentState from './model/HelloAssoApiV5CommonModelsComplianceV2DocumentsDocumentState';
 import HelloAssoApiV5CommonModelsDirectoryDirectoryOrganizationPublicModel from './model/HelloAssoApiV5CommonModelsDirectoryDirectoryOrganizationPublicModel';
@@ -104,13 +111,6 @@ import HelloAssoApiV5CommonModelsTagsPublicTagModel from './model/HelloAssoApiV5
 import HelloAssoApiV5ModelsPartnerStatisticsModel from './model/HelloAssoApiV5ModelsPartnerStatisticsModel';
 import HelloAssoModelsEnumsGlobalRole from './model/HelloAssoModelsEnumsGlobalRole';
 import HelloAssoModelsSharedGeoLocation from './model/HelloAssoModelsSharedGeoLocation';
-import ResultsWithPaginationModelFormLightModel from './model/ResultsWithPaginationModelFormLightModel';
-import ResultsWithPaginationModelItem from './model/ResultsWithPaginationModelItem';
-import ResultsWithPaginationModelOrder from './model/ResultsWithPaginationModelOrder';
-import ResultsWithPaginationModelPartnerOrganizationModel from './model/ResultsWithPaginationModelPartnerOrganizationModel';
-import ResultsWithPaginationModelPayment from './model/ResultsWithPaginationModelPayment';
-import ResultsWithPaginationModelSynchronizableFormModel from './model/ResultsWithPaginationModelSynchronizableFormModel';
-import ResultsWithPaginationModelSynchronizableOrganizationModel from './model/ResultsWithPaginationModelSynchronizableOrganizationModel';
 import AnnuaireApi from './api/AnnuaireApi';
 import CheckoutApi from './api/CheckoutApi';
 import CommandesApi from './api/CommandesApi';
@@ -277,6 +277,48 @@ export {
      * @property {module:model/HelloAssoApiV5CommonModelsCommonPlaceModel}
      */
     HelloAssoApiV5CommonModelsCommonPlaceModel,
+
+    /**
+     * The HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel}
+     */
+    HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel,
+
+    /**
+     * The HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelItem model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelItem}
+     */
+    HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelItem,
+
+    /**
+     * The HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder}
+     */
+    HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder,
+
+    /**
+     * The HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel}
+     */
+    HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel,
+
+    /**
+     * The HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment}
+     */
+    HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment,
+
+    /**
+     * The HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel}
+     */
+    HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel,
+
+    /**
+     * The HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel}
+     */
+    HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel,
 
     /**
      * The HelloAssoApiV5CommonModelsCommonVideoModel model constructor.
@@ -709,48 +751,6 @@ export {
      * @property {module:model/HelloAssoModelsSharedGeoLocation}
      */
     HelloAssoModelsSharedGeoLocation,
-
-    /**
-     * The ResultsWithPaginationModelFormLightModel model constructor.
-     * @property {module:model/ResultsWithPaginationModelFormLightModel}
-     */
-    ResultsWithPaginationModelFormLightModel,
-
-    /**
-     * The ResultsWithPaginationModelItem model constructor.
-     * @property {module:model/ResultsWithPaginationModelItem}
-     */
-    ResultsWithPaginationModelItem,
-
-    /**
-     * The ResultsWithPaginationModelOrder model constructor.
-     * @property {module:model/ResultsWithPaginationModelOrder}
-     */
-    ResultsWithPaginationModelOrder,
-
-    /**
-     * The ResultsWithPaginationModelPartnerOrganizationModel model constructor.
-     * @property {module:model/ResultsWithPaginationModelPartnerOrganizationModel}
-     */
-    ResultsWithPaginationModelPartnerOrganizationModel,
-
-    /**
-     * The ResultsWithPaginationModelPayment model constructor.
-     * @property {module:model/ResultsWithPaginationModelPayment}
-     */
-    ResultsWithPaginationModelPayment,
-
-    /**
-     * The ResultsWithPaginationModelSynchronizableFormModel model constructor.
-     * @property {module:model/ResultsWithPaginationModelSynchronizableFormModel}
-     */
-    ResultsWithPaginationModelSynchronizableFormModel,
-
-    /**
-     * The ResultsWithPaginationModelSynchronizableOrganizationModel model constructor.
-     * @property {module:model/ResultsWithPaginationModelSynchronizableOrganizationModel}
-     */
-    ResultsWithPaginationModelSynchronizableOrganizationModel,
 
     /**
     * The AnnuaireApi service constructor.

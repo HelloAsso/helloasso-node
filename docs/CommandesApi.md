@@ -250,7 +250,7 @@ null (empty response body)
 
 ## organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet
 
-> ResultsWithPaginationModelOrder organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet(organizationSlug, formSlug, formType, opts)
+> HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet(organizationSlug, formSlug, formType, opts)
 
 Obtenir les commandes d&#39;un formulaire
 
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResultsWithPaginationModelOrder**](ResultsWithPaginationModelOrder.md)
+[**HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder**](HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder.md)
 
 ### Authorization
 
@@ -396,7 +396,7 @@ null (empty response body)
 
 ## organizationsOrganizationSlugOrdersGet
 
-> ResultsWithPaginationModelOrder organizationsOrganizationSlugOrdersGet(organizationSlug, opts)
+> HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder organizationsOrganizationSlugOrdersGet(organizationSlug, opts)
 
 Obtenir les commandes d&#39;une organisation
 
@@ -451,7 +451,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResultsWithPaginationModelOrder**](ResultsWithPaginationModelOrder.md)
+[**HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder**](HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder.md)
 
 ### Authorization
 

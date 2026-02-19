@@ -320,7 +320,7 @@ This endpoint does not need any parameter.
 
 ## partnersMeOrganizationsGet
 
-> ResultsWithPaginationModelPartnerOrganizationModel partnersMeOrganizationsGet(opts)
+> HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel partnersMeOrganizationsGet(opts)
 
 Obtenir toutes les organisations
 
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResultsWithPaginationModelPartnerOrganizationModel**](ResultsWithPaginationModelPartnerOrganizationModel.md)
+[**HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel**](HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel.md)
 
 ### Authorization
 

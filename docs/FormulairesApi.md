@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ## organizationsOrganizationSlugFormsGet
 
-> ResultsWithPaginationModelFormLightModel organizationsOrganizationSlugFormsGet(organizationSlug, opts)
+> HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel organizationsOrganizationSlugFormsGet(organizationSlug, opts)
 
 Obtenir les formulaires d&#39;une organisation
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResultsWithPaginationModelFormLightModel**](ResultsWithPaginationModelFormLightModel.md)
+[**HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel**](HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel.md)
 
 ### Authorization
 

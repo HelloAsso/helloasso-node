@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet
 
-> ResultsWithPaginationModelPayment organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet(organizationSlug, formSlug, formType, opts)
+> HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet(organizationSlug, formSlug, formType, opts)
 
 Obtenir les informations des paiements effectués sur un formulaire
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResultsWithPaginationModelPayment**](ResultsWithPaginationModelPayment.md)
+[**HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment**](HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment.md)
 
 ### Authorization
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ## organizationsOrganizationSlugPaymentsGet
 
-> ResultsWithPaginationModelPayment organizationsOrganizationSlugPaymentsGet(organizationSlug, opts)
+> HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment organizationsOrganizationSlugPaymentsGet(organizationSlug, opts)
 
 Obtenir les informations des paiements effectués sur une organisation
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResultsWithPaginationModelPayment**](ResultsWithPaginationModelPayment.md)
+[**HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment**](HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPayment.md)
 
 ### Authorization
 

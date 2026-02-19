@@ -13,12 +13,12 @@
 
 
 import ApiClient from "../ApiClient";
+import HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel from '../model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel';
 import HelloAssoApiV5CommonModelsEnumsFormState from '../model/HelloAssoApiV5CommonModelsEnumsFormState';
 import HelloAssoApiV5CommonModelsEnumsFormType from '../model/HelloAssoApiV5CommonModelsEnumsFormType';
 import HelloAssoApiV5CommonModelsFormsFormPublicModel from '../model/HelloAssoApiV5CommonModelsFormsFormPublicModel';
 import HelloAssoApiV5CommonModelsFormsFormQuickCreateModel from '../model/HelloAssoApiV5CommonModelsFormsFormQuickCreateModel';
 import HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest from '../model/HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest';
-import ResultsWithPaginationModelFormLightModel from '../model/ResultsWithPaginationModelFormLightModel';
 
 /**
 * Formulaires service.
@@ -197,7 +197,7 @@ export default class FormulairesApi {
      * Callback function to receive the result of the organizationsOrganizationSlugFormsGet operation.
      * @callback module:api/FormulairesApi~organizationsOrganizationSlugFormsGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ResultsWithPaginationModelFormLightModel} data The data returned by the service call.
+     * @param {module:model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -212,7 +212,7 @@ export default class FormulairesApi {
      * @param {Number} [pageSize = 20)] The number of items per page
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
      * @param {module:api/FormulairesApi~organizationsOrganizationSlugFormsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ResultsWithPaginationModelFormLightModel}
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel}
      */
     organizationsOrganizationSlugFormsGet(organizationSlug, opts, callback) {
       opts = opts || {};
@@ -240,7 +240,7 @@ export default class FormulairesApi {
       let authNames = ['OAuth2'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ResultsWithPaginationModelFormLightModel;
+      let returnType = HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelFormLightModel;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/forms', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

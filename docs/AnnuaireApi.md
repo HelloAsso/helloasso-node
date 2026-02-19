@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## directoryFormsPost
 
-> ResultsWithPaginationModelSynchronizableFormModel directoryFormsPost(opts)
+> HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel directoryFormsPost(opts)
 
 Récupérer les formulaires
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResultsWithPaginationModelSynchronizableFormModel**](ResultsWithPaginationModelSynchronizableFormModel.md)
+[**HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel**](HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableFormModel.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ## directoryOrganizationsPost
 
-> ResultsWithPaginationModelSynchronizableOrganizationModel directoryOrganizationsPost(opts)
+> HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel directoryOrganizationsPost(opts)
 
 Récupérer les organisations
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResultsWithPaginationModelSynchronizableOrganizationModel**](ResultsWithPaginationModelSynchronizableOrganizationModel.md)
+[**HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel**](HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelSynchronizableOrganizationModel.md)
 
 ### Authorization
 

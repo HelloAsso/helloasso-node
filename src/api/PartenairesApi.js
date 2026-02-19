@@ -17,8 +17,8 @@ import HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest from '
 import HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType from '../model/HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType';
 import HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel from '../model/HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel';
 import HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody from '../model/HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody';
+import HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel from '../model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel';
 import HelloAssoApiV5CommonModelsPartnersPartnerPublicModel from '../model/HelloAssoApiV5CommonModelsPartnersPartnerPublicModel';
-import ResultsWithPaginationModelPartnerOrganizationModel from '../model/ResultsWithPaginationModelPartnerOrganizationModel';
 
 /**
 * Partenaires service.
@@ -291,7 +291,7 @@ export default class PartenairesApi {
      * Callback function to receive the result of the partnersMeOrganizationsGet operation.
      * @callback module:api/PartenairesApi~partnersMeOrganizationsGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ResultsWithPaginationModelPartnerOrganizationModel} data The data returned by the service call.
+     * @param {module:model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -302,7 +302,7 @@ export default class PartenairesApi {
      * @param {Number} [pageSize = 20)] The number of items per page
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
      * @param {module:api/PartenairesApi~partnersMeOrganizationsGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ResultsWithPaginationModelPartnerOrganizationModel}
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel}
      */
     partnersMeOrganizationsGet(opts, callback) {
       opts = opts || {};
@@ -322,7 +322,7 @@ export default class PartenairesApi {
       let authNames = ['OAuth2'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ResultsWithPaginationModelPartnerOrganizationModel;
+      let returnType = HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelPartnerOrganizationModel;
       return this.apiClient.callApi(
         '/partners/me/organizations', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

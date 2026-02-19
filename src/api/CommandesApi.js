@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder from '../model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder';
 import HelloAssoApiV5CommonModelsEnumsFormType from '../model/HelloAssoApiV5CommonModelsEnumsFormType';
 import HelloAssoApiV5CommonModelsEnumsItemState from '../model/HelloAssoApiV5CommonModelsEnumsItemState';
 import HelloAssoApiV5CommonModelsEnumsSortField from '../model/HelloAssoApiV5CommonModelsEnumsSortField';
@@ -20,7 +21,6 @@ import HelloAssoApiV5CommonModelsEnumsSortOrder from '../model/HelloAssoApiV5Com
 import HelloAssoApiV5CommonModelsEnumsTierType from '../model/HelloAssoApiV5CommonModelsEnumsTierType';
 import HelloAssoApiV5CommonModelsStatisticsItemDetail from '../model/HelloAssoApiV5CommonModelsStatisticsItemDetail';
 import HelloAssoApiV5CommonModelsStatisticsOrderDetail from '../model/HelloAssoApiV5CommonModelsStatisticsOrderDetail';
-import ResultsWithPaginationModelOrder from '../model/ResultsWithPaginationModelOrder';
 
 /**
 * Commandes service.
@@ -261,7 +261,7 @@ export default class CommandesApi {
      * Callback function to receive the result of the organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet operation.
      * @callback module:api/CommandesApi~organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ResultsWithPaginationModelOrder} data The data returned by the service call.
+     * @param {module:model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -281,7 +281,7 @@ export default class CommandesApi {
      * @param {Boolean} [withDetails = false)] Set to true to return CustomFields
      * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortOrder} [sortOrder] Sort forms orders by ascending or descending order. Default is descending
      * @param {module:api/CommandesApi~organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ResultsWithPaginationModelOrder}
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder}
      */
     organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet(organizationSlug, formSlug, formType, opts, callback) {
       opts = opts || {};
@@ -322,7 +322,7 @@ export default class CommandesApi {
       let authNames = ['OAuth2'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ResultsWithPaginationModelOrder;
+      let returnType = HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/forms/{formType}/{formSlug}/orders', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -402,7 +402,7 @@ export default class CommandesApi {
      * Callback function to receive the result of the organizationsOrganizationSlugOrdersGet operation.
      * @callback module:api/CommandesApi~organizationsOrganizationSlugOrdersGetCallback
      * @param {String} error Error message, if any.
-     * @param {module:model/ResultsWithPaginationModelOrder} data The data returned by the service call.
+     * @param {module:model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -421,7 +421,7 @@ export default class CommandesApi {
      * @param {Boolean} [withDetails = false)] Set to true to return CustomFields
      * @param {module:model/HelloAssoApiV5CommonModelsEnumsSortOrder} [sortOrder] Sort organizations orders by ascending or descending order. Default is descending
      * @param {module:api/CommandesApi~organizationsOrganizationSlugOrdersGetCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link module:model/ResultsWithPaginationModelOrder}
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder}
      */
     organizationsOrganizationSlugOrdersGet(organizationSlug, opts, callback) {
       opts = opts || {};
@@ -453,7 +453,7 @@ export default class CommandesApi {
       let authNames = ['OAuth2'];
       let contentTypes = [];
       let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = ResultsWithPaginationModelOrder;
+      let returnType = HelloAssoApiV5CommonModelsCommonResultsWithPaginationModelOrder;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/orders', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
