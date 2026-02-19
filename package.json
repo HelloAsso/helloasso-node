@@ -1,6 +1,6 @@
 {
     "name": "helloasso-node",
-    "version": "v1.0.10",
+    "version": "v1.0.11",
     "description": "HelloAsso auto-generated SDK",
     "license": "GPL-3.0-or-later",
     "main": "dist/index.js",
