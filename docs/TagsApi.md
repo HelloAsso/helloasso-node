@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## tagsTagNameGet
 
-> tagsTagNameGet(tagName, opts)
+> HelloAssoApiV5CommonModelsTagsInternalTagModel tagsTagNameGet(tagName, opts)
 
 Obtenir le détail d&#39;un tag interne
 
@@ -35,7 +35,7 @@ apiInstance.tagsTagNameGet(tagName, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**HelloAssoApiV5CommonModelsTagsInternalTagModel**](HelloAssoApiV5CommonModelsTagsInternalTagModel.md)
 
 ### Authorization
 
@@ -60,5 +60,5 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 

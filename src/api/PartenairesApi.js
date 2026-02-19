@@ -15,7 +15,10 @@
 import ApiClient from "../ApiClient";
 import HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest from '../model/HelloAssoApiV5CommonModelsAccountsClientsPublicPutApiClientRequest';
 import HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType from '../model/HelloAssoApiV5CommonModelsApiNotificationsApiNotificationType';
+import HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel from '../model/HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel';
 import HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody from '../model/HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody';
+import HelloAssoApiV5CommonModelsPartnersPartnerPublicModel from '../model/HelloAssoApiV5CommonModelsPartnersPartnerPublicModel';
+import ResultsWithPaginationModelPartnerOrganizationModel from '../model/ResultsWithPaginationModelPartnerOrganizationModel';
 
 /**
 * Partenaires service.
@@ -165,7 +168,7 @@ export default class PartenairesApi {
      * Callback function to receive the result of the partnersMeApiNotificationsOrganizationsOrganizationSlugPut operation.
      * @callback module:api/PartenairesApi~partnersMeApiNotificationsOrganizationsOrganizationSlugPutCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -176,6 +179,7 @@ export default class PartenairesApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody} [helloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody] The body of the request, do not specify a notification type to update the main notification Url
      * @param {module:api/PartenairesApi~partnersMeApiNotificationsOrganizationsOrganizationSlugPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel}
      */
     partnersMeApiNotificationsOrganizationsOrganizationSlugPut(organizationSlug, opts, callback) {
       opts = opts || {};
@@ -197,8 +201,8 @@ export default class PartenairesApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel;
       return this.apiClient.callApi(
         '/partners/me/api-notifications/organizations/{organizationSlug}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -210,7 +214,7 @@ export default class PartenairesApi {
      * Callback function to receive the result of the partnersMeApiNotificationsPut operation.
      * @callback module:api/PartenairesApi~partnersMeApiNotificationsPutCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -220,6 +224,7 @@ export default class PartenairesApi {
      * @param {Object} opts Optional parameters
      * @param {module:model/HelloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody} [helloAssoApiV5CommonModelsApiNotificationsPostApiUrlNotificationBody] The body of the request, do not specify a notification type to update the main notification Url
      * @param {module:api/PartenairesApi~partnersMeApiNotificationsPutCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel}
      */
     partnersMeApiNotificationsPut(opts, callback) {
       opts = opts || {};
@@ -236,8 +241,8 @@ export default class PartenairesApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = HelloAssoApiV5CommonModelsApiNotificationsApiUrlNotificationModel;
       return this.apiClient.callApi(
         '/partners/me/api-notifications', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -249,7 +254,7 @@ export default class PartenairesApi {
      * Callback function to receive the result of the partnersMeGet operation.
      * @callback module:api/PartenairesApi~partnersMeGetCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/HelloAssoApiV5CommonModelsPartnersPartnerPublicModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -257,6 +262,7 @@ export default class PartenairesApi {
      * Récupération des informations
      * <br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {module:api/PartenairesApi~partnersMeGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsPartnersPartnerPublicModel}
      */
     partnersMeGet(callback) {
       let postBody = null;
@@ -272,8 +278,8 @@ export default class PartenairesApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = HelloAssoApiV5CommonModelsPartnersPartnerPublicModel;
       return this.apiClient.callApi(
         '/partners/me', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -285,7 +291,7 @@ export default class PartenairesApi {
      * Callback function to receive the result of the partnersMeOrganizationsGet operation.
      * @callback module:api/PartenairesApi~partnersMeOrganizationsGetCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/ResultsWithPaginationModelPartnerOrganizationModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -296,6 +302,7 @@ export default class PartenairesApi {
      * @param {Number} [pageSize = 20)] The number of items per page
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
      * @param {module:api/PartenairesApi~partnersMeOrganizationsGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ResultsWithPaginationModelPartnerOrganizationModel}
      */
     partnersMeOrganizationsGet(opts, callback) {
       opts = opts || {};
@@ -314,8 +321,8 @@ export default class PartenairesApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ResultsWithPaginationModelPartnerOrganizationModel;
       return this.apiClient.callApi(
         '/partners/me/organizations', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

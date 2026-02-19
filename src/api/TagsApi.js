@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import HelloAssoApiV5CommonModelsTagsInternalTagModel from '../model/HelloAssoApiV5CommonModelsTagsInternalTagModel';
 
 /**
 * Tags service.
@@ -37,7 +38,7 @@ export default class TagsApi {
      * Callback function to receive the result of the tagsTagNameGet operation.
      * @callback module:api/TagsApi~tagsTagNameGetCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/HelloAssoApiV5CommonModelsTagsInternalTagModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -49,6 +50,7 @@ export default class TagsApi {
      * @param {Boolean} [withCount = false)] If true : Count of times Tag is used
      * @param {Boolean} [withAmount = false)] If true : Amount collected by all forms linked to this Tag
      * @param {module:api/TagsApi~tagsTagNameGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsTagsInternalTagModel}
      */
     tagsTagNameGet(tagName, opts, callback) {
       opts = opts || {};
@@ -72,8 +74,8 @@ export default class TagsApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = HelloAssoApiV5CommonModelsTagsInternalTagModel;
       return this.apiClient.callApi(
         '/tags/{tagName}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

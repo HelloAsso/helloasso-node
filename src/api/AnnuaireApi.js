@@ -15,6 +15,8 @@
 import ApiClient from "../ApiClient";
 import HelloAssoApiV5CommonModelsDirectoryListFormsRequest from '../model/HelloAssoApiV5CommonModelsDirectoryListFormsRequest';
 import HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest from '../model/HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest';
+import ResultsWithPaginationModelSynchronizableFormModel from '../model/ResultsWithPaginationModelSynchronizableFormModel';
+import ResultsWithPaginationModelSynchronizableOrganizationModel from '../model/ResultsWithPaginationModelSynchronizableOrganizationModel';
 
 /**
 * Annuaire service.
@@ -39,7 +41,7 @@ export default class AnnuaireApi {
      * Callback function to receive the result of the directoryFormsPost operation.
      * @callback module:api/AnnuaireApi~directoryFormsPostCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/ResultsWithPaginationModelSynchronizableFormModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -51,6 +53,7 @@ export default class AnnuaireApi {
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
      * @param {module:model/HelloAssoApiV5CommonModelsDirectoryListFormsRequest} [helloAssoApiV5CommonModelsDirectoryListFormsRequest] Body which contains the filters to apply
      * @param {module:api/AnnuaireApi~directoryFormsPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ResultsWithPaginationModelSynchronizableFormModel}
      */
     directoryFormsPost(opts, callback) {
       opts = opts || {};
@@ -69,8 +72,8 @@ export default class AnnuaireApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ResultsWithPaginationModelSynchronizableFormModel;
       return this.apiClient.callApi(
         '/directory/forms', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -82,7 +85,7 @@ export default class AnnuaireApi {
      * Callback function to receive the result of the directoryOrganizationsPost operation.
      * @callback module:api/AnnuaireApi~directoryOrganizationsPostCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {module:model/ResultsWithPaginationModelSynchronizableOrganizationModel} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -94,6 +97,7 @@ export default class AnnuaireApi {
      * @param {String} [continuationToken] Continuation Token from which we wish to retrieve results
      * @param {module:model/HelloAssoApiV5CommonModelsDirectoryListOrganizationsRequest} [helloAssoApiV5CommonModelsDirectoryListOrganizationsRequest] Body which contains the filters to apply
      * @param {module:api/AnnuaireApi~directoryOrganizationsPostCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/ResultsWithPaginationModelSynchronizableOrganizationModel}
      */
     directoryOrganizationsPost(opts, callback) {
       opts = opts || {};
@@ -112,8 +116,8 @@ export default class AnnuaireApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = ['application/json-patch+json', 'application/json', 'text/json', 'application/*+json'];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = ResultsWithPaginationModelSynchronizableOrganizationModel;
       return this.apiClient.callApi(
         '/directory/organizations', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,

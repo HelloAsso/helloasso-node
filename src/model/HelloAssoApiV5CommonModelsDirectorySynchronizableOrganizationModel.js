@@ -13,7 +13,7 @@
 
 import ApiClient from '../ApiClient';
 import HelloAssoApiV5CommonModelsEnumsRecordActionType from './HelloAssoApiV5CommonModelsEnumsRecordActionType';
-import HelloAssoApiV5CommonModelsOrganizationOrganizationBasicModel from './HelloAssoApiV5CommonModelsOrganizationOrganizationBasicModel';
+import HelloAssoApiV5CommonModelsOrganizationsOrganizationBasicModel from './HelloAssoApiV5CommonModelsOrganizationsOrganizationBasicModel';
 
 /**
  * The HelloAssoApiV5CommonModelsDirectorySynchronizableOrganizationModel model module.
@@ -54,7 +54,7 @@ class HelloAssoApiV5CommonModelsDirectorySynchronizableOrganizationModel {
                 obj['action'] = HelloAssoApiV5CommonModelsEnumsRecordActionType.constructFromObject(data['action']);
             }
             if (data.hasOwnProperty('record')) {
-                obj['record'] = HelloAssoApiV5CommonModelsOrganizationOrganizationBasicModel.constructFromObject(data['record']);
+                obj['record'] = HelloAssoApiV5CommonModelsOrganizationsOrganizationBasicModel.constructFromObject(data['record']);
             }
         }
         return obj;
@@ -68,7 +68,7 @@ class HelloAssoApiV5CommonModelsDirectorySynchronizableOrganizationModel {
     static validateJSON(data) {
         // validate the optional field `record`
         if (data['record']) { // data not null
-          HelloAssoApiV5CommonModelsOrganizationOrganizationBasicModel.validateJSON(data['record']);
+          HelloAssoApiV5CommonModelsOrganizationsOrganizationBasicModel.validateJSON(data['record']);
         }
 
         return true;
@@ -85,7 +85,7 @@ class HelloAssoApiV5CommonModelsDirectorySynchronizableOrganizationModel {
 HelloAssoApiV5CommonModelsDirectorySynchronizableOrganizationModel.prototype['action'] = undefined;
 
 /**
- * @member {module:model/HelloAssoApiV5CommonModelsOrganizationOrganizationBasicModel} record
+ * @member {module:model/HelloAssoApiV5CommonModelsOrganizationsOrganizationBasicModel} record
  */
 HelloAssoApiV5CommonModelsDirectorySynchronizableOrganizationModel.prototype['record'] = undefined;
 

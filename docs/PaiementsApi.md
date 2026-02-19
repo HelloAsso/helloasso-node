@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet
 
-> organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet(organizationSlug, formSlug, formType, opts)
+> ResultsWithPaginationModelPayment organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet(organizationSlug, formSlug, formType, opts)
 
 Obtenir les informations des paiements effectués sur un formulaire
 
@@ -39,16 +39,15 @@ let opts = {
   'pageIndex': 1, // Number | The page of results to retrieve
   'pageSize': 20, // Number | The number of items per page
   'continuationToken': "continuationToken_example", // String | Continuation Token from which we wish to retrieve results
-  'states': [new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsPaymentState()], // [HelloAssoApiV5CommonModelsEnumsPaymentState] | Filter results by states of payments  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.             Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
+  'states': [new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsPaymentState()], // [HelloAssoApiV5CommonModelsEnumsPaymentState] | Filter results by states of payments  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.             Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor * `WaitingBankValidation` - The payment is pending validation from the bank (used by SEPA direct debit).
   'sortOrder': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortOrder(), // HelloAssoApiV5CommonModelsEnumsSortOrder | Sort payments by ascending or descending order. Default is descending
-  'sortField': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortField(), // HelloAssoApiV5CommonModelsEnumsSortField | Sort payments by a specific field (Date or UpdateDate). Default is date
-  'withCount': false // Boolean | Whether the pagination should include totalCount and totalPages.
+  'sortField': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortField() // HelloAssoApiV5CommonModelsEnumsSortField | Sort payments by a specific field (Date or UpdateDate). Default is date
 };
 apiInstance.organizationsOrganizationSlugFormsFormTypeFormSlugPaymentsGet(organizationSlug, formSlug, formType, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -67,14 +66,13 @@ Name | Type | Description  | Notes
  **pageIndex** | **Number**| The page of results to retrieve | [optional] [default to 1]
  **pageSize** | **Number**| The number of items per page | [optional] [default to 20]
  **continuationToken** | **String**| Continuation Token from which we wish to retrieve results | [optional] 
- **states** | [**[HelloAssoApiV5CommonModelsEnumsPaymentState]**](HelloAssoApiV5CommonModelsEnumsPaymentState.md)| Filter results by states of payments  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.             Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor | [optional] 
+ **states** | [**[HelloAssoApiV5CommonModelsEnumsPaymentState]**](HelloAssoApiV5CommonModelsEnumsPaymentState.md)| Filter results by states of payments  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.             Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor * &#x60;WaitingBankValidation&#x60; - The payment is pending validation from the bank (used by SEPA direct debit). | [optional] 
  **sortOrder** | [**HelloAssoApiV5CommonModelsEnumsSortOrder**](.md)| Sort payments by ascending or descending order. Default is descending | [optional] 
  **sortField** | [**HelloAssoApiV5CommonModelsEnumsSortField**](.md)| Sort payments by a specific field (Date or UpdateDate). Default is date | [optional] 
- **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false]
 
 ### Return type
 
-null (empty response body)
+[**ResultsWithPaginationModelPayment**](ResultsWithPaginationModelPayment.md)
 
 ### Authorization
 
@@ -83,7 +81,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## organizationsOrganizationSlugPaymentsGet
@@ -112,10 +110,9 @@ let opts = {
   'pageIndex': 1, // Number | The page of results to retrieve
   'pageSize': 20, // Number | The number of items per page
   'continuationToken': "continuationToken_example", // String | Continuation Token from which we wish to retrieve results
-  'states': [new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsPaymentState()], // [HelloAssoApiV5CommonModelsEnumsPaymentState] | The payment states  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.             Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor
+  'states': [new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsPaymentState()], // [HelloAssoApiV5CommonModelsEnumsPaymentState] | The payment states  Available values: * `Pending` - A payment scheduled at a later date, not yet processed. * `Authorized` - The payment has been authorized, validated, processed. * `Refused` - The payment has been refused by the bank. * `Unknown` * `Registered` - Represents a payment made offline.             Probably for an item of type * `Refunded` - The payment has been refunded. * `Refunding` - The payment is being refunded. * `Contested` - Payment has been contested by the contributor * `WaitingBankValidation` - The payment is pending validation from the bank (used by SEPA direct debit).
   'sortOrder': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortOrder(), // HelloAssoApiV5CommonModelsEnumsSortOrder | Sort payments by ascending or descending order. Default is descending
-  'sortField': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortField(), // HelloAssoApiV5CommonModelsEnumsSortField | Sort payments by a specific field (Date or UpdateDate). Default is date
-  'withCount': false // Boolean | Whether the pagination should include totalCount and totalPages.
+  'sortField': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortField() // HelloAssoApiV5CommonModelsEnumsSortField | Sort payments by a specific field (Date or UpdateDate). Default is date
 };
 apiInstance.organizationsOrganizationSlugPaymentsGet(organizationSlug, opts, (error, data, response) => {
   if (error) {
@@ -138,10 +135,9 @@ Name | Type | Description  | Notes
  **pageIndex** | **Number**| The page of results to retrieve | [optional] [default to 1]
  **pageSize** | **Number**| The number of items per page | [optional] [default to 20]
  **continuationToken** | **String**| Continuation Token from which we wish to retrieve results | [optional] 
- **states** | [**[HelloAssoApiV5CommonModelsEnumsPaymentState]**](HelloAssoApiV5CommonModelsEnumsPaymentState.md)| The payment states  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.             Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor | [optional] 
+ **states** | [**[HelloAssoApiV5CommonModelsEnumsPaymentState]**](HelloAssoApiV5CommonModelsEnumsPaymentState.md)| The payment states  Available values: * &#x60;Pending&#x60; - A payment scheduled at a later date, not yet processed. * &#x60;Authorized&#x60; - The payment has been authorized, validated, processed. * &#x60;Refused&#x60; - The payment has been refused by the bank. * &#x60;Unknown&#x60; * &#x60;Registered&#x60; - Represents a payment made offline.             Probably for an item of type * &#x60;Refunded&#x60; - The payment has been refunded. * &#x60;Refunding&#x60; - The payment is being refunded. * &#x60;Contested&#x60; - Payment has been contested by the contributor * &#x60;WaitingBankValidation&#x60; - The payment is pending validation from the bank (used by SEPA direct debit). | [optional] 
  **sortOrder** | [**HelloAssoApiV5CommonModelsEnumsSortOrder**](.md)| Sort payments by ascending or descending order. Default is descending | [optional] 
  **sortField** | [**HelloAssoApiV5CommonModelsEnumsSortField**](.md)| Sort payments by a specific field (Date or UpdateDate). Default is date | [optional] 
- **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false]
 
 ### Return type
 
@@ -154,12 +150,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv
+- **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, text/csv
 
 
 ## paymentsPaymentIdGet
 
-> paymentsPaymentIdGet(paymentId, opts)
+> HelloAssoApiV5CommonModelsStatisticsPaymentDetail paymentsPaymentIdGet(paymentId, opts)
 
 Obtenir les informations détaillées d&#39;un paiement.
 
@@ -183,7 +179,7 @@ apiInstance.paymentsPaymentIdGet(paymentId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -198,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**HelloAssoApiV5CommonModelsStatisticsPaymentDetail**](HelloAssoApiV5CommonModelsStatisticsPaymentDetail.md)
 
 ### Authorization
 
@@ -207,12 +203,12 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## paymentsPaymentIdRefundPost
 
-> paymentsPaymentIdRefundPost(paymentId, opts)
+> HelloAssoApiV5CommonModelsPaymentRefundOperationModel paymentsPaymentIdRefundPost(paymentId, opts)
 
 Rembourser un paiement.
 
@@ -233,13 +229,16 @@ let opts = {
   'comment': "comment_example", // String | The comment about this refund.
   'cancelOrder': false, // Boolean | Whether the future payments and linked items of this order must be canceled (possible only if the payment is fully refunded)
   'sendRefundMail': true, // Boolean | Whether a refund mail must be sent or not.
-  'amount': 0 // Number | The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded
+  'amount': 0, // Number | The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded
+  'xMfaAccessAuthorization': "xMfaAccessAuthorization_example", // String | Must be filled only if AuthorizationErrors.MFA.AccessTokenRequired error code was returned previously.
+  'xMfaSmsAccessAuthorization': "xMfaSmsAccessAuthorization_example", // String | Must be filled only if AuthorizationErrors.MFA.AccessOtpSmsRequired error code was returned previously.
+  'xMfaPasswordAuthorization': "xMfaPasswordAuthorization_example" // String | Must be filled only if AuthorizationErrors.MFA.AccessPasswordTokenRequired error code was returned previously.
 };
 apiInstance.paymentsPaymentIdRefundPost(paymentId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -254,10 +253,13 @@ Name | Type | Description  | Notes
  **cancelOrder** | **Boolean**| Whether the future payments and linked items of this order must be canceled (possible only if the payment is fully refunded) | [optional] [default to false]
  **sendRefundMail** | **Boolean**| Whether a refund mail must be sent or not. | [optional] [default to true]
  **amount** | **Number**| The amount in cents to refund. Enter this amount only for a partial refund for stripe. If not filled in then the entire payment is refunded | [optional] [default to 0]
+ **xMfaAccessAuthorization** | **String**| Must be filled only if AuthorizationErrors.MFA.AccessTokenRequired error code was returned previously. | [optional] 
+ **xMfaSmsAccessAuthorization** | **String**| Must be filled only if AuthorizationErrors.MFA.AccessOtpSmsRequired error code was returned previously. | [optional] 
+ **xMfaPasswordAuthorization** | **String**| Must be filled only if AuthorizationErrors.MFA.AccessPasswordTokenRequired error code was returned previously. | [optional] 
 
 ### Return type
 
-null (empty response body)
+[**HelloAssoApiV5CommonModelsPaymentRefundOperationModel**](HelloAssoApiV5CommonModelsPaymentRefundOperationModel.md)
 
 ### Authorization
 
@@ -266,5 +268,5 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 

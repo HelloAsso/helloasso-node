@@ -170,9 +170,6 @@ class HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest {
             if (data.hasOwnProperty('allowIndividualPayer')) {
                 obj['allowIndividualPayer'] = ApiClient.convertToType(data['allowIndividualPayer'], 'Boolean');
             }
-            if (data.hasOwnProperty('displayVersion')) {
-                obj['displayVersion'] = ApiClient.convertToType(data['displayVersion'], 'Number');
-            }
             if (data.hasOwnProperty('remindAbandonedCart')) {
                 obj['remindAbandonedCart'] = ApiClient.convertToType(data['remindAbandonedCart'], 'Boolean');
             }
@@ -511,12 +508,6 @@ HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest.prototype['allowOrganismPa
  * @member {Boolean} allowIndividualPayer
  */
 HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest.prototype['allowIndividualPayer'] = undefined;
-
-/**
- * The form display version (only for donation).
- * @member {Number} displayVersion
- */
-HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest.prototype['displayVersion'] = undefined;
 
 /**
  * Whether a reminder email should be sent for abandoned carts.

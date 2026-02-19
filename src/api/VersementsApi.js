@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportRowModel from '../model/HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportRowModel';
 
 /**
 * Versements service.
@@ -37,7 +38,7 @@ export default class VersementsApi {
      * Callback function to receive the result of the organizationsOrganizationSlugCashOutCashOutIdExportGet operation.
      * @callback module:api/VersementsApi~organizationsOrganizationSlugCashOutCashOutIdExportGetCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportRowModel>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -47,6 +48,7 @@ export default class VersementsApi {
      * @param {String} organizationSlug The organization slug
      * @param {Number} cashOutId The cash-out id to details
      * @param {module:api/VersementsApi~organizationsOrganizationSlugCashOutCashOutIdExportGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportRowModel>}
      */
     organizationsOrganizationSlugCashOutCashOutIdExportGet(organizationSlug, cashOutId, callback) {
       let postBody = null;
@@ -72,8 +74,8 @@ export default class VersementsApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['application/json', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'text/csv'];
+      let returnType = [HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportRowModel];
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/cash-out/{cashOutId}/export', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

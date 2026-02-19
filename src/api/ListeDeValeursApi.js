@@ -13,6 +13,9 @@
 
 
 import ApiClient from "../ApiClient";
+import HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel from '../model/HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel';
+import HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel from '../model/HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel';
+import HelloAssoApiV5CommonModelsTagsPublicTagModel from '../model/HelloAssoApiV5CommonModelsTagsPublicTagModel';
 
 /**
 * ListeDeValeurs service.
@@ -37,7 +40,7 @@ export default class ListeDeValeursApi {
      * Callback function to receive the result of the valuesCompanyLegalStatusGet operation.
      * @callback module:api/ListeDeValeursApi~valuesCompanyLegalStatusGetCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -45,6 +48,7 @@ export default class ListeDeValeursApi {
      * Obtenir la liste des statuts juridiques
      * <br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {module:api/ListeDeValeursApi~valuesCompanyLegalStatusGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel>}
      */
     valuesCompanyLegalStatusGet(callback) {
       let postBody = null;
@@ -60,8 +64,8 @@ export default class ListeDeValeursApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [HelloAssoApiV5CommonModelsAccountsCompanyLegalStatusModel];
       return this.apiClient.callApi(
         '/values/company-legal-status', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -73,7 +77,7 @@ export default class ListeDeValeursApi {
      * Callback function to receive the result of the valuesOrganizationCategoriesGet operation.
      * @callback module:api/ListeDeValeursApi~valuesOrganizationCategoriesGetCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -81,6 +85,7 @@ export default class ListeDeValeursApi {
      * Obtenir la liste des catégories du JO
      * Utilisez ceci afin de construire votre liste de catégories d'organisation<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {module:api/ListeDeValeursApi~valuesOrganizationCategoriesGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel>}
      */
     valuesOrganizationCategoriesGet(callback) {
       let postBody = null;
@@ -96,8 +101,8 @@ export default class ListeDeValeursApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [HelloAssoApiV5CommonModelsAccountsOrganismCategoryModel];
       return this.apiClient.callApi(
         '/values/organization/categories', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
@@ -109,7 +114,7 @@ export default class ListeDeValeursApi {
      * Callback function to receive the result of the valuesTagsGet operation.
      * @callback module:api/ListeDeValeursApi~valuesTagsGetCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsTagsPublicTagModel>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -117,6 +122,7 @@ export default class ListeDeValeursApi {
      * Obtenir la liste des tags publiques
      * Utilisez ceci afin de récupérer la liste des étiquettes utilisées<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {module:api/ListeDeValeursApi~valuesTagsGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/HelloAssoApiV5CommonModelsTagsPublicTagModel>}
      */
     valuesTagsGet(callback) {
       let postBody = null;
@@ -132,8 +138,8 @@ export default class ListeDeValeursApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [HelloAssoApiV5CommonModelsTagsPublicTagModel];
       return this.apiClient.callApi(
         '/values/tags', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

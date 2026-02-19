@@ -28,9 +28,11 @@ import HelloAssoApiV5CommonModelsCartsInitCheckoutBody from './model/HelloAssoAp
 import HelloAssoApiV5CommonModelsCartsInitCheckoutResponse from './model/HelloAssoApiV5CommonModelsCartsInitCheckoutResponse';
 import HelloAssoApiV5CommonModelsCommonContactModel from './model/HelloAssoApiV5CommonModelsCommonContactModel';
 import HelloAssoApiV5CommonModelsCommonDocumentModel from './model/HelloAssoApiV5CommonModelsCommonDocumentModel';
+import HelloAssoApiV5CommonModelsCommonImageModel from './model/HelloAssoApiV5CommonModelsCommonImageModel';
 import HelloAssoApiV5CommonModelsCommonMetaModel from './model/HelloAssoApiV5CommonModelsCommonMetaModel';
 import HelloAssoApiV5CommonModelsCommonPaginationModel from './model/HelloAssoApiV5CommonModelsCommonPaginationModel';
 import HelloAssoApiV5CommonModelsCommonPlaceModel from './model/HelloAssoApiV5CommonModelsCommonPlaceModel';
+import HelloAssoApiV5CommonModelsCommonVideoModel from './model/HelloAssoApiV5CommonModelsCommonVideoModel';
 import HelloAssoApiV5CommonModelsComplianceV2DocumentsDocumentState from './model/HelloAssoApiV5CommonModelsComplianceV2DocumentsDocumentState';
 import HelloAssoApiV5CommonModelsDirectoryDirectoryOrganizationPublicModel from './model/HelloAssoApiV5CommonModelsDirectoryDirectoryOrganizationPublicModel';
 import HelloAssoApiV5CommonModelsDirectoryListFormsRequest from './model/HelloAssoApiV5CommonModelsDirectoryListFormsRequest';
@@ -59,6 +61,7 @@ import HelloAssoApiV5CommonModelsEnumsTagType from './model/HelloAssoApiV5Common
 import HelloAssoApiV5CommonModelsEnumsTierType from './model/HelloAssoApiV5CommonModelsEnumsTierType';
 import HelloAssoApiV5CommonModelsFormsCustomFieldPublicModel from './model/HelloAssoApiV5CommonModelsFormsCustomFieldPublicModel';
 import HelloAssoApiV5CommonModelsFormsExtraOptionPublicModel from './model/HelloAssoApiV5CommonModelsFormsExtraOptionPublicModel';
+import HelloAssoApiV5CommonModelsFormsFormActivityModel from './model/HelloAssoApiV5CommonModelsFormsFormActivityModel';
 import HelloAssoApiV5CommonModelsFormsFormBasicModel from './model/HelloAssoApiV5CommonModelsFormsFormBasicModel';
 import HelloAssoApiV5CommonModelsFormsFormLightModel from './model/HelloAssoApiV5CommonModelsFormsFormLightModel';
 import HelloAssoApiV5CommonModelsFormsFormPublicModel from './model/HelloAssoApiV5CommonModelsFormsFormPublicModel';
@@ -68,9 +71,9 @@ import HelloAssoApiV5CommonModelsFormsFormStateRequest from './model/HelloAssoAp
 import HelloAssoApiV5CommonModelsFormsTermModel from './model/HelloAssoApiV5CommonModelsFormsTermModel';
 import HelloAssoApiV5CommonModelsFormsTierLightModel from './model/HelloAssoApiV5CommonModelsFormsTierLightModel';
 import HelloAssoApiV5CommonModelsFormsTierPublicModel from './model/HelloAssoApiV5CommonModelsFormsTierPublicModel';
-import HelloAssoApiV5CommonModelsOrganizationOrganizationBasicModel from './model/HelloAssoApiV5CommonModelsOrganizationOrganizationBasicModel';
-import HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel from './model/HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel';
-import HelloAssoApiV5CommonModelsOrganizationOrganizationModel from './model/HelloAssoApiV5CommonModelsOrganizationOrganizationModel';
+import HelloAssoApiV5CommonModelsOrganizationsOrganizationBasicModel from './model/HelloAssoApiV5CommonModelsOrganizationsOrganizationBasicModel';
+import HelloAssoApiV5CommonModelsOrganizationsOrganizationLightModel from './model/HelloAssoApiV5CommonModelsOrganizationsOrganizationLightModel';
+import HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel from './model/HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel';
 import HelloAssoApiV5CommonModelsPartnersPartnerPublicModel from './model/HelloAssoApiV5CommonModelsPartnersPartnerPublicModel';
 import HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportPaymentOperation from './model/HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportPaymentOperation';
 import HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportPaymentStatus from './model/HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportPaymentStatus';
@@ -119,6 +122,7 @@ import PaiementsApi from './api/PaiementsApi';
 import PartenairesApi from './api/PartenairesApi';
 import TagsApi from './api/TagsApi';
 import UtilisateursApi from './api/UtilisateursApi';
+import ValuesDefinitionsApi from './api/ValuesDefinitionsApi';
 import VersementsApi from './api/VersementsApi';
 
 
@@ -251,6 +255,12 @@ export {
     HelloAssoApiV5CommonModelsCommonDocumentModel,
 
     /**
+     * The HelloAssoApiV5CommonModelsCommonImageModel model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsCommonImageModel}
+     */
+    HelloAssoApiV5CommonModelsCommonImageModel,
+
+    /**
      * The HelloAssoApiV5CommonModelsCommonMetaModel model constructor.
      * @property {module:model/HelloAssoApiV5CommonModelsCommonMetaModel}
      */
@@ -267,6 +277,12 @@ export {
      * @property {module:model/HelloAssoApiV5CommonModelsCommonPlaceModel}
      */
     HelloAssoApiV5CommonModelsCommonPlaceModel,
+
+    /**
+     * The HelloAssoApiV5CommonModelsCommonVideoModel model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsCommonVideoModel}
+     */
+    HelloAssoApiV5CommonModelsCommonVideoModel,
 
     /**
      * The HelloAssoApiV5CommonModelsComplianceV2DocumentsDocumentState model constructor.
@@ -437,6 +453,12 @@ export {
     HelloAssoApiV5CommonModelsFormsExtraOptionPublicModel,
 
     /**
+     * The HelloAssoApiV5CommonModelsFormsFormActivityModel model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsFormsFormActivityModel}
+     */
+    HelloAssoApiV5CommonModelsFormsFormActivityModel,
+
+    /**
      * The HelloAssoApiV5CommonModelsFormsFormBasicModel model constructor.
      * @property {module:model/HelloAssoApiV5CommonModelsFormsFormBasicModel}
      */
@@ -491,22 +513,22 @@ export {
     HelloAssoApiV5CommonModelsFormsTierPublicModel,
 
     /**
-     * The HelloAssoApiV5CommonModelsOrganizationOrganizationBasicModel model constructor.
-     * @property {module:model/HelloAssoApiV5CommonModelsOrganizationOrganizationBasicModel}
+     * The HelloAssoApiV5CommonModelsOrganizationsOrganizationBasicModel model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsOrganizationsOrganizationBasicModel}
      */
-    HelloAssoApiV5CommonModelsOrganizationOrganizationBasicModel,
+    HelloAssoApiV5CommonModelsOrganizationsOrganizationBasicModel,
 
     /**
-     * The HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel model constructor.
-     * @property {module:model/HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel}
+     * The HelloAssoApiV5CommonModelsOrganizationsOrganizationLightModel model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsOrganizationsOrganizationLightModel}
      */
-    HelloAssoApiV5CommonModelsOrganizationOrganizationLightModel,
+    HelloAssoApiV5CommonModelsOrganizationsOrganizationLightModel,
 
     /**
-     * The HelloAssoApiV5CommonModelsOrganizationOrganizationModel model constructor.
-     * @property {module:model/HelloAssoApiV5CommonModelsOrganizationOrganizationModel}
+     * The HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel}
      */
-    HelloAssoApiV5CommonModelsOrganizationOrganizationModel,
+    HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel,
 
     /**
      * The HelloAssoApiV5CommonModelsPartnersPartnerPublicModel model constructor.
@@ -795,6 +817,12 @@ export {
     * @property {module:api/UtilisateursApi}
     */
     UtilisateursApi,
+
+    /**
+    * The ValuesDefinitionsApi service constructor.
+    * @property {module:api/ValuesDefinitionsApi}
+    */
+    ValuesDefinitionsApi,
 
     /**
     * The VersementsApi service constructor.

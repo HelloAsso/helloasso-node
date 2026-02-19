@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## organizationsOrganizationSlugCheckoutIntentsCheckoutIntentIdGet
 
-> organizationsOrganizationSlugCheckoutIntentsCheckoutIntentIdGet(organizationSlug, checkoutIntentId, opts)
+> HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse organizationsOrganizationSlugCheckoutIntentsCheckoutIntentIdGet(organizationSlug, checkoutIntentId, opts)
 
 Récupérer une intention de paiement
 
@@ -36,7 +36,7 @@ apiInstance.organizationsOrganizationSlugCheckoutIntentsCheckoutIntentIdGet(orga
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse**](HelloAssoApiV5CommonModelsCartsCheckoutIntentResponse.md)
 
 ### Authorization
 
@@ -61,12 +61,12 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## organizationsOrganizationSlugCheckoutIntentsPost
 
-> organizationsOrganizationSlugCheckoutIntentsPost(organizationSlug, opts)
+> HelloAssoApiV5CommonModelsCartsInitCheckoutResponse organizationsOrganizationSlugCheckoutIntentsPost(organizationSlug, opts)
 
 Initialisation d&#39;un Checkout
 
@@ -90,7 +90,7 @@ apiInstance.organizationsOrganizationSlugCheckoutIntentsPost(organizationSlug, o
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**HelloAssoApiV5CommonModelsCartsInitCheckoutResponse**](HelloAssoApiV5CommonModelsCartsInitCheckoutResponse.md)
 
 ### Authorization
 
@@ -114,5 +114,5 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: application/json-patch+json, application/json, text/json, application/*+json
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 

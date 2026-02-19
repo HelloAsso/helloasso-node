@@ -13,6 +13,7 @@
 
 
 import ApiClient from "../ApiClient";
+import HelloAssoApiV5CommonModelsOrganizationsOrganizationLightModel from '../model/HelloAssoApiV5CommonModelsOrganizationsOrganizationLightModel';
 
 /**
 * Utilisateurs service.
@@ -37,7 +38,7 @@ export default class UtilisateursApi {
      * Callback function to receive the result of the usersMeOrganizationsGet operation.
      * @callback module:api/UtilisateursApi~usersMeOrganizationsGetCallback
      * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
+     * @param {Array.<module:model/HelloAssoApiV5CommonModelsOrganizationsOrganizationLightModel>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
@@ -45,6 +46,7 @@ export default class UtilisateursApi {
      * Obtenir mes organisations
      * Renvoie la liste des organisations où l'utilisateur connecté a des droits<br/><br/><b>Votre clientId doit être autorisé à tous ces privilèges : </b> <br/> AccessPublicData<br/><br/>
      * @param {module:api/UtilisateursApi~usersMeOrganizationsGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/HelloAssoApiV5CommonModelsOrganizationsOrganizationLightModel>}
      */
     usersMeOrganizationsGet(callback) {
       let postBody = null;
@@ -60,8 +62,8 @@ export default class UtilisateursApi {
 
       let authNames = ['OAuth2'];
       let contentTypes = [];
-      let accepts = [];
-      let returnType = null;
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [HelloAssoApiV5CommonModelsOrganizationsOrganizationLightModel];
       return this.apiClient.callApi(
         '/users/me/organizations', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,

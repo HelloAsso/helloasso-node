@@ -48,13 +48,6 @@ export default class HelloAssoApiV5CommonModelsEnumsItemState {
 
     
         /**
-         * value: "Refunded"
-         * @const
-         */
-        "Refunded" = "Refunded";
-
-    
-        /**
          * value: "Unknown"
          * @const
          */
@@ -66,20 +59,6 @@ export default class HelloAssoApiV5CommonModelsEnumsItemState {
          * @const
          */
         "Canceled" = "Canceled";
-
-    
-        /**
-         * value: "Contested"
-         * @const
-         */
-        "Contested" = "Contested";
-
-    
-        /**
-         * value: "Unknow"
-         * @const
-         */
-        "Unknow" = "Unknow";
 
     
         /**

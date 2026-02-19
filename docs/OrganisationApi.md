@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## organizationsOrganizationSlugGet
 
-> organizationsOrganizationSlugGet(organizationSlug)
+> HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel organizationsOrganizationSlugGet(organizationSlug)
 
 Obtenir le détail d&#39;une organisation
 
@@ -31,7 +31,7 @@ apiInstance.organizationsOrganizationSlugGet(organizationSlug, (error, data, res
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel**](HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel.md)
 
 ### Authorization
 
@@ -54,5 +54,5 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 

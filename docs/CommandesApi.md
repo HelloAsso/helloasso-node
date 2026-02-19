@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## itemsItemIdGet
 
-> itemsItemIdGet(itemId, opts)
+> HelloAssoApiV5CommonModelsStatisticsItemDetail itemsItemIdGet(itemId, opts)
 
 Obtenir le détail d&#39;un article contenu dans une commande
 
@@ -40,7 +40,7 @@ apiInstance.itemsItemIdGet(itemId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**HelloAssoApiV5CommonModelsStatisticsItemDetail**](HelloAssoApiV5CommonModelsStatisticsItemDetail.md)
 
 ### Authorization
 
@@ -64,7 +64,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## ordersOrderIdCancelPost
@@ -118,7 +118,7 @@ null (empty response body)
 
 ## ordersOrderIdGet
 
-> ordersOrderIdGet(orderId)
+> HelloAssoApiV5CommonModelsStatisticsOrderDetail ordersOrderIdGet(orderId, opts)
 
 Obtenir des informations détaillées sur une commande
 
@@ -134,12 +134,15 @@ let OAuth2 = defaultClient.authentications['OAuth2'];
 OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 
 let apiInstance = new HelloAssoApi.CommandesApi();
-let orderId = 56; // Number | 
-apiInstance.ordersOrderIdGet(orderId, (error, data, response) => {
+let orderId = 56; // Number | The order ID
+let opts = {
+  'withFormData': false // Boolean | Set to true to include form data in the response
+};
+apiInstance.ordersOrderIdGet(orderId, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -149,11 +152,12 @@ apiInstance.ordersOrderIdGet(orderId, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orderId** | **Number**|  | 
+ **orderId** | **Number**| The order ID | 
+ **withFormData** | **Boolean**| Set to true to include form data in the response | [optional] [default to false]
 
 ### Return type
 
-null (empty response body)
+[**HelloAssoApiV5CommonModelsStatisticsOrderDetail**](HelloAssoApiV5CommonModelsStatisticsOrderDetail.md)
 
 ### Authorization
 
@@ -162,12 +166,12 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet
 
-> ResultsWithPaginationModelItem organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet(organizationSlug, formSlug, formType, opts)
+> organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet(organizationSlug, formSlug, formType, opts)
 
 Obtenir une liste d&#39;articles vendus dans un formulaire
 
@@ -198,14 +202,13 @@ let opts = {
   'tierName': "tierName_example", // String | The name of a tier
   'withDetails': false, // Boolean | Set to true to return CustomFields and Options
   'sortOrder': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortOrder(), // HelloAssoApiV5CommonModelsEnumsSortOrder | Sort forms items by ascending or descending order. Default is descending
-  'sortField': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortField(), // HelloAssoApiV5CommonModelsEnumsSortField | Sort forms items by a specific field (Date or UpdateDate). Default is date
-  'withCount': false // Boolean | Whether the pagination should include totalCount and totalPages.
+  'sortField': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortField() // HelloAssoApiV5CommonModelsEnumsSortField | Sort forms items by a specific field (Date or UpdateDate). Default is date
 };
 apiInstance.organizationsOrganizationSlugFormsFormTypeFormSlugItemsGet(organizationSlug, formSlug, formType, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -230,11 +233,10 @@ Name | Type | Description  | Notes
  **withDetails** | **Boolean**| Set to true to return CustomFields and Options | [optional] [default to false]
  **sortOrder** | [**HelloAssoApiV5CommonModelsEnumsSortOrder**](.md)| Sort forms items by ascending or descending order. Default is descending | [optional] 
  **sortField** | [**HelloAssoApiV5CommonModelsEnumsSortField**](.md)| Sort forms items by a specific field (Date or UpdateDate). Default is date | [optional] 
- **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false]
 
 ### Return type
 
-[**ResultsWithPaginationModelItem**](ResultsWithPaginationModelItem.md)
+null (empty response body)
 
 ### Authorization
 
@@ -243,12 +245,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv
+- **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, text/csv
 
 
 ## organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet
 
-> organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet(organizationSlug, formSlug, formType, opts)
+> ResultsWithPaginationModelOrder organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet(organizationSlug, formSlug, formType, opts)
 
 Obtenir les commandes d&#39;un formulaire
 
@@ -275,14 +277,13 @@ let opts = {
   'pageSize': 20, // Number | The number of items per page
   'continuationToken': "continuationToken_example", // String | Continuation Token from which we wish to retrieve results
   'withDetails': false, // Boolean | Set to true to return CustomFields
-  'sortOrder': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortOrder(), // HelloAssoApiV5CommonModelsEnumsSortOrder | Sort forms orders by ascending or descending order. Default is descending
-  'withCount': false // Boolean | Whether the pagination should include totalCount and totalPages.
+  'sortOrder': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortOrder() // HelloAssoApiV5CommonModelsEnumsSortOrder | Sort forms orders by ascending or descending order. Default is descending
 };
 apiInstance.organizationsOrganizationSlugFormsFormTypeFormSlugOrdersGet(organizationSlug, formSlug, formType, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -303,11 +304,10 @@ Name | Type | Description  | Notes
  **continuationToken** | **String**| Continuation Token from which we wish to retrieve results | [optional] 
  **withDetails** | **Boolean**| Set to true to return CustomFields | [optional] [default to false]
  **sortOrder** | [**HelloAssoApiV5CommonModelsEnumsSortOrder**](.md)| Sort forms orders by ascending or descending order. Default is descending | [optional] 
- **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false]
 
 ### Return type
 
-null (empty response body)
+[**ResultsWithPaginationModelOrder**](ResultsWithPaginationModelOrder.md)
 
 ### Authorization
 
@@ -316,12 +316,12 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## organizationsOrganizationSlugItemsGet
 
-> ResultsWithPaginationModelItem organizationsOrganizationSlugItemsGet(organizationSlug, opts)
+> organizationsOrganizationSlugItemsGet(organizationSlug, opts)
 
 Obtenir une liste d&#39;articles vendus par une organisation
 
@@ -350,14 +350,13 @@ let opts = {
   'tierName': "tierName_example", // String | The name of a tier
   'withDetails': false, // Boolean | Set to true to return CustomFields and Options
   'sortOrder': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortOrder(), // HelloAssoApiV5CommonModelsEnumsSortOrder | Sort organizations items by ascending or descending order. Default is descending
-  'sortField': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortField(), // HelloAssoApiV5CommonModelsEnumsSortField | Sort organizations items by a specific field (Date or UpdateDate). Default is date
-  'withCount': false // Boolean | Whether the pagination should include totalCount and totalPages.
+  'sortField': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortField() // HelloAssoApiV5CommonModelsEnumsSortField | Sort organizations items by a specific field (Date or UpdateDate). Default is date
 };
 apiInstance.organizationsOrganizationSlugItemsGet(organizationSlug, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully.');
   }
 });
 ```
@@ -380,11 +379,10 @@ Name | Type | Description  | Notes
  **withDetails** | **Boolean**| Set to true to return CustomFields and Options | [optional] [default to false]
  **sortOrder** | [**HelloAssoApiV5CommonModelsEnumsSortOrder**](.md)| Sort organizations items by ascending or descending order. Default is descending | [optional] 
  **sortField** | [**HelloAssoApiV5CommonModelsEnumsSortField**](.md)| Sort organizations items by a specific field (Date or UpdateDate). Default is date | [optional] 
- **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false]
 
 ### Return type
 
-[**ResultsWithPaginationModelItem**](ResultsWithPaginationModelItem.md)
+null (empty response body)
 
 ### Authorization
 
@@ -393,12 +391,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: text/csv
+- **Accept**: application/json, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, text/csv
 
 
 ## organizationsOrganizationSlugOrdersGet
 
-> organizationsOrganizationSlugOrdersGet(organizationSlug, opts)
+> ResultsWithPaginationModelOrder organizationsOrganizationSlugOrdersGet(organizationSlug, opts)
 
 Obtenir les commandes d&#39;une organisation
 
@@ -424,14 +422,13 @@ let opts = {
   'continuationToken': "continuationToken_example", // String | Continuation Token from which we wish to retrieve results
   'formTypes': [new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsFormType()], // [HelloAssoApiV5CommonModelsEnumsFormType] | The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop
   'withDetails': false, // Boolean | Set to true to return CustomFields
-  'sortOrder': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortOrder(), // HelloAssoApiV5CommonModelsEnumsSortOrder | Sort organizations orders by ascending or descending order. Default is descending
-  'withCount': false // Boolean | Whether the pagination should include totalCount and totalPages.
+  'sortOrder': new HelloAssoApi.HelloAssoApiV5CommonModelsEnumsSortOrder() // HelloAssoApiV5CommonModelsEnumsSortOrder | Sort organizations orders by ascending or descending order. Default is descending
 };
 apiInstance.organizationsOrganizationSlugOrdersGet(organizationSlug, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully.');
+    console.log('API called successfully. Returned data: ' + data);
   }
 });
 ```
@@ -451,11 +448,10 @@ Name | Type | Description  | Notes
  **formTypes** | [**[HelloAssoApiV5CommonModelsEnumsFormType]**](HelloAssoApiV5CommonModelsEnumsFormType.md)| The type of the form CrowdFunding, Membership, Event, Donation, PaymentForm, Checkout, Shop | [optional] 
  **withDetails** | **Boolean**| Set to true to return CustomFields | [optional] [default to false]
  **sortOrder** | [**HelloAssoApiV5CommonModelsEnumsSortOrder**](.md)| Sort organizations orders by ascending or descending order. Default is descending | [optional] 
- **withCount** | **Boolean**| Whether the pagination should include totalCount and totalPages. | [optional] [default to false]
 
 ### Return type
 
-null (empty response body)
+[**ResultsWithPaginationModelOrder**](ResultsWithPaginationModelOrder.md)
 
 ### Authorization
 
@@ -464,5 +460,5 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
