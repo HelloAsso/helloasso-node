@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **videos** | [**[HelloAssoApiV5CommonModelsCommonVideoModel]**](HelloAssoApiV5CommonModelsCommonVideoModel.md) |  | [optional] 
 **webSite** | **String** |  | [optional] 
 **isAuthenticated** | **Boolean** | The organization is authenticated. Property returned only when asked by an organization admin. | [optional] 
+**displayCoordinates** | **Boolean** | If the organization chose to display its coordinates. Property returned only when asked by an organization admin. | [optional] 
 **isCashInCompliant** | **Boolean** | If transaction can be init on the organization or not. Property returned only when asked by an organization admin. | [optional] 
 **banner** | **String** | The organization banner | [optional] 
 **fiscalReceiptEligibility** | **Boolean** | The organism can issue fiscal receipts (type ok and has not deactivated it)  Must configure it and be authenticated to become enabled | [optional] 

@@ -73,6 +73,9 @@ class HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel {
             if (data.hasOwnProperty('isAuthenticated')) {
                 obj['isAuthenticated'] = ApiClient.convertToType(data['isAuthenticated'], 'Boolean');
             }
+            if (data.hasOwnProperty('displayCoordinates')) {
+                obj['displayCoordinates'] = ApiClient.convertToType(data['displayCoordinates'], 'Boolean');
+            }
             if (data.hasOwnProperty('isCashInCompliant')) {
                 obj['isCashInCompliant'] = ApiClient.convertToType(data['isCashInCompliant'], 'Boolean');
             }
@@ -268,6 +271,12 @@ HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel.prototype['webSit
  * @member {Boolean} isAuthenticated
  */
 HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel.prototype['isAuthenticated'] = undefined;
+
+/**
+ * If the organization chose to display its coordinates. Property returned only when asked by an organization admin.
+ * @member {Boolean} displayCoordinates
+ */
+HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel.prototype['displayCoordinates'] = undefined;
 
 /**
  * If transaction can be init on the organization or not. Property returned only when asked by an organization admin.

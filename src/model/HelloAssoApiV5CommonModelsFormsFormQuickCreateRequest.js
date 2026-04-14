@@ -173,6 +173,9 @@ class HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest {
             if (data.hasOwnProperty('remindAbandonedCart')) {
                 obj['remindAbandonedCart'] = ApiClient.convertToType(data['remindAbandonedCart'], 'Boolean');
             }
+            if (data.hasOwnProperty('displayVersion')) {
+                obj['displayVersion'] = ApiClient.convertToType(data['displayVersion'], 'Number');
+            }
             if (data.hasOwnProperty('maxEntries')) {
                 obj['maxEntries'] = ApiClient.convertToType(data['maxEntries'], 'Number');
             }
@@ -514,6 +517,12 @@ HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest.prototype['allowIndividual
  * @member {Boolean} remindAbandonedCart
  */
 HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest.prototype['remindAbandonedCart'] = undefined;
+
+/**
+ * The form display version (only for membership).
+ * @member {Number} displayVersion
+ */
+HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest.prototype['displayVersion'] = undefined;
 
 /**
  * Indicates the maximum available entries for the whole form. Null means unlimited entries.

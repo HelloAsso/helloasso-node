@@ -15,6 +15,7 @@
 import ApiClient from "../ApiClient";
 import HelloAssoApiV5CommonModelsEnumsFormType from '../model/HelloAssoApiV5CommonModelsEnumsFormType';
 import HelloAssoApiV5CommonModelsFormsFormStateRequest from '../model/HelloAssoApiV5CommonModelsFormsFormStateRequest';
+import HelloAssoApiV5CommonModelsFormsFormStatsModel from '../model/HelloAssoApiV5CommonModelsFormsFormStatsModel';
 
 /**
 * Forms service.
@@ -87,6 +88,61 @@ export default class FormsApi {
       let returnType = null;
       return this.apiClient.callApi(
         '/organizations/{organizationSlug}/forms/{formType}/{formSlug}/state', 'PUT',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the organizationsOrganizationSlugFormsFormTypeFormSlugStatsGet operation.
+     * @callback module:api/FormsApi~organizationsOrganizationSlugFormsFormTypeFormSlugStatsGetCallback
+     * @param {String} error Error message, if any.
+     * @param {module:model/HelloAssoApiV5CommonModelsFormsFormStatsModel} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Get Stats for the form
+     * <br/><br/><b>Your token must have one of these roles : </b><br/>FormAdmin<br/>OrganizationAdmin<br/><br/>If you are an <b>association</b>, you can obtain these roles with your client.<br/>If you are a <b>partner</b>, you can obtain these roles by the authorize flow.<br/><br/><b>Your clientId must be allowed all of those privileges : </b> <br/> AccessPublicData<br/><br/>
+     * @param {String} organizationSlug 
+     * @param {String} formSlug 
+     * @param {module:model/HelloAssoApiV5CommonModelsEnumsFormType} formType 
+     * @param {module:api/FormsApi~organizationsOrganizationSlugFormsFormTypeFormSlugStatsGetCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:model/HelloAssoApiV5CommonModelsFormsFormStatsModel}
+     */
+    organizationsOrganizationSlugFormsFormTypeFormSlugStatsGet(organizationSlug, formSlug, formType, callback) {
+      let postBody = null;
+      // verify the required parameter 'organizationSlug' is set
+      if (organizationSlug === undefined || organizationSlug === null) {
+        throw new Error("Missing the required parameter 'organizationSlug' when calling organizationsOrganizationSlugFormsFormTypeFormSlugStatsGet");
+      }
+      // verify the required parameter 'formSlug' is set
+      if (formSlug === undefined || formSlug === null) {
+        throw new Error("Missing the required parameter 'formSlug' when calling organizationsOrganizationSlugFormsFormTypeFormSlugStatsGet");
+      }
+      // verify the required parameter 'formType' is set
+      if (formType === undefined || formType === null) {
+        throw new Error("Missing the required parameter 'formType' when calling organizationsOrganizationSlugFormsFormTypeFormSlugStatsGet");
+      }
+
+      let pathParams = {
+        'organizationSlug': organizationSlug,
+        'formSlug': formSlug,
+        'formType': formType
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = HelloAssoApiV5CommonModelsFormsFormStatsModel;
+      return this.apiClient.callApi(
+        '/organizations/{organizationSlug}/forms/{formType}/{formSlug}/stats', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

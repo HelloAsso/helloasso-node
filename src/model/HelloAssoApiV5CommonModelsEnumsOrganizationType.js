@@ -236,6 +236,13 @@ export default class HelloAssoApiV5CommonModelsEnumsOrganizationType {
         "Autres" = "Autres";
 
     
+        /**
+         * value: "EPA"
+         * @const
+         */
+        "EPA" = "EPA";
+
+    
 
     /**
     * Returns a <code>HelloAssoApiV5CommonModelsEnumsOrganizationType</code> enum value from a Javascript object name.

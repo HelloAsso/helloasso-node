@@ -44,6 +44,7 @@ Name | Type | Description | Notes
 **allowOrganismPayer** | **Boolean** | Whether users are allowed to contribute to this form through an organism (only for donation and crowdfunding). | [optional] 
 **allowIndividualPayer** | **Boolean** | Whether user are allowed to personally contribute to this form (only for donation and crowdfunding). | [optional] 
 **remindAbandonedCart** | **Boolean** | Whether a reminder email should be sent for abandoned carts. | [optional] 
+**displayVersion** | **Number** | The form display version (only for membership). | [optional] 
 **maxEntries** | **Number** | Indicates the maximum available entries for the whole form. Null means unlimited entries. | [optional] 
 
 

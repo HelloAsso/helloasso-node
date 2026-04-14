@@ -75,9 +75,11 @@ import HelloAssoApiV5CommonModelsFormsFormPublicModel from './model/HelloAssoApi
 import HelloAssoApiV5CommonModelsFormsFormQuickCreateModel from './model/HelloAssoApiV5CommonModelsFormsFormQuickCreateModel';
 import HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest from './model/HelloAssoApiV5CommonModelsFormsFormQuickCreateRequest';
 import HelloAssoApiV5CommonModelsFormsFormStateRequest from './model/HelloAssoApiV5CommonModelsFormsFormStateRequest';
+import HelloAssoApiV5CommonModelsFormsFormStatsModel from './model/HelloAssoApiV5CommonModelsFormsFormStatsModel';
 import HelloAssoApiV5CommonModelsFormsTermModel from './model/HelloAssoApiV5CommonModelsFormsTermModel';
 import HelloAssoApiV5CommonModelsFormsTierLightModel from './model/HelloAssoApiV5CommonModelsFormsTierLightModel';
 import HelloAssoApiV5CommonModelsFormsTierPublicModel from './model/HelloAssoApiV5CommonModelsFormsTierPublicModel';
+import HelloAssoApiV5CommonModelsFormsTierStatsModel from './model/HelloAssoApiV5CommonModelsFormsTierStatsModel';
 import HelloAssoApiV5CommonModelsOrganizationsOrganizationBasicModel from './model/HelloAssoApiV5CommonModelsOrganizationsOrganizationBasicModel';
 import HelloAssoApiV5CommonModelsOrganizationsOrganizationLightModel from './model/HelloAssoApiV5CommonModelsOrganizationsOrganizationLightModel';
 import HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel from './model/HelloAssoApiV5CommonModelsOrganizationsOrganizationPublicModel';
@@ -537,6 +539,12 @@ export {
     HelloAssoApiV5CommonModelsFormsFormStateRequest,
 
     /**
+     * The HelloAssoApiV5CommonModelsFormsFormStatsModel model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsFormsFormStatsModel}
+     */
+    HelloAssoApiV5CommonModelsFormsFormStatsModel,
+
+    /**
      * The HelloAssoApiV5CommonModelsFormsTermModel model constructor.
      * @property {module:model/HelloAssoApiV5CommonModelsFormsTermModel}
      */
@@ -553,6 +561,12 @@ export {
      * @property {module:model/HelloAssoApiV5CommonModelsFormsTierPublicModel}
      */
     HelloAssoApiV5CommonModelsFormsTierPublicModel,
+
+    /**
+     * The HelloAssoApiV5CommonModelsFormsTierStatsModel model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsFormsTierStatsModel}
+     */
+    HelloAssoApiV5CommonModelsFormsTierStatsModel,
 
     /**
      * The HelloAssoApiV5CommonModelsOrganizationsOrganizationBasicModel model constructor.

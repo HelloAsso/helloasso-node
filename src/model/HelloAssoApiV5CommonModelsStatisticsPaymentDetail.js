@@ -56,6 +56,9 @@ class HelloAssoApiV5CommonModelsStatisticsPaymentDetail {
         if (data) {
             obj = obj || new HelloAssoApiV5CommonModelsStatisticsPaymentDetail();
 
+            if (data.hasOwnProperty('cardExpirationDate')) {
+                obj['cardExpirationDate'] = ApiClient.convertToType(data['cardExpirationDate'], 'Date');
+            }
             if (data.hasOwnProperty('order')) {
                 obj['order'] = HelloAssoApiV5CommonModelsStatisticsOrderLight.constructFromObject(data['order']);
             }
@@ -171,6 +174,12 @@ class HelloAssoApiV5CommonModelsStatisticsPaymentDetail {
 }
 
 
+
+/**
+ * Card expiration date (only for card payments)
+ * @member {Date} cardExpirationDate
+ */
+HelloAssoApiV5CommonModelsStatisticsPaymentDetail.prototype['cardExpirationDate'] = undefined;
 
 /**
  * @member {module:model/HelloAssoApiV5CommonModelsStatisticsOrderLight} order

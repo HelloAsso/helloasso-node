@@ -65,4 +65,6 @@
 
 * `Autres` (value: `"Autres"`)
 
+* `EPA` (value: `"EPA"`)
+
 
