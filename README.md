@@ -291,6 +291,9 @@ const client = new ClientCredentials({
     tokenHost: 'https://api.helloasso.com',
     tokenPath: '/oauth2/token',
   },
+  options: {
+    authorizationMethod: 'body',
+  },
 });
 
 // Get an access token
