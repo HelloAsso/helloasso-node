@@ -19,6 +19,7 @@ import HelloAssoApiV5CommonModelsEnumsPaymentState from './HelloAssoApiV5CommonM
 import HelloAssoApiV5CommonModelsEnumsPaymentType from './HelloAssoApiV5CommonModelsEnumsPaymentType';
 import HelloAssoApiV5CommonModelsStatisticsOrderLight from './HelloAssoApiV5CommonModelsStatisticsOrderLight';
 import HelloAssoApiV5CommonModelsStatisticsPayer from './HelloAssoApiV5CommonModelsStatisticsPayer';
+import HelloAssoApiV5CommonModelsStatisticsPaymentDisplayData from './HelloAssoApiV5CommonModelsStatisticsPaymentDisplayData';
 import HelloAssoApiV5CommonModelsStatisticsPaymentItem from './HelloAssoApiV5CommonModelsStatisticsPaymentItem';
 import HelloAssoApiV5CommonModelsStatisticsRefundOperationLightModel from './HelloAssoApiV5CommonModelsStatisticsRefundOperationLightModel';
 
@@ -67,6 +68,9 @@ class HelloAssoApiV5CommonModelsStatisticsPaymentDetail {
             }
             if (data.hasOwnProperty('items')) {
                 obj['items'] = ApiClient.convertToType(data['items'], [HelloAssoApiV5CommonModelsStatisticsPaymentItem]);
+            }
+            if (data.hasOwnProperty('displayData')) {
+                obj['displayData'] = HelloAssoApiV5CommonModelsStatisticsPaymentDisplayData.constructFromObject(data['displayData']);
             }
             if (data.hasOwnProperty('cashOutDate')) {
                 obj['cashOutDate'] = ApiClient.convertToType(data['cashOutDate'], 'Date');
@@ -144,6 +148,10 @@ class HelloAssoApiV5CommonModelsStatisticsPaymentDetail {
                 HelloAssoApiV5CommonModelsStatisticsPaymentItem.validateJSON(item);
             };
         }
+        // validate the optional field `displayData`
+        if (data['displayData']) { // data not null
+          HelloAssoApiV5CommonModelsStatisticsPaymentDisplayData.validateJSON(data['displayData']);
+        }
         // ensure the json data is a string
         if (data['paymentReceiptUrl'] && !(typeof data['paymentReceiptUrl'] === 'string' || data['paymentReceiptUrl'] instanceof String)) {
             throw new Error("Expected the field `paymentReceiptUrl` to be a primitive type in the JSON string but got " + data['paymentReceiptUrl']);
@@ -196,6 +204,11 @@ HelloAssoApiV5CommonModelsStatisticsPaymentDetail.prototype['payer'] = undefined
  * @member {Array.<module:model/HelloAssoApiV5CommonModelsStatisticsPaymentItem>} items
  */
 HelloAssoApiV5CommonModelsStatisticsPaymentDetail.prototype['items'] = undefined;
+
+/**
+ * @member {module:model/HelloAssoApiV5CommonModelsStatisticsPaymentDisplayData} displayData
+ */
+HelloAssoApiV5CommonModelsStatisticsPaymentDetail.prototype['displayData'] = undefined;
 
 /**
  * The date of the cash out

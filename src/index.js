@@ -88,6 +88,7 @@ import HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportPaymentOperati
 import HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportPaymentStatus from './model/HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportPaymentStatus';
 import HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportRowModel from './model/HelloAssoApiV5CommonModelsPaymentCashoutExportCashoutExportRowModel';
 import HelloAssoApiV5CommonModelsPaymentRefundOperationModel from './model/HelloAssoApiV5CommonModelsPaymentRefundOperationModel';
+import HelloAssoApiV5CommonModelsStatisticsFormDisplayType from './model/HelloAssoApiV5CommonModelsStatisticsFormDisplayType';
 import HelloAssoApiV5CommonModelsStatisticsItem from './model/HelloAssoApiV5CommonModelsStatisticsItem';
 import HelloAssoApiV5CommonModelsStatisticsItemCustomField from './model/HelloAssoApiV5CommonModelsStatisticsItemCustomField';
 import HelloAssoApiV5CommonModelsStatisticsItemDetail from './model/HelloAssoApiV5CommonModelsStatisticsItemDetail';
@@ -103,6 +104,7 @@ import HelloAssoApiV5CommonModelsStatisticsOrderPayment from './model/HelloAssoA
 import HelloAssoApiV5CommonModelsStatisticsPayer from './model/HelloAssoApiV5CommonModelsStatisticsPayer';
 import HelloAssoApiV5CommonModelsStatisticsPayment from './model/HelloAssoApiV5CommonModelsStatisticsPayment';
 import HelloAssoApiV5CommonModelsStatisticsPaymentDetail from './model/HelloAssoApiV5CommonModelsStatisticsPaymentDetail';
+import HelloAssoApiV5CommonModelsStatisticsPaymentDisplayData from './model/HelloAssoApiV5CommonModelsStatisticsPaymentDisplayData';
 import HelloAssoApiV5CommonModelsStatisticsPaymentItem from './model/HelloAssoApiV5CommonModelsStatisticsPaymentItem';
 import HelloAssoApiV5CommonModelsStatisticsRefundOperationLightModel from './model/HelloAssoApiV5CommonModelsStatisticsRefundOperationLightModel';
 import HelloAssoApiV5CommonModelsStatisticsShareItem from './model/HelloAssoApiV5CommonModelsStatisticsShareItem';
@@ -617,6 +619,12 @@ export {
     HelloAssoApiV5CommonModelsPaymentRefundOperationModel,
 
     /**
+     * The HelloAssoApiV5CommonModelsStatisticsFormDisplayType model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsStatisticsFormDisplayType}
+     */
+    HelloAssoApiV5CommonModelsStatisticsFormDisplayType,
+
+    /**
      * The HelloAssoApiV5CommonModelsStatisticsItem model constructor.
      * @property {module:model/HelloAssoApiV5CommonModelsStatisticsItem}
      */
@@ -705,6 +713,12 @@ export {
      * @property {module:model/HelloAssoApiV5CommonModelsStatisticsPaymentDetail}
      */
     HelloAssoApiV5CommonModelsStatisticsPaymentDetail,
+
+    /**
+     * The HelloAssoApiV5CommonModelsStatisticsPaymentDisplayData model constructor.
+     * @property {module:model/HelloAssoApiV5CommonModelsStatisticsPaymentDisplayData}
+     */
+    HelloAssoApiV5CommonModelsStatisticsPaymentDisplayData,
 
     /**
      * The HelloAssoApiV5CommonModelsStatisticsPaymentItem model constructor.

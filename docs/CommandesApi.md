@@ -136,7 +136,8 @@ OAuth2.accessToken = 'YOUR ACCESS TOKEN';
 let apiInstance = new HelloAssoApi.CommandesApi();
 let orderId = 56; // Number | The order ID
 let opts = {
-  'withFormData': false // Boolean | Set to true to include form data in the response
+  'withFormData': false, // Boolean | Set to true to include form data in the response
+  'checkPaymentsRefundEligibility': false // Boolean | Set to true to check if payments are eligible to refund or not
 };
 apiInstance.ordersOrderIdGet(orderId, opts, (error, data, response) => {
   if (error) {
@@ -154,6 +155,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **orderId** | **Number**| The order ID | 
  **withFormData** | **Boolean**| Set to true to include form data in the response | [optional] [default to false]
+ **checkPaymentsRefundEligibility** | **Boolean**| Set to true to check if payments are eligible to refund or not | [optional] [default to false]
 
 ### Return type
 

@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **items** | [**[HelloAssoApiV5CommonModelsStatisticsShareItem]**](HelloAssoApiV5CommonModelsStatisticsShareItem.md) | Items linked to this payment and each share between the item and the payment | [optional] 
+**isRefundable** | **Boolean** | Indicate if the payment is refundable or not | [optional] 
 **cashOutDate** | **Date** | The date of the cash out | [optional] 
 **idCashOut** | **Number** | The id of the cash out | [optional] 
 **cashOutState** | [**HelloAssoApiV5CommonModelsEnumsPaymentCashOutState**](HelloAssoApiV5CommonModelsEnumsPaymentCashOutState.md) |  | [optional] 

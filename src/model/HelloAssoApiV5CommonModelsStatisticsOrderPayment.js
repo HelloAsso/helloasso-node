@@ -58,6 +58,9 @@ class HelloAssoApiV5CommonModelsStatisticsOrderPayment {
             if (data.hasOwnProperty('items')) {
                 obj['items'] = ApiClient.convertToType(data['items'], [HelloAssoApiV5CommonModelsStatisticsShareItem]);
             }
+            if (data.hasOwnProperty('isRefundable')) {
+                obj['isRefundable'] = ApiClient.convertToType(data['isRefundable'], 'Boolean');
+            }
             if (data.hasOwnProperty('cashOutDate')) {
                 obj['cashOutDate'] = ApiClient.convertToType(data['cashOutDate'], 'Date');
             }
@@ -162,6 +165,12 @@ class HelloAssoApiV5CommonModelsStatisticsOrderPayment {
  * @member {Array.<module:model/HelloAssoApiV5CommonModelsStatisticsShareItem>} items
  */
 HelloAssoApiV5CommonModelsStatisticsOrderPayment.prototype['items'] = undefined;
+
+/**
+ * Indicate if the payment is refundable or not
+ * @member {Boolean} isRefundable
+ */
+HelloAssoApiV5CommonModelsStatisticsOrderPayment.prototype['isRefundable'] = undefined;
 
 /**
  * The date of the cash out

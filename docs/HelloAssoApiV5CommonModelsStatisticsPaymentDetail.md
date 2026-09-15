@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **order** | [**HelloAssoApiV5CommonModelsStatisticsOrderLight**](HelloAssoApiV5CommonModelsStatisticsOrderLight.md) |  | [optional] 
 **payer** | [**HelloAssoApiV5CommonModelsStatisticsPayer**](HelloAssoApiV5CommonModelsStatisticsPayer.md) |  | [optional] 
 **items** | [**[HelloAssoApiV5CommonModelsStatisticsPaymentItem]**](HelloAssoApiV5CommonModelsStatisticsPaymentItem.md) | Items linked to this payment | [optional] 
+**displayData** | [**HelloAssoApiV5CommonModelsStatisticsPaymentDisplayData**](HelloAssoApiV5CommonModelsStatisticsPaymentDisplayData.md) |  | [optional] 
 **cashOutDate** | **Date** | The date of the cash out | [optional] 
 **idCashOut** | **Number** | The id of the cash out | [optional] 
 **cashOutState** | [**HelloAssoApiV5CommonModelsEnumsPaymentCashOutState**](HelloAssoApiV5CommonModelsEnumsPaymentCashOutState.md) |  | [optional] 

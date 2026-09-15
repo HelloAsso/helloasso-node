@@ -144,6 +144,7 @@ export default class CommandesApi {
      * @param {Number} orderId The order ID
      * @param {Object} opts Optional parameters
      * @param {Boolean} [withFormData = false)] Set to true to include form data in the response
+     * @param {Boolean} [checkPaymentsRefundEligibility = false)] Set to true to check if payments are eligible to refund or not
      * @param {module:api/CommandesApi~ordersOrderIdGetCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/HelloAssoApiV5CommonModelsStatisticsOrderDetail}
      */
@@ -159,7 +160,8 @@ export default class CommandesApi {
         'orderId': orderId
       };
       let queryParams = {
-        'withFormData': opts['withFormData']
+        'withFormData': opts['withFormData'],
+        'checkPaymentsRefundEligibility': opts['checkPaymentsRefundEligibility']
       };
       let headerParams = {
       };
